@@ -1,0 +1,921 @@
+"line","title","estimate","all consumer units","less than $5,000","$5,000 to $9,999","$10,000 to $14,999","$15,000 to $19,999","$20,000 to $29,999","$30,000 to $39,999","$40,000 to $49,999","$50,000 to $69,999","$70,000 and over"
+"100001","Number of consumer units (in thousands)                     ","N",116281687.269384,4553150.84604899,7224485.00122071,8943621.65301003,8173260.22988892,14163179.1243032,13127491.609965,11376608.3525136,18008643.9294891,30711246.5229441
+"100011","Lower limit                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100021","Percent distribution of consumer units                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100031","  Income before taxes                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100042","    Meals as pay                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100052","    Rent as pay                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100062","    Income before taxes                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100071","  Income after taxes                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100082","    Meals as pay                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100092","    Rent as pay                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100102","    Income after taxes                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100111","  Age of reference person                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100121","    Persons                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100131","    Children under 18                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100141","    Persons 65 and over                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100151","    Earners                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100161","    Vehicles                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100172","      Vehicles (owned)                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100182","      Vehicles (leased)                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100191","    Male                                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100201","    Female                                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100211","    Homeowner                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100222","      With mortgage                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100232","      Without mortgage                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100241","    Renter                                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100251","    Black or African-American                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100261","    White, Asian, and All Other Races                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100272","      White (new UCC Q20032)                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100282","      Asian (new UCC Q20032)                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100292","      All Other Races (new UCC Q20032)                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100301","    Hispanic or Latino (new UCC Q20032)                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100311","    Not Hispanic or Latino (new UCC Q20032)                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100321","    Elementary (1-8)                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100331","    High school (9-12)                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100341","    College                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100351","    Never attended and other                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100361","  At least one vehicle owned or leased                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100371","  At least one vehicle owned                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100381","  At least one vehicle leased                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100391","Average annual expenditures                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100402","  Food                                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100413","    Food at home                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100424","      Cereals and bakery products                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100435","        Cereals and cereal products                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100446","          Flour                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100456","          Prepared flour mixes                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100466","          Ready-to-eat and cooked cereals                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100476","          Rice                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100486","          Pasta, cornmeal and other cereal products         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100495","        Bakery products                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100506","          Bread                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100517","            White bread                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100527","            Bread, other than white                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100536","          Cookies and crackers                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100547","            Cookies                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100557","            Crackers                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100566","          Frozen and refrigerated bakery products           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100576","          Other bakery products                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100587","            Biscuits and rolls                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100597","            Cakes and cupcakes                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100607","            Bread and cracker products                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100617","            Sweetrolls, coffee cakes, doughnuts             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100627","            Pies, tarts, turnovers                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100634","      Meats, poultry, fish, and eggs                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100645","        Beef                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100656","          Ground beef                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100666","          Roast                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100677","            Chuck roast                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100687","            Round roast                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100697","            Other roast                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100706","          Steak                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100717","            Round steak                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100727","            Sirloin steak                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100737","            Other steak                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100746","          Other beef                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100755","        Pork                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100766","          Bacon                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100776","          Pork chops                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100786","          Ham                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100797","            Ham, not canned                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100807","            Canned ham                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100816","          Sausage                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100826","          Other pork                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100835","        Other meats                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100846","          Frankfurters                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100856","          Lunch meats (cold cuts)                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100867","            Bologna, liverwurst, salami                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100877","            Other lunchmeats                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100886","          Lamb, organ meats and others                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100897","            Lamb and organ meats                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100907","            Mutton, goat and game                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100915","        Poultry                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100926","          Fresh and frozen chickens                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100937","            Fresh and frozen whole chicken                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100947","            Fresh and frozen chicken parts                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100956","          Other poultry                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100965","        Fish and seafood                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100976","          Canned fish and seafood                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100986","          Fresh fish and shellfish                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"100996","          Frozen fish and shellfish                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101005","        Eggs                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101014","      Dairy products                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101025","        Fresh milk and cream                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101036","          Fresh milk, all types                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101046","          Cream                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101055","        Other dairy products                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101066","          Butter                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101076","          Cheese                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101086","          Ice cream and related products                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101096","          Miscellaneous dairy products                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101104","      Fruits and vegetables                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101115","        Fresh fruits                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101126","          Apples                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101136","          Bananas                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101146","          Oranges                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101156","          Citrus fruits, excluding oranges                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101166","          Other fresh fruits                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101175","        Fresh vegetables                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101186","          Potatoes                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101196","          Lettuce                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101206","          Tomatoes                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101216","          Other fresh vegetables                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101225","        Processed fruits                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101236","          Frozen fruits and fruit juices                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101247","            Frozen orange juice                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101257","            Frozen fruits                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101267","            Frozen fruit juices                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101276","          Canned fruits                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101286","          Dried fruit                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101296","          Fresh fruit juice                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101306","          Canned and bottled fruit juice                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101315","        Processed vegetables                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101326","          Frozen vegetables                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101336","          Canned and dried vegetables and juices            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101347","            Canned beans                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101357","            Canned corn                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101367","            Canned miscellaneous vegetables                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101377","            Dried peas                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101387","            Dried beans                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101397","            Dried miscellaneous vegetables                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101407","            Dried processed vegetables                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101417","            Frozen vegetable juices                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101427","            Fresh and canned vegetable juices               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101434","      Other food at home                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101445","        Sugar and other sweets                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101456","          Candy and chewing gum                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101466","          Sugar                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101476","          Artificial sweeteners                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101486","          Jams, preserves, other sweets                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101495","        Fats and oils                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101506","          Margarine                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101516","          Fats and oils                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101526","          Salad dressings                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101536","          Nondairy cream and imitation milk                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101546","          Peanut butter                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101555","        Miscellaneous foods                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101566","          Frozen prepared foods                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101577","            Frozen meals                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101587","            Other frozen prepared foods                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101596","          Canned and packaged soups                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101606","          Potato chips, nuts, and other snacks              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101617","            Potato chips and other snacks                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101627","            Nuts                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101636","          Condiments and seasonings                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101647","            Salt, spices, other seasonings                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101657","            Olives, pickles, relishes                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101667","            Sauces and gravies                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101677","            Baking needs and miscellaneous products         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101686","          Other canned and packaged prepared foods          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101697","            Prepared salads                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101707","            Prepared desserts                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101717","            Baby food                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101727","            Miscellaneous prepared foods                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101737","            Vitamin supplements                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101745","        Nonalcoholic beverages                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101756","          Cola                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101766","          Other carbonated drinks                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101776","          Coffee                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101787","            Roasted coffee                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101797","            Instant and freeze dried coffee                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101806","          Noncarbonated fruit flavored drinks, including    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101816","          Tea                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101826","          Nonalcoholic beer                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101836","          Other nonalcoholic beverages and ice              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101845","        Food prepared by consumer unit on out-of-town trips ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101853","    Food away from home                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101864","      Meals at restaurants, carry outs and other            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101875","        Lunch                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101886","          Lunch at fast food, take-out, delivery, concession","MEAN",0,0,0,0,0,0,0,0,0,0
+"101896","          Lunch at full service restaurants                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101906","          Lunch at vending machines and mobile vendors      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101916","          Lunch at employer and school cafeterias           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101925","         Dinner                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101936","          Dinner at fast food, take-out, delivery, concessio","MEAN",0,0,0,0,0,0,0,0,0,0
+"101946","          Dinner at full service restaurants                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101956","          Dinner at vending machines and mobile vendors     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101966","          Dinner at employer and school cafeterias          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101975","        Snacks and nonalcoholic beverages                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101986","          Snacks and nonalcoholic beverages at fast food,   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"101996","          Snacks and nonalcoholic beverages at full service ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102006","          Snacks and nonalcoholic beverages at vending      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102016","          Snacks and nonalcoholic beverages at employer and ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102025","        Breakfast and brunch                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102036","          Breakfast and brunch at fast food, take-out,      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102046","          Breakfast and brunch at full service restaurants  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102056","          Breakfast and brunch at vending machines and mobil","MEAN",0,0,0,0,0,0,0,0,0,0
+"102066","          Breakfast and brunch at employer and school       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102074","      Food or board at school                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102084","      Catered affairs                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102094","      Food on out-of-town trips                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102104","      School lunches                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102114","      Meals as pay                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102122","  Alcoholic beverages                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102133","    At home                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102144","      Beer and ale                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102154","      Whiskey                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102164","      Wine                                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102174","      Other alcoholic beverages                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102183","    Away from home                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102194","      Beer and ale                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102205","        Beer and ale at fast food, take-out, delivery,      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102215","        Beer and ale at full service restaurants            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102225","        Beer and ale at vending machines and mobile vendors ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102235","        Beer and ale at catered affairs                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102244","      Wine                                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102255","        Wine at fast food, take-out, delivery, concession   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102265","        Wine at full service restaurants                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102275","        Wine at vending machines and mobile vendors         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102285","        Wine at catered affairs                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102294","      Other alcoholic beverages                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102305","        Other alcoholic beverages at fast food, take-out,   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102315","        Other alcoholic beverages at full service restaurant","MEAN",0,0,0,0,0,0,0,0,0,0
+"102325","        Other alcoholic beverages at vending machines and   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102335","        Other alcoholic beverages at catered affairs        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102345","        Alcoholic beverages purchased on trips              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102352","  Housing                                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102363","    Shelter                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102374","      Owned dwellings                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102385","        Mortgage interest and charges                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102396","          Mortgage interest                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102406","          Interest paid, home equity loan                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102416","          Interest paid, home equity line of credit         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102426","          Prepayment penalty charges                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102435","        Property taxes                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102445","        Maintenance, repairs, insurance, other expenses     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102456","          Homeowners insurance                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102466","          Ground rent                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102476","          Maintenance and repair services                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102487","            Painting and papering                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102497","            Plumbing and water heating                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102507","            Heat, a/c, electrical work                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102517","            Roofing and gutters                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102527","            Other repair and maintenance services           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102537","            Repair and replacement of hard surface flooring ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102547","            Repair of built-in appliances                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102556","          Maintenance and repair commodities                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102567","            Paints, wallpaper and supplies                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102577","            Tools and equipment for painting and wallpaperin","MEAN",0,0,0,0,0,0,0,0,0,0
+"102587","            Plumbing supplies and equipment                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102597","            Electrical supplies, heating and cooling        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102607","            Materials for hard surface flooring, repair and ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102617","            Materials and equipment for roof and gutters    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102627","            Materials for plaster., panel., siding, windows,","MEAN",0,0,0,0,0,0,0,0,0,0
+"102637","            Materials for patio, walk, fence, driveway,     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102647","            Materials for landscaping maintenance           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102657","            Miscellaneous supplies and equipment            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102668","              Material for insulation, other maintenance and","MEAN",0,0,0,0,0,0,0,0,0,0
+"102678","              Materials to finish basement, remodel rooms or","MEAN",0,0,0,0,0,0,0,0,0,0
+"102686","          Property management and security                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102697","            Property management                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102707","            Management and upkeep services for security     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102716","          Parking                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102724","      Rented dwellings                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102735","        Rent                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102745","        Rent as pay                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102755","        Maintenance, insurance and other expenses           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102766","          Tenant''s insurance                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102776","          Maintenance and repair services                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102787","            Repair or maintenance services                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102797","            Repair and replacement of hard surface flooring ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102807","            Repair of built-in appliances                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102816","          Maintenance and repair commodities                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102827","            Paint, wallpaper, and supplies                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102837","            Tools and equipment for painting and wallpaperin","MEAN",0,0,0,0,0,0,0,0,0,0
+"102847","            Materials for plastering, panels, roofing,      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102857","            Materials for patio, walk, fence, driveway,     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102867","            Plumbing supplies and equipment                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102877","            Electrical supplies, heating and cooling        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102887","            Miscellaneous supplies and equipment            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102898","              Material for insulation, other maintenance and","MEAN",0,0,0,0,0,0,0,0,0,0
+"102908","              Materials for additions, finishing basements, ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102918","              Construction materials for jobs not started   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102927","            Material for hard surface flooring              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102937","            Material for landscape maintenance              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102944","      Other lodging                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102955","        Owned vacation homes                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102966","          Mortgage interest and charges                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102977","            Mortgage interest                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102987","            Interest paid, home equity loan                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"102997","            Interest paid, home equity line of credit       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103007","            Prepayment penalty charge                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103016","          Property taxes                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103026","          Maintenance, insurance, and other expenses        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103037","            Homeowners insurance                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103047","            Ground rent                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103057","            Maintenance and repair services                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103068","              Repair and remodeling services                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103078","              Repair and replacement of hard surface floorin","MEAN",0,0,0,0,0,0,0,0,0,0
+"103087","            Maintenance and repair commodities              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103098","              Paints, wallpaper, supplies                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103108","              Tools and equipment for painting and          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103118","              Materials for plastering, paneling, roofing,  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103128","              Material for patio, walk, fence, drive,       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103138","              Plumbing supplies and equipment               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103148","              Electrical supplies, heating and cooling      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103158","              Miscellaneous supplies and equipment          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103169","                Material for insulation, other maintenance  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103179","                Material for finishing basements and        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103188","              Materials for hard surface flooring           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103198","              Materials for landscaping maintenance         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103207","            Property management and security                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103218","              Property management                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103228","              Management and upkeep services for security   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103237","            Parking                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103245","        Housing while attending school                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103255","        Lodging on out-of-town trips                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103263","    Utilities, fuels, and public services                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103274","      Natural gas                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103285","        Utility--natural gas (renter)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103295","        Utility--natural gas (owned home)                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103305","        Utility--natural gas (owned vacation)               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103315","        Utility--natural gas (rented vacation)              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103324","      Electricity                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103335","        Electricity (renter)                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103345","        Electricity (owned home)                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103355","        Electricity (owned vacation)                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103365","        Electricity (rented vacation)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103374","      Fuel oil and other fuels                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103385","        Fuel oil                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103396","          Fuel oil (renter)                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103406","          Fuel oil (owned home)                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103416","          Fuel oil (owned vacation)                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103426","          Fuel oil (rented vacation)                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103435","        Coal                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103446","          Coal (renter)                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103456","          Coal (owned home)                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103466","          Coal (owned vacation)                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103476","          Coal (rented vacation)                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103485","        Bottled gas                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103496","          Gas, btld/tank (renter)                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103506","          Gas, btld/tank (owned home)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103516","          Gas, btld/tank (owned vacation)                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103526","          Gas, btld/tank (rented vacation)                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103535","        Wood and other fuels                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103546","          Wood/other fuels (renter)                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103556","          Wood/other fuels (owned home)                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103566","          Wood/other fuels (owned vacation)                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103576","          Wood/other fuels (rented vacation)                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103584","      Telephone services                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103595","        Residential telephone/pay phones                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103605","        Cellular phone service                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103615","        Pager service                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103625","        Phone cards                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103634","      Water and other public services                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103645","        Water and sewerage maintenance                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103656","          Water/sewer maint. (renter)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103666","          Water/sewer maint. (owned home)                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103676","          Water/sewer maint. (owned vacation)               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103686","          Water/sewer maint. (rented vacation)              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103695","        Trash and garbage collection                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103706","          Trash/garb. coll. (renter)                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103716","          Trash/garb. coll. (owned home)                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103726","          Trash/garb. coll. (owned vacation)                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103736","          Trash/garb. coll. (rented vacation)               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103745","        Septic tank cleaning                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103756","          Septic tank clean. (renter)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103766","          Septic tank clean. (owned home)                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103776","          Septic tank clean. (owned vacation)               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103786","          Septic tank clean. (rented vacation)              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103793","    Household operations                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103804","      Personal services                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103815","        Babysitting and child care in your own home         ","MEAN",37.085007007978,3.7721480903419,1.57717089739397,6.42794942494709,3.50853000614951,6.15534159887808,14.1518646387683,20.5759083776791,22.9322525118809,106.721555264901
+"103815","        Babysitting and child care in your own home         ","SE",5.28101022103802,1.60851283759276,0.615130169532565,3.76820138158311,1.32695331770723,1.64332489437848,3.28994643515839,5.14319564639199,4.7523314807588,19.3252736578689
+"103825","        Babysitting and child care in someone else''s home  ","MEAN",26.1201107029952,8.5592793000046,3.8870762063303,7.67159837525874,14.7436760794826,16.4878491860145,26.3178099711274,29.0887020514144,36.6992952982128,39.4083142110615
+"103825","        Babysitting and child care in someone else''s home  ","SE",3.43797667479008,5.28861966586951,1.66207256518575,2.96164814822983,6.35380524904875,4.04203703673283,7.09825266598643,5.84500674313773,7.70183442334035,6.28826596508511
+"103835","        Care for elderly, invalids, handicapped, etc.       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103845","        Adult day care centers                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103855","        Day care centers, nursery, and preschools           ","MEAN",193.513166666873,27.6049026083523,11.2672046476808,41.1647025883453,56.2455607577395,77.6943741492592,107.756670615122,108.909803661194,187.849193668428,466.60983951235
+"103855","        Day care centers, nursery, and preschools           ","SE",9.93528300891804,19.1582999049328,5.46434763603194,12.0830298237699,11.8557975775172,14.1431262151229,19.9064646558176,16.1213792028142,21.2432068626175,33.1287328302705
+"103864","      Other household expenses                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103875","        Housekeeping services                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103885","        Gardening, lawn care service                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103895","        Water softening service                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103905","        Household laundry and dry cleaning, sent out        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103915","        Coin-operated household laundry and dry cleaning    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103925","        Services for termite/pest control                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103935","        Home security system service fee                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103945","        Other home services                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103955","        Termite/pest control products                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103965","        Moving, storage, freight express                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103975","        Appliance repair, including service center          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103985","        Reupholstering, furniture repair                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"103995","        Repairs/rentals of lawn and garden equipment, hand o","MEAN",0,0,0,0,0,0,0,0,0,0
+"104005","        Appliance rental                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104015","        Rental of office equipment for nonbusiness use      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104025","        Repair of miscellaneous household equipment and     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104035","        Repair of computer systems for nonbusiness use      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104045","        Computer information services                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104055","        Rental and installation of dishwashers, range hoods,","MEAN",0,0,0,0,0,0,0,0,0,0
+"104063","    Housekeeping supplies                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104074","      Laundry and cleaning supplies                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104085","        Soaps and detergents                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104095","        Other laundry cleaning products                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104104","      Other household products                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104115","        Cleansing and toilet tissue, paper towels and napkin","MEAN",0,0,0,0,0,0,0,0,0,0
+"104125","        Miscellaneous household products                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104135","        Lawn and garden supplies                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104144","      Postage and stationery                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104155","        Stationery, stationery supplies, giftwrap           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104165","        Postage                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104175","        Delivery services                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104183","    Household furnishings and equipment                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104194","      Household textiles                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104205","        Bathroom linens                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104215","        Bedroom linens                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104225","        Kitchen and dining room linens                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104235","        Curtains and draperies                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104245","        Slipcovers, decorative pillows                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104255","        Sewing materials for slipcovers, curtains, other    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104265","        Other linens                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104274","      Furniture                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104285","        Mattress and springs                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104295","        Other bedroom furniture                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104305","        Sofas                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104315","        Living room chairs                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104325","        Living room tables                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104335","        Kitchen, dining room furniture                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104345","        Infants'' furniture                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104355","        Outdoor furniture                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104365","        Wall units, cabinets and other occasional furniture ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104374","      Floor coverings                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104385","        Wall-to-wall carpeting (renter)                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104396","          Wall-to-wall carpet (renter)                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104406","          Wall-to-wall carpet (replacement)(renter)         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104415","        Wall-to-wall carpet (replacement) (owned home)      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104425","        Floor coverings, nonpermanent                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104434","      Major appliances                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104445","        Dishwashers (built-in), garbage disposals, range    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104455","        Dishwashers (built-in), garbage disposals, range    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104465","        Refrigerators, freezers (renter)                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104475","        Refrigerators, freezers (owned home)                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104485","        Washing machines (renter)                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104495","        Washing machines (owned home)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104505","        Clothes dryers (renter)                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104515","        Clothes dryers (owned home)                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104525","        Cooking stoves, ovens (renter)                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104535","        Cooking stoves, ovens (owned home)                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104545","        Microwave ovens (renter)                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104555","        Microwave ovens (owned home)                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104565","        Portable dishwasher (renter)                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104575","        Portable dishwasher (owned home)                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104585","        Window air conditioners (renter)                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104595","        Window air conditioners (owned home)                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104605","        Electric floor cleaning equipment                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104615","        Sewing machines                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104625","        Miscellaneous household appliances                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104634","      Small appliances, miscellaneous housewares            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104645","        Housewares                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104656","          Plastic dinnerware                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104666","          China and other dinnerware                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104676","          Flatware                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104686","          Glassware                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104696","          Silver serving pieces                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104706","          Other serving pieces                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104716","          Nonelectric cookware                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104726","          Tableware, nonelectric kitchenware                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104735","        Small appliances                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104746","          Small electric kitchen appliances                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104756","          Portable heating and cooling equipment            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104764","      Miscellaneous household equipment                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104775","        Window coverings                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104785","        Infants'' equipment                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104795","        Laundry and cleaning equipment                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104805","        Outdoor equipment                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104815","        Clocks                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104825","        Lamps and lighting fixtures                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104835","        Other household decorative items                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104845","        Telephones and accessories                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104855","        Lawn and garden equipment                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104865","        Power tools                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104875","        Office furniture for home use                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104885","        Hand tools                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104895","        Indoor plants, fresh flowers                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104905","        Closet and storage items                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104915","        Rental of furniture                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104925","        Luggage                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104935","        Computers and computer hardware for nonbusiness use ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104945","        Computer software and accessories for nonbusiness us","MEAN",0,0,0,0,0,0,0,0,0,0
+"104955","        Telephone answering devices                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104965","        Calculators                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104975","        Business equipment for home use                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104985","        Other hardware                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"104995","        Smoke alarms (owned home)                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105005","        Smoke alarms (renter)                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105015","        Smoke alarms (owned vacation)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105025","        Other household appliances (owned home)             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105035","        Other household appliances (renter)                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105045","        Miscellaneous household equipment and parts         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105052","  Apparel and services                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105063","    Men and boys                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105074","      Men, 16 and over                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105085","        Men''s suits                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105095","        Men''s sportcoats, tailored jackets                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105105","        Men''s coats and jackets                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105115","        Men''s underwear                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105125","        Men''s hosiery                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105135","        Men''s nightwear                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105145","        Men''s accessories                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105155","        Men''s sweaters and vests                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105165","        Men''s active sportswear                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105175","        Men''s shirts                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105185","        Men''s pants                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105195","        Men''s shorts, shorts sets                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105205","        Men''s uniforms                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105215","        Men''s costumes                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105224","      Boys, 2 to 15                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105235","        Boys'' coats and jackets                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105245","        Boys'' sweaters                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105255","        Boys'' shirts                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105265","        Boys'' underwear                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105275","        Boys'' nightwear                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105285","        Boys'' hosiery                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105295","        Boys'' accessories                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105305","        Boys'' suits, sportcoats, vests                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105315","        Boys''  pants                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105325","        Boys'' shorts, shorts sets                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105335","        Boys'' uniforms                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105345","        Boys'' active sportswear                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105355","        Boys''  costumes                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105363","    Women and girls                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105374","      Women, 16 and over                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105385","        Women''s coats and jackets                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105395","        Women''s dresses                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105405","        Women''s sportcoats, tailored jackets               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105415","        Women''s vests and sweaters                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105425","        Women''s shirts, tops, blouses                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105435","        Women''s skirts                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105445","        Women''s pants                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105455","        Women''s shorts, shorts sets                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105465","        Women''s active sportswear                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105475","        Women''s sleepwear                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105485","        Women''s undergarments                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105495","        Women''s hosiery                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105505","        Women''s suits                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105515","        Women''s accessories                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105525","        Women''s uniforms                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105535","        Women''s costumes                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105544","      Girls, 2 to 15                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105555","        Girls'' coats and jackets                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105565","        Girls'' dresses and suits                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105575","        Girls'' shirts, blouses, sweaters                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105585","        Girls'' skirts and pants                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105595","        Girls'' shorts, shorts sets                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105605","        Girls'' active sportswear                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105615","        Girls'' underwear and sleepwear                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105625","        Girls'' hosiery                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105635","        Girls'' accessories                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105645","        Girls''  uniforms                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105655","        Girls'' costumes                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105663","    Children under 2                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105674","      Infant coat, jacket, snowsuit                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105684","      Infant dresses, outerwear                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105694","      Infant underwear                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105704","      Infant nightwear, loungewear                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105714","      Infant accessories                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105723","    Footwear                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105734","      Men''s footwear                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105744","      Boys'' footwear                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105754","      Women''s footwear                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105764","      Girls'' footwear                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105773","    Other apparel products and services                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105784","      Material for making clothes                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105794","      Sewing patterns and notions                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105804","      Watches                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105814","      Jewelry                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105824","      Shoe repair and other shoe service                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105834","      Coin-operated apparel laundry and dry cleaning        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105844","      Alteration, repair and tailoring of apparel and       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105854","      Clothing rental                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105864","      Watch and jewelry repair                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105874","      Apparel laundry and dry cleaning not coin-operated    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105884","      Clothing storage                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105892","  Transportation                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105903","    Vehicle purchases (net outlay)                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105914","      Cars and trucks, new                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105925","        New cars                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105935","        New trucks                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105944","      Cars and trucks, used                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105955","        Used cars                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105965","        Used trucks                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105974","      Other vehicles                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105985","        New motorcycles                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"105995","        New aircraft                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106005","        Used motorcycles                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106015","        Used aircraft                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106023","    Gasoline and motor oil                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106034","      Gasoline                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106044","      Diesel fuel                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106054","      Gasoline on out-of-town trips                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106064","      Gasohol                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106074","      Motor oil                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106084","      Motor oil on out-of-town trips                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106093","    Other vehicle expenses                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106104","      Vehicle finance charges                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106115","        Automobile finance charges                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106125","        Truck finance charges                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106135","        Motorcycle and plane finance charges                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106145","        Other vehicle finance charges                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106154","      Maintenance and repairs                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106165","        Coolant, brake fluid, transmission fluid, and other ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106175","        Tires - purchased, replaced, installed              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106185","        Parts, equipment, and accessories                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106195","        Vehicle audio equipment, excluding labor            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106205","        Vehicle products                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106215","        Misc. auto repair, servicing                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106225","        Body work and painting                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106235","        Clutch, transmission repair                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106245","        Drive shaft and rear-end repair                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106255","        Brake work, including adjustments                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106265","        Repair to steering or front-end                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106275","        Repair to engine cooling system                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106285","        Motor tune-up                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106295","        Lube, oil change, and oil filters                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106305","        Front-end alignment, wheel balance and rotation     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106315","        Shock absorber replacement                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106325","        Gas tank repair, replacement                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106335","        Repair tires and other repair work                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106345","        Vehicle air conditioning repair                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106355","        Exhaust system repair                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106365","        Electrical system repair                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106375","        Motor repair, replacement                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106385","        Auto repair service policy                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106394","      Vehicle insurance                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106404","      Vehicle rental, leases, licenses, and other charges   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106415","        Leased and rented vehicles                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106426","          Rented vehicles                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106437","            Auto rental                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106447","            Auto rental, out-of-town trips                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106457","            Truck rental                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106467","            Truck rental, out-of-town trips                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106477","            Motorcycle rental                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106487","            Motorcycle rental, out-of-town trips            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106497","            Aircraft rental                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106507","            Aircraft rental, out-of-town trips              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106516","          Leased vehicles                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106527","            Car lease payments                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106537","            Cash downpayment (car lease)                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106547","            Termination fee (car lease)                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106557","            Truck lease payments                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106567","            Cash downpayment (truck lease)                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106577","            Termination fee (truck lease)                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106585","        Vehicle registration state                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106595","        Vehicle registration local                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106605","        Drivers'' license                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106615","        Vehicle inspection                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106625","        Parking fees                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106636","          Parking fees in home city, excluding residence    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106646","          Parking fees, out-of-town trips                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106655","        Tolls                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106665","        Tolls on out-of-town trips                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106675","        Towing charges                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106685","        Automobile service clubs                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106693","    Public transportation                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106704","      Airline fares                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106714","      Intercity bus fares                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106724","      Intracity mass transit fares                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106734","      Local trans. on out-of-town trips                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106744","      Taxi fares and limousine services on trips            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106754","      Taxi fares and limousine services                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106764","      Intercity train fares                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106774","      Ship fares                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106784","      School bus                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106792","  Health care                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106803","    Health insurance                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106814","      Commercial health insurance                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106825","        Traditional fee for service health plan (not BCBS)  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106835","        Preferred provider health plan (not BCBS)           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106844","      Blue Cross, Blue Shield                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106855","        Traditional fee for service health plan (BCBS)      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106865","        Preferred provider health plan (BCBS)               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106875","        Health maintenance organization (BCBS)              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106885","        Commercial medicare supplement (BCBS)               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106895","        Other health insurance (BCBS)                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106904","      Health maintenance organization (not BCBS)            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106914","      Medicare payments                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106924","      Commercial medicare supplements and other health      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106935","        Commercial medicare supplement (not BCBS)           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106945","        Other health insurance (not BCBS)                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106953","    Medical services                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106964","      Physician''s services                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106974","      Dental services                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106984","      Eyecare services                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"106994","      Service by professionals other than physician         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107004","      Lab tests, x-rays                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107014","      Hospital room                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107024","      Hospital service other than room                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107034","      Medical care in retirement community                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107044","      Care in convalescent or nursing home                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107054","      Repair of medical equipment                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107064","      Other medical care services                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107073","    Drugs                                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107084","      Nonprescription drugs                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107094","      Nonprescription vitamins                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107104","      Prescription drugs                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107113","    Medical supplies                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107124","      Eyeglasses and contact lenses                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107134","      Hearing aids                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107144","      Topicals and dressings                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107154","      Medical equipment for general use                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107164","      Supportive and convalescent medical equipment         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107174","      Rental of medical equipment                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107184","      Rental of supportive, convalescent medical equipment  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107192","  Entertainment                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107203","    Fees and admissions                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107214","      Recreation expenses, out-of-town trips                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107224","      Social, recreation, civic club membership             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107234","      Fees for participant sports                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107244","      Participant sports, out-of-town trips                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107254","      Movie, theater, opera, ballet                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107264","      Movie, other admissions, out-of-town trips            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107274","      Admission to sporting events                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107284","      Admission to sports events, out-of-town trips         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107294","      Fees for recreational lessons                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107304","      Other entertainment services, out-of-town trips       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107313","    Television, radios, sound equipment                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107324","      Televisions                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107335","        Community antenna or cable tv                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107345","        Black and white tv                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107355","        Color tv - console                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107365","        Color tv - portable, table model                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107375","        VCR''s and video disc players                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107385","        Video cassettes, tapes, and discs                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107395","        Video game hardware and software                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107405","        Repair of tv, radio, and sound equipment            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107415","        Rental of televisions                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107424","      Radios, sound equipment                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107435","        Radios                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107445","        Phonographs                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107455","        Tape recorders and players                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107465","        Sound components and component systems              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107475","        Miscellaneous sound equipment                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107485","        Sound equipment accessories                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107495","        Satellite dishes                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107505","        Compact disc, tape, record and video mail order club","MEAN",0,0,0,0,0,0,0,0,0,0
+"107515","        Records, CDs, audio tapes, needles                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107525","        Rental of VCR, radio, and sound equipment           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107535","        Musical instruments and accessories                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107545","        Rental and repair of musical instruments            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107555","        Rental of video cassettes, tapes, films, and discs  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107563","    Pets, toys, hobbies, and playground equipment           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107574","      Pets                                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107585","        Pet food                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107595","        Pet purchase, supplies, medicine                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107605","        Pet services                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107615","        Vet services                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107624","      Toys, games, arts and crafts, and tricycles           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107634","      Stamp and coin collecting (new UCC Q20042)            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107644","      Playground equipment                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107653","    Other entertainment supplies, equipment, and services   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107664","      Unmotored recreational vehicles                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107675","        Boat without motor and boat trailers                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107685","        Trailer and other attachable campers                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107694","      Motorized recreational vehicles                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107705","        Purchase of motorized camper                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107715","        Purchase of other vehicle                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107725","        Purchase of boat with motor                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107734","      Rental of recreational vehicles                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107745","        Rental noncamper trailer                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107755","        Boat and trailer rental out-of-town trips           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107765","        Rental of campers on out-of-town trips              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107775","        Rental of other vehicles on out-of-town trips       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107785","        Rental of boat                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107795","        Rental of motorized camper                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107805","        Rental of other RV""s                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107814","      Outboard motors                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107824","      Docking and landing fees                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107834","      Sports, recreation and exercise equipment             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107845","        Athletic gear, game tables, and exercise equipment  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107855","        Bicycles                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107865","        Camping equipment                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107875","        Hunting and fishing equipment                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107885","        Winter sports equipment                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107895","        Water sports equipment                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107905","        Other sports equipment                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107915","        Rental and repair of miscellaneous sports equipment ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107924","      Photographic equipment, supplies and services         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107935","        Film                                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107945","        Other photographic supplies                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107955","        Film processing                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107965","        Repair and rental of photographic equipment         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107975","        Photographic equipment                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107985","        Photographer fees                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"107994","      Fireworks                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108004","      Souvenirs                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108014","      Visual goods                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108024","      Pinball, electronic video games                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108032","  Personal care products and services                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108043","    Personal care products                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108054","      Hair care products                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108064","      Nonelectric articles for the hair                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108074","      Wigs and hairpieces                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108084","      Oral hygiene products, articles                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108094","      Shaving needs                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108104","      Cosmetics, perfume, bath preparations                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108114","      Deodorants, feminine hygiene, miscellaneous personal  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108124","      Electric personal care appliances                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108133","    Personal care services                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108144","      Personal care services                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108154","      Repair of personal care appliances                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108162","  Reading                                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108173","    Newspaper subscriptions                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108183","    Newspapers, non-subscriptions                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108193","    Magazine subscriptions                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108203","    Magazines, non-subscriptions                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108213","    Newsletters                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108223","    Books thru book clubs                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108233","    Books not thru book clubs                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108243","    Encyclopedia and other sets of reference books          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108252","  Education                                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108263","    College tuition                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108273","    Elementary and high school tuition                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108283","    Other schools tuition                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108293","    Other school expenses including rentals                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108303","    School books, supplies, equipment for college           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108313","    School books, supplies, equipment for elementary, high  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108323","    School books, supplies, equipment for day care, nursery,","MEAN",0,0,0,0,0,0,0,0,0,0
+"108333","    School supplies, etc. - unspecified                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108342","  Tobacco products and smoking supplies                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108353","    Cigarettes                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108363","    Other tobacco products                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108373","    Smoking accessories                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108383","    Marijuana                                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108392","  Miscellaneous                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108403","    Miscellaneous fees                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108413","    Lotteries and pari-mutuel losses                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108423","    Legal fees                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108433","    Funeral expenses                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108443","    Safe deposit box rental                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108453","    Checking accounts, other bank service charges           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108463","    Cemetery lots, vaults, maintenance fees                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108473","    Accounting fees                                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108483","    Miscellaneous personal services                         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108493","    Finance charges excluding mortgage and vehicle          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108503","    Occupational expenses                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108513","    Expenses for other properties                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108523","    Interest paid, home equity line of credit (other        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108533","    Credit card memberships                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108543","    Shopping club membership fees                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108552","  Cash contributions                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108563","    Support for college students (Sec. 19)                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108573","    Alimony expenditures (Sec 19)                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108583","    Child support expenditures (Sec. 19)                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108593","    Gift to non-CU members of stocks, bonds, and mutual fund","MEAN",0,0,0,0,0,0,0,0,0,0
+"108603","    Cash contributions to charities and other organizations ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108613","    Cash contributions to church, religious organizations   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108623","    Cash contribution to educational institutions           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108633","    Cash contribution to political organizations            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108643","    Other cash gifts                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108652","  Personal insurance and pensions                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108663","    Life and other personal insurance                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108674","      Life, endowment, annuity, other personal insurance    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108684","      Other nonhealth insurance                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108693","    Pensions and Social Security                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108704","      Deductions for government retirement                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108714","      Deductions for railroad retirement                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108724","      Deductions for private pensions                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108734","      Non-payroll deposit to retirement plans               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108744","      Deductions for Social Security                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108751","  Money income before taxes                                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108762","    Wages and salaries                                      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108772","    Self-employment income                                  ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108783","      Net business income                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108793","      Net farm income                                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108802","    Social Security, private and government retirement      ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108813","      Social Security and railroad retirement income        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108823","      Pensions and annuities                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108832","    Interest, dividends, rental income, other property incom","MEAN",0,0,0,0,0,0,0,0,0,0
+"108843","      Interest                                              ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108853","      Dividends, royalties, estates, trusts                 ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108863","      Roomer and boarder income                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108873","      Other rental income                                   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108882","    Unemployment and workers'' compensation, veterans''     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108893","      Unemployment compensation                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108903","      Workers'' compensation and veterans'' benefits        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108912","    Public assistance, supplemental security income, food   ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108923","      Supplemental security income                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108933","      Public assistance                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108943","      Food stamps                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108952","    Regular contributions for support                       ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108963","      Child support payments                                ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108973","      Other regular contributions including alimony         ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108982","    Other income                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"108993","      Meals as pay                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109003","      Rent as pay                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109013","      Other income                                          ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109021","  Personal taxes                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109032","    Federal income taxes                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109043","      Federal income tax                                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109053","      Federal income tax refunds                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109062","    State and local income taxes                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109073","      State and local income tax                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109083","      State and local income tax refunds                    ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109092","    Other taxes                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109103","      Personal property taxes                               ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109113","      Other taxes                                           ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109123","      Other tax refunds                                     ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109131","  Income after taxes                                        ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109142","    Meals as pay                                            ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109152","    Rent as pay                                             ","MEAN",0,0,0,0,0,0,0,0,0,0
+"109162","    Income after taxes                                      ","MEAN",0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,785 @@
+Prepare National Survey of Early Childhood Health (NSECH) Data 
+========================================================
+This document preps data (making use of information calculated in `data_prep_CES.Rmd` and `data_prep_ATUS`) from the NSECH. The NSECH data loaded (`datasech.csv`) is a converted version of the file available for download on the CDC website [here](http://www.cdc.gov/nchs/slaits/nsech.htm). The actual data file is in an `*.sd2` format. This is an older SAS format and cannot be read directly into R. This file was downloaded and converted using the SAS system viewer available for free [here](http://www.sas.com/apps/demosdownloads/sassysview_PROD_8.2_sysdep.jsp?packageID=000176). 
+
+```{r prelim_steps_SECH}
+#clear memory
+rm(list=ls(all=TRUE)) 
+
+#setwd("C:/Users/mienkoja/Dropbox/qp_analysis/ATUS/2003")
+setwd("~/Dropbox/qualpaper/")
+
+require(sqldf)  	# load the sqldf package (enables sql queries on data frames)
+
+set.seed(123456)
+
+load("~/Dropbox/qualpaper/cc_out.RData")
+load("~/Dropbox/qualpaper/atus_out.RData")
+dat <- read.csv("datasech.csv")
+```
+
+Load Variables Required for Analysis
+-------------------------
+The following script loads all of the variables required in the core analysis of the paper. A preliminary chunk defines a function `coalesce()` which accepts a list of vectors of identical length and returns one vector with the first non-NA value. This script was written by Eric Minikel and is documented in more detail [here](http://www.cureffi.org/2013/05/02/r-equivalent-of-sql-coalesce/). This function is helpful in defining flags across multiple curvey variables (e.g. `dev_cnc` as defined below).
+
+
+```{r define_coalesce_function}
+coalesce = function(...) {
+  # convert input arguments into a list of vectors
+  input_list = list(...)
+  # check that all input vectors are of same length
+  vectorlength = length(input_list[[1]])
+  for (j in 1:length(input_list)) {
+    if(length(input_list[[j]]) != vectorlength) {
+      stop(paste("Not all vectors are of same length. First vector length: ",vectorlength,". Vector #",j,"'s length: ",length(input_list[[j]]),sep=""))
+    }
+  }
+  # create a result vector to fill with first non-NA values
+  result = rep(NA,vectorlength)
+  # fill with first non-NA value
+  for (i in 1:length(result)) {
+    for (j in 1:length(input_list)) {
+      if(!is.na(input_list[[j]][i])) {
+        result[i] = input_list[[j]][i]
+        break
+      }
+    }
+  }
+  return(result)
+}
+```
+
+Having defined `coalesce()`, we now load all of the variables required for our analysis. These variables roughly mirror those used in previous NSECH reports examining abuse. 
+
+```{r load_req_SECH_vars}
+
+# load adult count
+m_adltcnt <- ifelse(as.vector(dat$A7Q01_AR)>=96, NA,as.vector(dat$A7Q01_AR)) 
+
+# load race 
+m_race <- ifelse(as.vector(dat$MOMRACER)>=96, NA,as.vector(dat$MOMRACER)) 
+
+#recalc race to white
+m_white <- ifelse(m_race==1, 1, ifelse(is.na(m_race)==TRUE, NA, 0))
+
+#load maternal age
+m_age <- ifelse(as.vector(dat$A7Q11R)>=96, NA,as.vector(dat$A7Q11R)) 
+
+#load marital status
+m_mar_stat <- ifelse(as.vector(dat$A7Q07)>=96, NA,as.vector(dat$A7Q07)) 
+
+#recalc married dummy
+m_mar <- ifelse(m_mar_stat==1, 1, ifelse(is.na(m_mar_stat)==TRUE, NA, 0))
+
+#load maternal education
+m_ed <- ifelse(as.vector(dat$I_EDUCM)>=96, NA,as.vector(dat$I_EDUCM)) 
+
+#recode to any collegde
+m_college <- ifelse(m_ed==3, 1, ifelse(is.na(m_ed)==TRUE, NA, 0))
+
+#load maternal frustration
+m_frus <- ifelse(as.vector(dat$A4Q05)>=6, NA,as.vector(dat$A4Q05)) 
+
+#recode to high frustration
+m_hi_frus <- ifelse(m_frus<3, 1, ifelse(is.na(m_frus)==TRUE, NA, 0))
+
+#load child health status
+c_health <- ifelse(as.vector(dat$A2Q08)>=6, NA,as.vector(dat$A2Q08)) 
+
+#recode to good health
+c_hi_health <- ifelse(c_health<3, 1, ifelse(is.na(c_health)==TRUE, NA, 0))
+
+#flag any developmental concern
+
+devq1 <- ifelse(dat$A5Q05X01 <= 2, 1, NA)
+devq2 <- ifelse(dat$A5Q05X02 <= 2, 1, NA)
+devq3 <- ifelse(dat$A5Q05X03 <= 2, 1, NA)
+devq4 <- ifelse(dat$A5Q05X04 <= 2, 1, NA)
+devq5 <- ifelse(dat$A5Q05X05 <= 2, 1, NA)
+devq6 <- ifelse(dat$A5Q05X06 <= 2, 1, NA)
+devq7 <- ifelse(dat$A5Q05X07 <= 2, 1, NA)
+devq8 <- ifelse(dat$A5Q05X08 <= 2, 1, NA)
+devq9 <- ifelse(dat$A5Q05X09 <= 2, 1, NA)
+devq10 <- ifelse(dat$A5Q05X10 <= 2, 1, NA)
+devq11 <- ifelse(dat$A5Q05X11 <= 2, 1, NA)
+
+dev_cnc <- coalesce(devq1, devq2, devq3, devq4, devq5, devq6, devq7, devq8, devq9, devq10, devq11) 
+dev_cnc[is.na(dev_cnc)] <- 0
+
+#load parental well-being
+m_wb1 <- ifelse(as.vector(dat$A5Q01X01)>=96, NA,as.vector(dat$A5Q01X01)) 
+m_wb2 <- ifelse(as.vector(dat$A5Q01X02)>=96, NA,as.vector(dat$A5Q01X02)) 
+m_wb3 <- ifelse(as.vector(dat$A5Q01X03)>=96, NA,as.vector(dat$A5Q01X03)) 
+m_wb4 <- ifelse(as.vector(dat$A5Q01X04)>=96, NA,as.vector(dat$A5Q01X04)) 
+m_wb5 <- ifelse(as.vector(dat$A5Q01X05)>=96, NA,as.vector(dat$A5Q01X05)) 
+
+# load child age
+c_age <- as.vector(dat$AAP_AGE)
+
+# load income
+inc <- as.vector(dat$XBESTINC)
+
+# load reports of positive punishment (yelling)
+pospn1 <- ifelse(as.vector(dat$A4Q07X01) > 4, NA, as.vector(dat$A4Q07X01))
+
+# load reports of positive punishment (spanking)
+pospn2 <- ifelse(as.vector(dat$A4Q07X02) > 4, NA, as.vector(dat$A4Q07X02))
+
+# load reports of negative punishment (toy takeaway)
+negpn1 <- ifelse(as.vector(dat$A4Q07X03) > 4, NA, as.vector(dat$A4Q07X03))
+
+# load reports of negative punishment (time out)
+negpn2 <- ifelse(as.vector(dat$A4Q07X04) > 4, NA, as.vector(dat$A4Q07X04))
+
+# load reports of positive punishment (talking about behavior)
+pospn3 <- ifelse(as.vector(dat$A4Q07X05) > 4, NA, as.vector(dat$A4Q07X05))
+
+# load reports of safety precautions (gates)
+safgt <- ifelse(as.vector(dat$A4Q08X01) > 4, NA, as.vector(dat$A4Q08X01))
+
+# load reports of safety precautions (locks)
+saflk <- ifelse(as.vector(dat$A4Q08X02) > 4, NA, as.vector(dat$A4Q08X02))
+
+# load reports of safety precautions (padding)
+safpd <- ifelse(as.vector(dat$A4Q08X03) > 4, NA, as.vector(dat$A4Q08X03))
+
+# load reports of safety precautions (block plugs)
+safbp <- ifelse(as.vector(dat$A4Q08X04) > 4, NA, as.vector(dat$A4Q08X04))
+
+# load reports of safety precautions (thermostat)
+safth <- ifelse(as.vector(dat$A4Q08X05) > 4, NA, as.vector(dat$A4Q08X05))
+
+# load count of children
+cnt_ch <- ifelse(as.vector(dat$NUMCHILR) == 97, NA, as.vector(dat$NUMCHILR))
+
+# load reports of reading
+read <- data.frame(read=ifelse(as.vector(dat$A4Q02X1R) > 4
+                               ,NA
+                               ,as.vector(dat$A4Q02X1R)))
+# load reports of singing
+sing <- data.frame(sing=ifelse(as.vector(dat$A4Q02X2R) > 4
+                               ,NA
+                               ,as.vector(dat$A4Q02X2R)))
+
+# load reports of transportation (for kids)
+trans <- data.frame(trans=ifelse(as.vector(dat$A4Q02X3R) > 4
+                                 ,NA
+                                 ,as.vector(dat$A4Q02X3R)))
+
+# load reports of dinner 
+dinner <- data.frame(dinner=ifelse(as.vector(dat$A4Q02X4R) > 4
+                                   ,NA
+                                   ,as.vector(dat$A4Q02X4R)))
+
+# load reports of breakfast
+breakf <- data.frame(breakf=ifelse(as.vector(dat$A4Q02X5R) > 4
+                                   ,NA
+                                   ,as.vector(dat$A4Q02X5R)))
+
+# load reports of childcare 
+childcare <- ifelse(as.vector(dat$A4Q10R)==995
+                    ,0
+                    ,ifelse(as.vector(dat$A4Q10R)<995
+                            ,as.vector(dat$A4Q10R)
+                            ,NA)
+                    )
+
+# load reports of childcare setting
+care_stg <- as.vector(dat$A4Q12)
+
+# load employment status
+emp <- as.vector(dat$A7Q08R)
+```
+
+"Smooth" Ordinal and Nominal Variables
+-------------------------
+In order to complete the proposed analysis, we need to have continuous measures of wealth and of the time spent with children in various activities. The responses from the NSECH do not provide us with this - they provide us with bounded ordinal measures of income. Having defined "priors" from a reasonable income distribution, the American Time Use Survey (ATUS), and the Consumer Expenditure Survey (CES), we can make use of our bounded ordinal measures to sample continuous data into our bounded ordinal measures. At some point, it would be helpful to write a function to help this along. The basic algorithm works as follows: 
+
+1. Define a dataframe with high and low categories from the bounded ordinal measure. 
+2. Define a vector of samples from an appropriate prior distribution (as we did in the CES and ATUS scripts).  
+3. Loop through each value provided in the survey. 
+  * For each value, sample a value from the prior distribution. 
+  * For time use measures, sample seperately for different levels of employment. 
+
+The following chunks of code accomplish this task. 
+
+### Smooth Income
+
+```{r smooth_income, tidy=FALSE, cache=TRUE}
+# calculate a dataframe with high and low income categories 
+inc <- as.data.frame(inc)
+inc <- sqldf("select
+             inc
+             ,case 
+             when inc = 1 then 0
+             when inc = 2 then 7501
+             when inc = 3 then 17501
+             when inc = 4 then 25001
+             when inc = 5 then 35001
+             when inc = 6 then 45001
+             when inc = 7 then 60001
+             when inc = 8 then 75001
+             else null
+             end minimum
+             ,case 
+             when inc = 1 then 7500
+             when inc = 2 then 17500
+             when inc = 3 then 25000
+             when inc = 4 then 35000
+             when inc = 5 then 45000
+             when inc = 6 then 60000
+             when inc = 7 then 75000
+             when inc = 8 then 100000
+             else null
+             end maximum
+             from inc")
+
+#create a dataframe with the income prior calculated above
+inc_prior <- data.frame(inc_prior=inc_prior)
+
+#extract the maximum value of the income prior and set that value as the upper limit of inc = 8
+inc$maximum <- ifelse(inc$maximum==100000, max(inc_prior), inc$maximum)
+
+#calculate the number of observations
+obs <- length(inc[,1])
+
+#create an empty vector to hold simulated income values
+inc_est <- rep(NA, obs)
+
+#loop through each income value provided in the survey
+for (i in 1:obs){
+  inc_est[i] <- sample(inc_prior[inc_prior$inc_prior >= inc[i,2] & 
+                                   inc_prior$inc_prior <= inc[i,3], ], 1)
+}
+
+```
+
+### Smooth Reading
+
+```{r smooth_reading, cache=TRUE, tidy=FALSE}
+read <- sqldf("select
+              case 
+              when read = 1 then 7
+              when read = 2 then 3
+              when read = 3 then 1
+              when read = 4 then 0
+              end min_read
+              ,case 
+              when read = 1 then 7
+              when read = 2 then 6
+              when read = 3 then 2
+              when read = 4 then 0
+              end max_read
+              from read")
+
+read$emp <- emp
+
+read$min_read <- ifelse(read$min_read == 0, 0
+                        ,ifelse(read$min_read > 0
+                                ,60/(-read$min_read+8), NA)
+)
+
+read$max_read <- ifelse(read$max_read == 0, 0
+                        ,ifelse(read$max_read > 0
+                                ,60/(-read$max_read+8), NA)
+)
+
+read$max_read <- ifelse(read$max_read==60
+                        ,max(read_prior_emp)
+                        ,read$max_read)
+
+read_prior_emp <- data.frame(read_prior_emp=read_prior_emp)
+read_prior_unemp <- data.frame(read_prior_unemp=read_prior_unemp)
+
+read_est <- rep(NA, obs)
+
+for (i in 1:obs){
+  if(read[i,3]==1|read[i,3]==2){
+    read_est[i] <- sample(read_prior_emp[read_prior_emp$read_prior_emp >= read[i,1] & 
+                                           read_prior_emp$read_prior_emp <= read[i,2], ], 1)
+  } else if(read[i,3]==3){
+    read_est[i] <- sample(read_prior_unemp[read_prior_unemp$read_prior_unemp >= read[i,1] & 
+                                             read_prior_unemp$read_prior_unemp <= read[i,2], ], 1)
+  } else {
+    read_est[i] <- NA
+  }
+}
+
+```
+
+### Smooth Singing
+
+```{r smooth_singing, cache=TRUE, tidy=FALSE}
+
+sing <- sqldf("select
+              case 
+              when sing = 1 then 7
+              when sing = 2 then 3
+              when sing = 3 then 1
+              when sing = 4 then 0
+              end min_sing
+              ,case 
+              when sing = 1 then 7
+              when sing = 2 then 6
+              when sing = 3 then 2
+              when sing = 4 then 0
+              end max_sing
+              from sing")
+sing$emp <- emp
+
+sing$min_sing <- ifelse(sing$min_sing == 0, 0
+                        ,ifelse(sing$min_sing > 0
+                                ,60/(-sing$min_sing+8), NA)
+)
+
+sing$max_sing <- ifelse(sing$max_sing == 0, 0
+                        ,ifelse(sing$max_sing > 0
+                                ,60/(-sing$max_sing+8), NA)
+)
+
+sing$max_sing <- ifelse(sing$max_sing==60
+                        ,max(sing_prior_emp)
+                        ,sing$max_sing)
+
+
+sing_prior_emp <- data.frame(sing_prior_emp=sing_prior_emp)
+sing_prior_unemp <- data.frame(sing_prior_unemp=sing_prior_unemp)
+
+sing_est <- rep(NA, obs)
+
+for (i in 1:obs){
+  if(sing[i,3]==1|sing[i,3]==2){
+    sing_est[i] <- sample(sing_prior_emp[sing_prior_emp$sing_prior_emp >= sing[i,1] & 
+                                           sing_prior_emp$sing_prior_emp <= sing[i,2], ], 1)
+  } else if(sing[i,3]==3){
+    sing_est[i] <- sample(sing_prior_unemp[sing_prior_unemp$sing_prior_unemp >= sing[i,1] & 
+                                             sing_prior_unemp$sing_prior_unemp <= sing[i,2], ], 1)
+  } else {
+    sing_est[i] <- NA
+  }
+}
+```
+
+### Smooth Transportation
+
+```{r smooth_transport, cache=TRUE, tidy=FALSE}
+
+trans <- sqldf("select
+               case 
+               when trans = 1 then 7
+               when trans = 2 then 3
+               when trans = 3 then 1
+               when trans = 4 then 0
+               end min_trans
+               ,case 
+               when trans = 1 then 7
+               when trans = 2 then 6
+               when trans = 3 then 2
+               when trans = 4 then 0
+               end max_trans
+               from trans")
+trans$emp <- emp
+
+trans$min_trans <- ifelse(trans$min_trans == 0, 0
+                          ,ifelse(trans$min_trans > 0
+                                  ,60/(-trans$min_trans+8), NA)
+)
+
+trans$max_trans <- ifelse(trans$max_trans == 0, 0
+                          ,ifelse(trans$max_trans > 0
+                                  ,60/(-trans$max_trans+8), NA)
+)
+
+trans$max_trans <- ifelse(trans$max_trans==60
+                          ,max(trans_prior_emp)
+                          ,trans$max_trans)
+
+
+trans_prior_emp <- data.frame(trans_prior_emp=trans_prior_emp)
+trans_prior_unemp <- data.frame(trans_prior_unemp=trans_prior_unemp)
+
+trans_est <- rep(NA, obs)
+
+for (i in 1:obs){
+  if(trans[i,3]==1|trans[i,3]==2){
+    trans_est[i] <- sample(trans_prior_emp[trans_prior_emp$trans_prior_emp >= trans[i,1] & 
+                                             trans_prior_emp$trans_prior_emp <= trans[i,2], ], 1)
+  } else if(trans[i,3]==3){
+    trans_est[i] <- sample(trans_prior_unemp[trans_prior_unemp$trans_prior_unemp >= trans[i,1] & 
+                                               trans_prior_unemp$trans_prior_unemp <= trans[i,2], ], 1)
+  } else {
+    trans_est[i] <- NA
+  }
+}
+```
+
+### Smooth Dinner
+
+```{r smooth_dinner, cache=TRUE, tidy=FALSE}
+
+dinner_prior_unemp <- meal_prior_unemp
+dinner_prior_emp <- meal_prior_emp
+
+dinner <- sqldf("select
+                case 
+                when dinner = 1 then 7
+                when dinner = 2 then 3
+                when dinner = 3 then 1
+                when dinner = 4 then 0
+                end min_dinner
+                ,case 
+                when dinner = 1 then 7
+                when dinner = 2 then 6
+                when dinner = 3 then 2
+                when dinner = 4 then 0
+                end max_dinner
+                from dinner")
+dinner$emp <- emp
+
+dinner$min_dinner <- ifelse(dinner$min_dinner == 0, 0
+                            ,ifelse(dinner$min_dinner > 0
+                                    ,60/(-dinner$min_dinner+8), NA)
+)
+
+dinner$max_dinner <- ifelse(dinner$max_dinner == 0, 0
+                            ,ifelse(dinner$max_dinner > 0
+                                    ,60/(-dinner$max_dinner+8), NA)
+)
+
+dinner$max_dinner <- ifelse(dinner$max_dinner==60
+                            ,max(dinner_prior_emp)
+                            ,dinner$max_dinner)
+
+
+dinner_prior_emp <- data.frame(dinner_prior_emp=dinner_prior_emp)
+dinner_prior_unemp <- data.frame(dinner_prior_unemp=dinner_prior_unemp)
+
+dinner_est <- rep(NA, obs)
+
+for (i in 1:obs){
+  if(dinner[i,3]==1|dinner[i,3]==2){
+    dinner_est[i] <- sample(dinner_prior_emp[dinner_prior_emp$dinner_prior_emp >= dinner[i,1] & 
+                                               dinner_prior_emp$dinner_prior_emp <= dinner[i,2], ], 1)
+  } else if(dinner[i,3]==3){
+    dinner_est[i] <- sample(dinner_prior_unemp[dinner_prior_unemp$dinner_prior_unemp >= dinner[i,1] & 
+                                                 dinner_prior_unemp$dinner_prior_unemp <= dinner[i,2], ], 1)
+  } else {
+    dinner_est[i] <- NA
+  }
+}
+```
+
+### Smooth Breakfast
+
+```{r smooth_breakfast, cache=TRUE, tidy=FALSE}
+
+breakf_prior_unemp <- meal_prior_unemp
+breakf_prior_emp <- meal_prior_emp
+
+breakf <- sqldf("select
+                case 
+                when breakf = 1 then 7
+                when breakf = 2 then 3
+                when breakf = 3 then 1
+                when breakf = 4 then 0
+                end min_breakf
+                ,case 
+                when breakf = 1 then 7
+                when breakf = 2 then 6
+                when breakf = 3 then 2
+                when breakf = 4 then 0
+                end max_breakf
+                from breakf")
+breakf$emp <- emp
+
+
+breakf$min_breakf <- ifelse(breakf$min_breakf == 0, 0
+                            ,ifelse(breakf$min_breakf > 0
+                                    ,60/(-breakf$min_breakf+8), NA)
+)
+
+breakf$max_breakf <- ifelse(breakf$max_breakf == 0, 0
+                            ,ifelse(breakf$max_breakf > 0
+                                    ,60/(-breakf$max_breakf+8), NA)
+)
+
+breakf$max_breakf <- ifelse(breakf$max_breakf==60
+                            ,max(breakf_prior_emp)
+                            ,breakf$max_breakf)
+
+
+breakf_prior_emp <- data.frame(breakf_prior_emp=breakf_prior_emp)
+breakf_prior_unemp <- data.frame(breakf_prior_unemp=breakf_prior_unemp)
+
+breakf_est <- rep(NA, obs)
+
+for (i in 1:obs){
+  if(breakf[i,3]==1|breakf[i,3]==2){
+    breakf_est[i] <- sample(breakf_prior_emp[breakf_prior_emp$breakf_prior_emp >= breakf[i,1] & 
+                                               breakf_prior_emp$breakf_prior_emp <= breakf[i,2], ], 1)
+  } else if(breakf[i,3]==3){
+    breakf_est[i] <- sample(breakf_prior_unemp[breakf_prior_unemp$breakf_prior_unemp >= breakf[i,1] & 
+                                                 breakf_prior_unemp$breakf_prior_unemp <= breakf[i,2], ], 1)
+  } else {
+    breakf_est[i] <- NA
+  }
+}
+```
+
+### Combine Time Estimates
+
+This section binds all of the time use estimates into a single dataframe and sums in order to calculate a total annual hours committed to children (`t_ca`)
+
+```{r combine_time_est, cache=TRUE, tidy=FALSE}
+#clean up RAM
+gc()
+
+t_c <- data.frame(read=read_est
+                  ,sing=sing_est
+                  ,trans=trans_est
+                  ,dinner=dinner_est
+                  ,breakf=breakf_est)
+t_c <- rowSums(t_c)
+t_ca <- t_c*365.25/60
+```
+
+Estimate an Annual Childcare Expenditure
+-------------------------
+Here I use estimates from the consumer expenditure survey to calculate an estimated childcare expenditure per year based on the maternal responses in the SECH. Here, the mothers responded with an actual number of hours that children spend in childcare during a given week (`childcare`). I use a different distribution (i.e. `cc_own`, `cc_ctr`, or `cc_oth`) depending on the care setting (`care_stg`) indicated by the mother. 
+
+```{r cc_est, cache=TRUE, tidy=FALSE}
+# bind relevant variables into a dataframe
+childcare <- data.frame(childcare = childcare)
+childcare$care_stg <- care_stg
+
+# create an empty vector 
+x_c <- rep(NA, obs)
+
+#childcare*(cc_cost/4/40)*52 = 0.29575*cc_cost*childcare
+
+# loop through every survey value
+for (i in 1:obs){
+  if(!is.na(childcare[i,2]) & childcare[i,2]==1){
+    x_c[i] <- childcare[i,1]*(cc_own/4/40)*52
+  } else if(!is.na(childcare[i,2]) & childcare[i,2]==2){
+    x_c[i] <- childcare[i,1]*(cc_oth/4/40)*52  
+  } else if(!is.na(childcare[i,2]) & childcare[i,2]==3){
+    x_c[i] <- childcare[i,1]*(cc_ctr/4/40)*52
+  } else {
+    x_c[i] <- childcare[i,1]*(mean(c(cc_ctr, cc_oth, cc_own))/4/40)*52
+  }
+}
+```
+
+
+Define Key Economic and Dependent Variables for analysis
+-------------------------
+
+```{r key_vars, cache=TRUE, tidy=FALSE}
+# next calculate an hourly wage for the parents using the mc work hour sims from atus                                  
+
+hrs_est <- rep(NA, obs)
+for (i in 1:obs){
+  hrs_est[i] <- ifelse(emp[i]==1, sample(x=mc_hrs_ft, size=1, replace=TRUE),
+                       ifelse(emp[i]==2, sample(x=mc_hrs_pt, size=1, replace=TRUE), 
+                              ifelse(emp[i]==3|emp[i]==4, 0, NA)))
+}
+
+#wage from income (w_i) (hourly)
+w_i <- (inc_est/m_adltcnt)/(365.25*hrs_est)
+
+#calculate the child time multiplier (w_i for working mothers, market rate for childcare otherwise)
+cc_mlt <- ifelse(w_i == Inf, 104/31, w_i)
+
+#calculate alpha (constraining values to below 1...this only effects 18 values)
+#alpha <- log(t_ca*cc_mlt + x_c)/log((cc_mlt*365.25*24))
+#alpha <- ifelse(alpha > 1, 1, alpha)
+alpha <- (t_ca*cc_mlt + x_c)/((cc_mlt*365.25*24))
+alpha <- ifelse(alpha > 1, 1, alpha)
+
+#wage from endowment (w_e) (annual)
+w_ea <- ifelse(w_i==Inf, inc_est, 0) 
+
+#recode wealth from income (annual)
+w_ia <- w_i*40*52
+
+#total wealth from income and endowments
+w_ta <- inc_est 
+
+#total time available (minus work hours)
+t_ta <- (24*365.25)-hrs_est
+
+#total time value available
+t_tva <- t_ta*w_i
+
+#total time value spent on children using the Reid (1934) standard 
+#outlined in A Framework for Nonmarket Accounting
+t_tvc <- t_ca*cc_mlt
+
+#implicit time value spent on parent
+t_tvp <- t_tva-t_tvc
+
+#time value for the whole year
+#for working parents multiply by w_i
+#if w_i not available, multiply by mean(cc_own, cc_oth, cc_ctr)
+t_v <- w_i * 365*24
+
+# load reports of negative punishment (toy takeaway)
+negpn1 <- ifelse(as.vector(dat$A4Q07X03) > 4, NA, as.vector(dat$A4Q07X03))
+
+# load reports of negative punishment (time out)
+negpn2 <- ifelse(as.vector(dat$A4Q07X04) > 4, NA, as.vector(dat$A4Q07X04))
+
+# load reports of positive punishment (talking about behavior)
+pospn3 <- ifelse(as.vector(dat$A4Q07X05) > 4, NA, as.vector(dat$A4Q07X05))
+
+#recode yelling
+pospn1_bin <- ifelse(pospn1 < 4, 1, 0)
+
+#recode spanking
+pospn2_bin <- ifelse(pospn2 < 4, 1, 0)
+
+#recode toy takeaway
+negpn1_bin <- ifelse(negpn1 < 4, 1, 0)
+
+#recode time-out
+negpn2_bin <- ifelse(negpn2 < 4, 1, 0)
+
+#recode talking about behavior
+pospn3_bin <- ifelse(pospn3 < 4, 1, 0)
+
+#recode gate safety gates
+safgt_bin <- ifelse(safgt == 3 | safgt == 7, NA
+                    ,ifelse(safgt == 1, 1, 0)
+                    )
+
+#recode gate safety locks
+saflk_bin <- ifelse(saflk == 3 | saflk == 7, NA
+                    ,ifelse(saflk == 1, 1, 0)
+)
+
+#recode padding precautions
+safpd_bin <- ifelse(safpd == 3 | safpd == 7, NA
+                    ,ifelse(safpd == 1, 1, 0)
+)
+
+#recode gate safety plug blocks
+safbp_bin <- ifelse(safbp == 3 | safbp == 7, NA
+                    ,ifelse(safbp == 1, 1, 0)
+)
+
+
+# recode thermostat safety
+safth_bin <- ifelse(safth == 3 | safth == 7, NA
+                    ,ifelse(safth == 1, 1, 0)
+)
+
+```
+
+
+Pull Key Variables Together
+-------------------------
+
+```{r combine_vars, tidy=FALSE}
+
+r_dat <- data.frame(id=seq(1:2068)
+                    ,c_age
+                    ,cnt_ch
+                    ,m_white 
+                    ,m_age
+                    ,m_mar 
+                    ,m_college
+                    ,m_hi_frus
+                    ,c_health 
+                    ,c_hi_health                    
+                    ,dev_cnc
+                   ,w_ta
+                   ,t_ta
+                   ,t_tvc
+                   ,x_c
+                   ,inc_est
+                   ,t_ca
+                   ,cc_mlt
+                   ,x_c
+                   ,pospn1_bin
+                   ,pospn1
+                   ,pospn2_bin
+                   ,pospn2
+                   ,negpn1_bin
+                   ,negpn1
+                   ,negpn2_bin
+                   ,negpn2
+                   ,pospn3_bin
+                   ,pospn3
+                   ,safgt_bin
+                   ,safgt
+                   ,saflk_bin
+                   ,saflk
+                   ,safpd_bin
+                   ,safpd
+                   ,safbp_bin
+                   ,safbp
+                   ,safth_bin
+                   ,safth
+                   ,alpha)
+```
+
+Calculate Probability of All Negative Discipline
+-------------------------
+
+```{r calc_p_all_neg, tidy=FALSE}
+pospn1_bin0 <- pospn1_bin
+pospn2_bin0 <- pospn2_bin
+pospn3_bin0 <- pospn3_bin
+negpn1_bin0 <- negpn1_bin
+negpn2_bin0 <- negpn2_bin
+
+safgt_bin0 <- safgt_bin
+safpd_bin0 <- safpd_bin
+saflk_bin0 <- saflk_bin
+safbp_bin0 <- safbp_bin
+safth_bin0 <- safth_bin
+
+pospn1_bin0[is.na(pospn1_bin0)] <- 0
+pospn2_bin0[is.na(pospn2_bin0)] <- 0
+pospn3_bin0[is.na(pospn3_bin0)] <- 0
+negpn1_bin0[is.na(negpn1_bin0)] <- 0
+negpn2_bin0[is.na(negpn2_bin0)] <- 0
+safgt_bin0[is.na(safgt_bin0)] <- 0
+safpd_bin0[is.na(safpd_bin0)] <- 0
+saflk_bin0[is.na(saflk_bin0)] <- 0
+safbp_bin0[is.na(safbp_bin0)] <- 0
+safth_bin0[is.na(safth_bin0)] <- 0
+
+pos_count <- rowSums(data.frame(pospn1_bin0, pospn2_bin0, pospn3_bin0))
+neg_count <- rowSums(data.frame(negpn1_bin0, negpn2_bin0))
+saf_count <- rowSums(data.frame(safgt_bin0, safpd_bin0, saflk_bin0, safbp_bin0, safth_bin0))
+
+dis_strat <- data.frame(id=seq(1:obs)
+                        ,dis_strat=rep(NA, obs)
+                        ,pos_count
+                        ,neg_count
+                        ,saf_count)
+for (i in 1:obs){
+  if(pos_count[i]>0 & neg_count[i]==0){
+    dis_strat[i,2] <- 0
+  }else if(neg_count[i]>0 & pos_count[i]==0){
+    dis_strat[i,2] <- 1
+  }else{
+    dis_strat[i,2] <- "mixture"
+  }  
+}
+
+r_dat <- sqldf("select 
+               r.*
+               ,dis_strat
+               ,pos_count
+               ,neg_count
+               ,saf_count
+               from r_dat r
+               join dis_strat ds
+               on r.id=ds.id")
+
+#rm(list=setdiff(ls(), "r_dat"))
+save.image("~/Dropbox/qualpaper/sech_out.RData")
+```

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Prepare National Survey of Early Childhood Health (NSECH) Data </title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>Prepare National Survey of Early Childhood Health (NSECH) Data </h1>
+
+<p>This document preps data (making use of information calculated in <code>data_prep_CES.Rmd</code> and <code>data_prep_ATUS</code>) from the NSECH. The NSECH data loaded (<code>datasech.csv</code>) is a converted version of the file available for download on the CDC website <a href="http://www.cdc.gov/nchs/slaits/nsech.htm">here</a>. The actual data file is in an <code>*.sd2</code> format. This is an older SAS format and cannot be read directly into R. This file was downloaded and converted using the SAS system viewer available for free <a href="http://www.sas.com/apps/demosdownloads/sassysview_PROD_8.2_sysdep.jsp?packageID=000176">here</a>. </p>
+
+<pre><code class="r"># clear memory
+rm(list = ls(all = TRUE))
+
+# setwd(&#39;C:/Users/mienkoja/Dropbox/qp_analysis/ATUS/2003&#39;)
+setwd(&quot;~/Dropbox/qualpaper/&quot;)
+
+require(sqldf)  # load the sqldf package (enables sql queries on data frames)
+</code></pre>
+
+<pre><code>## Loading required package: sqldf
+## Loading required package: gsubfn
+## Loading required package: proto
+## Loading required namespace: tcltk
+## Loading required package: RSQLite
+## Loading required package: DBI
+## Loading required package: RSQLite.extfuns
+</code></pre>
+
+<pre><code class="r">
+set.seed(123456)
+
+load(&quot;~/Dropbox/qualpaper/cc_out.RData&quot;)
+load(&quot;~/Dropbox/qualpaper/atus_out.RData&quot;)
+dat &lt;- read.csv(&quot;datasech.csv&quot;)
+</code></pre>
+
+<h2>Load Variables Required for Analysis</h2>
+
+<p>The following script loads all of the variables required in the core analysis of the paper. A preliminary chunk defines a function <code>coalesce()</code> which accepts a list of vectors of identical length and returns one vector with the first non-NA value. This script was written by Eric Minikel and is documented in more detail <a href="http://www.cureffi.org/2013/05/02/r-equivalent-of-sql-coalesce/">here</a>. This function is helpful in defining flags across multiple curvey variables (e.g. <code>dev_cnc</code> as defined below).</p>
+
+<pre><code class="r">coalesce = function(...) {
+    # convert input arguments into a list of vectors
+    input_list = list(...)
+    # check that all input vectors are of same length
+    vectorlength = length(input_list[[1]])
+    for (j in 1:length(input_list)) {
+        if (length(input_list[[j]]) != vectorlength) {
+            stop(paste(&quot;Not all vectors are of same length. First vector length: &quot;, 
+                vectorlength, &quot;. Vector #&quot;, j, &quot;&#39;s length: &quot;, length(input_list[[j]]), 
+                sep = &quot;&quot;))
+        }
+    }
+    # create a result vector to fill with first non-NA values
+    result = rep(NA, vectorlength)
+    # fill with first non-NA value
+    for (i in 1:length(result)) {
+        for (j in 1:length(input_list)) {
+            if (!is.na(input_list[[j]][i])) {
+                result[i] = input_list[[j]][i]
+                break
+            }
+        }
+    }
+    return(result)
+}
+</code></pre>
+
+<p>Having defined <code>coalesce()</code>, we now load all of the variables required for our analysis. These variables roughly mirror those used in previous NSECH reports examining abuse. </p>
+
+<pre><code class="r">
+# load adult count
+m_adltcnt &lt;- ifelse(as.vector(dat$A7Q01_AR) &gt;= 96, NA, as.vector(dat$A7Q01_AR))
+
+# load race
+m_race &lt;- ifelse(as.vector(dat$MOMRACER) &gt;= 96, NA, as.vector(dat$MOMRACER))
+
+# recalc race to white
+m_white &lt;- ifelse(m_race == 1, 1, ifelse(is.na(m_race) == TRUE, NA, 0))
+
+# load maternal age
+m_age &lt;- ifelse(as.vector(dat$A7Q11R) &gt;= 96, NA, as.vector(dat$A7Q11R))
+
+# load marital status
+m_mar_stat &lt;- ifelse(as.vector(dat$A7Q07) &gt;= 96, NA, as.vector(dat$A7Q07))
+
+# recalc married dummy
+m_mar &lt;- ifelse(m_mar_stat == 1, 1, ifelse(is.na(m_mar_stat) == TRUE, NA, 0))
+
+# load maternal education
+m_ed &lt;- ifelse(as.vector(dat$I_EDUCM) &gt;= 96, NA, as.vector(dat$I_EDUCM))
+
+# recode to any collegde
+m_college &lt;- ifelse(m_ed == 3, 1, ifelse(is.na(m_ed) == TRUE, NA, 0))
+
+# load maternal frustration
+m_frus &lt;- ifelse(as.vector(dat$A4Q05) &gt;= 6, NA, as.vector(dat$A4Q05))
+
+# recode to high frustration
+m_hi_frus &lt;- ifelse(m_frus &lt; 3, 1, ifelse(is.na(m_frus) == TRUE, NA, 0))
+
+# load child health status
+c_health &lt;- ifelse(as.vector(dat$A2Q08) &gt;= 6, NA, as.vector(dat$A2Q08))
+
+# recode to good health
+c_hi_health &lt;- ifelse(c_health &lt; 3, 1, ifelse(is.na(c_health) == TRUE, NA, 0))
+
+# flag any developmental concern
+
+devq1 &lt;- ifelse(dat$A5Q05X01 &lt;= 2, 1, NA)
+devq2 &lt;- ifelse(dat$A5Q05X02 &lt;= 2, 1, NA)
+devq3 &lt;- ifelse(dat$A5Q05X03 &lt;= 2, 1, NA)
+devq4 &lt;- ifelse(dat$A5Q05X04 &lt;= 2, 1, NA)
+devq5 &lt;- ifelse(dat$A5Q05X05 &lt;= 2, 1, NA)
+devq6 &lt;- ifelse(dat$A5Q05X06 &lt;= 2, 1, NA)
+devq7 &lt;- ifelse(dat$A5Q05X07 &lt;= 2, 1, NA)
+devq8 &lt;- ifelse(dat$A5Q05X08 &lt;= 2, 1, NA)
+devq9 &lt;- ifelse(dat$A5Q05X09 &lt;= 2, 1, NA)
+devq10 &lt;- ifelse(dat$A5Q05X10 &lt;= 2, 1, NA)
+devq11 &lt;- ifelse(dat$A5Q05X11 &lt;= 2, 1, NA)
+
+dev_cnc &lt;- coalesce(devq1, devq2, devq3, devq4, devq5, devq6, devq7, devq8, 
+    devq9, devq10, devq11)
+dev_cnc[is.na(dev_cnc)] &lt;- 0
+
+# load parental well-being
+m_wb1 &lt;- ifelse(as.vector(dat$A5Q01X01) &gt;= 96, NA, as.vector(dat$A5Q01X01))
+m_wb2 &lt;- ifelse(as.vector(dat$A5Q01X02) &gt;= 96, NA, as.vector(dat$A5Q01X02))
+m_wb3 &lt;- ifelse(as.vector(dat$A5Q01X03) &gt;= 96, NA, as.vector(dat$A5Q01X03))
+m_wb4 &lt;- ifelse(as.vector(dat$A5Q01X04) &gt;= 96, NA, as.vector(dat$A5Q01X04))
+m_wb5 &lt;- ifelse(as.vector(dat$A5Q01X05) &gt;= 96, NA, as.vector(dat$A5Q01X05))
+
+# load child age
+c_age &lt;- as.vector(dat$AAP_AGE)
+
+# load income
+inc &lt;- as.vector(dat$XBESTINC)
+
+# load reports of positive punishment (yelling)
+pospn1 &lt;- ifelse(as.vector(dat$A4Q07X01) &gt; 4, NA, as.vector(dat$A4Q07X01))
+
+# load reports of positive punishment (spanking)
+pospn2 &lt;- ifelse(as.vector(dat$A4Q07X02) &gt; 4, NA, as.vector(dat$A4Q07X02))
+
+# load reports of negative punishment (toy takeaway)
+negpn1 &lt;- ifelse(as.vector(dat$A4Q07X03) &gt; 4, NA, as.vector(dat$A4Q07X03))
+
+# load reports of negative punishment (time out)
+negpn2 &lt;- ifelse(as.vector(dat$A4Q07X04) &gt; 4, NA, as.vector(dat$A4Q07X04))
+
+# load reports of positive punishment (talking about behavior)
+pospn3 &lt;- ifelse(as.vector(dat$A4Q07X05) &gt; 4, NA, as.vector(dat$A4Q07X05))
+
+# load reports of safety precautions (gates)
+safgt &lt;- ifelse(as.vector(dat$A4Q08X01) &gt; 4, NA, as.vector(dat$A4Q08X01))
+
+# load reports of safety precautions (locks)
+saflk &lt;- ifelse(as.vector(dat$A4Q08X02) &gt; 4, NA, as.vector(dat$A4Q08X02))
+
+# load reports of safety precautions (padding)
+safpd &lt;- ifelse(as.vector(dat$A4Q08X03) &gt; 4, NA, as.vector(dat$A4Q08X03))
+
+# load reports of safety precautions (block plugs)
+safbp &lt;- ifelse(as.vector(dat$A4Q08X04) &gt; 4, NA, as.vector(dat$A4Q08X04))
+
+# load reports of safety precautions (thermostat)
+safth &lt;- ifelse(as.vector(dat$A4Q08X05) &gt; 4, NA, as.vector(dat$A4Q08X05))
+
+# load count of children
+cnt_ch &lt;- ifelse(as.vector(dat$NUMCHILR) == 97, NA, as.vector(dat$NUMCHILR))
+
+# load reports of reading
+read &lt;- data.frame(read = ifelse(as.vector(dat$A4Q02X1R) &gt; 4, NA, as.vector(dat$A4Q02X1R)))
+# load reports of singing
+sing &lt;- data.frame(sing = ifelse(as.vector(dat$A4Q02X2R) &gt; 4, NA, as.vector(dat$A4Q02X2R)))
+
+# load reports of transportation (for kids)
+trans &lt;- data.frame(trans = ifelse(as.vector(dat$A4Q02X3R) &gt; 4, NA, as.vector(dat$A4Q02X3R)))
+
+# load reports of dinner
+dinner &lt;- data.frame(dinner = ifelse(as.vector(dat$A4Q02X4R) &gt; 4, NA, as.vector(dat$A4Q02X4R)))
+
+# load reports of breakfast
+breakf &lt;- data.frame(breakf = ifelse(as.vector(dat$A4Q02X5R) &gt; 4, NA, as.vector(dat$A4Q02X5R)))
+
+# load reports of childcare
+childcare &lt;- ifelse(as.vector(dat$A4Q10R) == 995, 0, ifelse(as.vector(dat$A4Q10R) &lt; 
+    995, as.vector(dat$A4Q10R), NA))
+
+# load reports of childcare setting
+care_stg &lt;- as.vector(dat$A4Q12)
+
+# load employment status
+emp &lt;- as.vector(dat$A7Q08R)
+</code></pre>
+
+<h2>&ldquo;Smooth&rdquo; Ordinal and Nominal Variables</h2>
+
+<p>In order to complete the proposed analysis, we need to have continuous measures of wealth and of the time spent with children in various activities. The responses from the NSECH do not provide us with this - they provide us with bounded ordinal measures of income. Having defined &ldquo;priors&rdquo; from a reasonable income distribution, the American Time Use Survey (ATUS), and the Consumer Expenditure Survey (CES), we can make use of our bounded ordinal measures to sample continuous data into our bounded ordinal measures. At some point, it would be helpful to write a function to help this along. The basic algorithm works as follows: </p>
+
+<ol>
+<li>Define a dataframe with high and low categories from the bounded ordinal measure. </li>
+<li>Define a vector of samples from an appropriate prior distribution (as we did in the CES and ATUS scripts).<br/></li>
+<li>Loop through each value provided in the survey. 
+
+<ul>
+<li>For each value, sample a value from the prior distribution. </li>
+<li>For time use measures, sample seperately for different levels of employment. </li>
+</ul></li>
+</ol>
+
+<p>The following chunks of code accomplish this task. </p>
+
+<h3>Smooth Income</h3>
+
+<pre><code class="r"># calculate a dataframe with high and low income categories 
+inc &lt;- as.data.frame(inc)
+inc &lt;- sqldf(&quot;select
+             inc
+             ,case 
+             when inc = 1 then 0
+             when inc = 2 then 7501
+             when inc = 3 then 17501
+             when inc = 4 then 25001
+             when inc = 5 then 35001
+             when inc = 6 then 45001
+             when inc = 7 then 60001
+             when inc = 8 then 75001
+             else null
+             end minimum
+             ,case 
+             when inc = 1 then 7500
+             when inc = 2 then 17500
+             when inc = 3 then 25000
+             when inc = 4 then 35000
+             when inc = 5 then 45000
+             when inc = 6 then 60000
+             when inc = 7 then 75000
+             when inc = 8 then 100000
+             else null
+             end maximum
+             from inc&quot;)
+</code></pre>
+
+<pre><code>## Loading required package: tcltk
+</code></pre>
+
+<pre><code class="r">
+#create a dataframe with the income prior calculated above
+inc_prior &lt;- data.frame(inc_prior=inc_prior)
+
+#extract the maximum value of the income prior and set that value as the upper limit of inc = 8
+inc$maximum &lt;- ifelse(inc$maximum==100000, max(inc_prior), inc$maximum)
+
+#calculate the number of observations
+obs &lt;- length(inc[,1])
+
+#create an empty vector to hold simulated income values
+inc_est &lt;- rep(NA, obs)
+
+#loop through each income value provided in the survey
+for (i in 1:obs){
+  inc_est[i] &lt;- sample(inc_prior[inc_prior$inc_prior &gt;= inc[i,2] &amp; 
+                                   inc_prior$inc_prior &lt;= inc[i,3], ], 1)
+}
+</code></pre>
+
+<h3>Smooth Reading</h3>
+
+<pre><code class="r">read &lt;- sqldf(&quot;select
+              case 
+              when read = 1 then 7
+              when read = 2 then 3
+              when read = 3 then 1
+              when read = 4 then 0
+              end min_read
+              ,case 
+              when read = 1 then 7
+              when read = 2 then 6
+              when read = 3 then 2
+              when read = 4 then 0
+              end max_read
+              from read&quot;)
+</code></pre>
+
+<pre><code>## Loading required package: tcltk
+</code></pre>
+
+<pre><code class="r">
+read$emp &lt;- emp
+
+read$min_read &lt;- ifelse(read$min_read == 0, 0
+                        ,ifelse(read$min_read &gt; 0
+                                ,60/(-read$min_read+8), NA)
+)
+
+read$max_read &lt;- ifelse(read$max_read == 0, 0
+                        ,ifelse(read$max_read &gt; 0
+                                ,60/(-read$max_read+8), NA)
+)
+
+read$max_read &lt;- ifelse(read$max_read==60
+                        ,max(read_prior_emp)
+                        ,read$max_read)
+
+read_prior_emp &lt;- data.frame(read_prior_emp=read_prior_emp)
+read_prior_unemp &lt;- data.frame(read_prior_unemp=read_prior_unemp)
+
+read_est &lt;- rep(NA, obs)
+
+for (i in 1:obs){
+  if(read[i,3]==1|read[i,3]==2){
+    read_est[i] &lt;- sample(read_prior_emp[read_prior_emp$read_prior_emp &gt;= read[i,1] &amp; 
+                                           read_prior_emp$read_prior_emp &lt;= read[i,2], ], 1)
+  } else if(read[i,3]==3){
+    read_est[i] &lt;- sample(read_prior_unemp[read_prior_unemp$read_prior_unemp &gt;= read[i,1] &amp; 
+                                             read_prior_unemp$read_prior_unemp &lt;= read[i,2], ], 1)
+  } else {
+    read_est[i] &lt;- NA
+  }
+}
+</code></pre>
+
+<h3>Smooth Singing</h3>
+
+<pre><code class="r">
+sing &lt;- sqldf(&quot;select
+              case 
+              when sing = 1 then 7
+              when sing = 2 then 3
+              when sing = 3 then 1
+              when sing = 4 then 0
+              end min_sing
+              ,case 
+              when sing = 1 then 7
+              when sing = 2 then 6
+              when sing = 3 then 2
+              when sing = 4 then 0
+              end max_sing
+              from sing&quot;)
+sing$emp &lt;- emp
+
+sing$min_sing &lt;- ifelse(sing$min_sing == 0, 0
+                        ,ifelse(sing$min_sing &gt; 0
+                                ,60/(-sing$min_sing+8), NA)
+)
+
+sing$max_sing &lt;- ifelse(sing$max_sing == 0, 0
+                        ,ifelse(sing$max_sing &gt; 0
+                                ,60/(-sing$max_sing+8), NA)
+)
+
+sing$max_sing &lt;- ifelse(sing$max_sing==60
+                        ,max(sing_prior_emp)
+                        ,sing$max_sing)
+
+
+sing_prior_emp &lt;- data.frame(sing_prior_emp=sing_prior_emp)
+sing_prior_unemp &lt;- data.frame(sing_prior_unemp=sing_prior_unemp)
+
+sing_est &lt;- rep(NA, obs)
+
+for (i in 1:obs){
+  if(sing[i,3]==1|sing[i,3]==2){
+    sing_est[i] &lt;- sample(sing_prior_emp[sing_prior_emp$sing_prior_emp &gt;= sing[i,1] &amp; 
+                                           sing_prior_emp$sing_prior_emp &lt;= sing[i,2], ], 1)
+  } else if(sing[i,3]==3){
+    sing_est[i] &lt;- sample(sing_prior_unemp[sing_prior_unemp$sing_prior_unemp &gt;= sing[i,1] &amp; 
+                                             sing_prior_unemp$sing_prior_unemp &lt;= sing[i,2], ], 1)
+  } else {
+    sing_est[i] &lt;- NA
+  }
+}
+</code></pre>
+
+<h3>Smooth Transportation</h3>
+
+<pre><code class="r">
+trans &lt;- sqldf(&quot;select
+               case 
+               when trans = 1 then 7
+               when trans = 2 then 3
+               when trans = 3 then 1
+               when trans = 4 then 0
+               end min_trans
+               ,case 
+               when trans = 1 then 7
+               when trans = 2 then 6
+               when trans = 3 then 2
+               when trans = 4 then 0
+               end max_trans
+               from trans&quot;)
+trans$emp &lt;- emp
+
+trans$min_trans &lt;- ifelse(trans$min_trans == 0, 0
+                          ,ifelse(trans$min_trans &gt; 0
+                                  ,60/(-trans$min_trans+8), NA)
+)
+
+trans$max_trans &lt;- ifelse(trans$max_trans == 0, 0
+                          ,ifelse(trans$max_trans &gt; 0
+                                  ,60/(-trans$max_trans+8), NA)
+)
+
+trans$max_trans &lt;- ifelse(trans$max_trans==60
+                          ,max(trans_prior_emp)
+                          ,trans$max_trans)
+
+
+trans_prior_emp &lt;- data.frame(trans_prior_emp=trans_prior_emp)
+trans_prior_unemp &lt;- data.frame(trans_prior_unemp=trans_prior_unemp)
+
+trans_est &lt;- rep(NA, obs)
+
+for (i in 1:obs){
+  if(trans[i,3]==1|trans[i,3]==2){
+    trans_est[i] &lt;- sample(trans_prior_emp[trans_prior_emp$trans_prior_emp &gt;= trans[i,1] &amp; 
+                                             trans_prior_emp$trans_prior_emp &lt;= trans[i,2], ], 1)
+  } else if(trans[i,3]==3){
+    trans_est[i] &lt;- sample(trans_prior_unemp[trans_prior_unemp$trans_prior_unemp &gt;= trans[i,1] &amp; 
+                                               trans_prior_unemp$trans_prior_unemp &lt;= trans[i,2], ], 1)
+  } else {
+    trans_est[i] &lt;- NA
+  }
+}
+</code></pre>
+
+<h3>Smooth Dinner</h3>
+
+<pre><code class="r">
+dinner_prior_unemp &lt;- meal_prior_unemp
+dinner_prior_emp &lt;- meal_prior_emp
+
+dinner &lt;- sqldf(&quot;select
+                case 
+                when dinner = 1 then 7
+                when dinner = 2 then 3
+                when dinner = 3 then 1
+                when dinner = 4 then 0
+                end min_dinner
+                ,case 
+                when dinner = 1 then 7
+                when dinner = 2 then 6
+                when dinner = 3 then 2
+                when dinner = 4 then 0
+                end max_dinner
+                from dinner&quot;)
+dinner$emp &lt;- emp
+
+dinner$min_dinner &lt;- ifelse(dinner$min_dinner == 0, 0
+                            ,ifelse(dinner$min_dinner &gt; 0
+                                    ,60/(-dinner$min_dinner+8), NA)
+)
+
+dinner$max_dinner &lt;- ifelse(dinner$max_dinner == 0, 0
+                            ,ifelse(dinner$max_dinner &gt; 0
+                                    ,60/(-dinner$max_dinner+8), NA)
+)
+
+dinner$max_dinner &lt;- ifelse(dinner$max_dinner==60
+                            ,max(dinner_prior_emp)
+                            ,dinner$max_dinner)
+
+
+dinner_prior_emp &lt;- data.frame(dinner_prior_emp=dinner_prior_emp)
+dinner_prior_unemp &lt;- data.frame(dinner_prior_unemp=dinner_prior_unemp)
+
+dinner_est &lt;- rep(NA, obs)
+
+for (i in 1:obs){
+  if(dinner[i,3]==1|dinner[i,3]==2){
+    dinner_est[i] &lt;- sample(dinner_prior_emp[dinner_prior_emp$dinner_prior_emp &gt;= dinner[i,1] &amp; 
+                                               dinner_prior_emp$dinner_prior_emp &lt;= dinner[i,2], ], 1)
+  } else if(dinner[i,3]==3){
+    dinner_est[i] &lt;- sample(dinner_prior_unemp[dinner_prior_unemp$dinner_prior_unemp &gt;= dinner[i,1] &amp; 
+                                                 dinner_prior_unemp$dinner_prior_unemp &lt;= dinner[i,2], ], 1)
+  } else {
+    dinner_est[i] &lt;- NA
+  }
+}
+</code></pre>
+
+<h3>Smooth Breakfast</h3>
+
+<pre><code class="r">
+breakf_prior_unemp &lt;- meal_prior_unemp
+breakf_prior_emp &lt;- meal_prior_emp
+
+breakf &lt;- sqldf(&quot;select
+                case 
+                when breakf = 1 then 7
+                when breakf = 2 then 3
+                when breakf = 3 then 1
+                when breakf = 4 then 0
+                end min_breakf
+                ,case 
+                when breakf = 1 then 7
+                when breakf = 2 then 6
+                when breakf = 3 then 2
+                when breakf = 4 then 0
+                end max_breakf
+                from breakf&quot;)
+breakf$emp &lt;- emp
+
+
+breakf$min_breakf &lt;- ifelse(breakf$min_breakf == 0, 0
+                            ,ifelse(breakf$min_breakf &gt; 0
+                                    ,60/(-breakf$min_breakf+8), NA)
+)
+
+breakf$max_breakf &lt;- ifelse(breakf$max_breakf == 0, 0
+                            ,ifelse(breakf$max_breakf &gt; 0
+                                    ,60/(-breakf$max_breakf+8), NA)
+)
+
+breakf$max_breakf &lt;- ifelse(breakf$max_breakf==60
+                            ,max(breakf_prior_emp)
+                            ,breakf$max_breakf)
+
+
+breakf_prior_emp &lt;- data.frame(breakf_prior_emp=breakf_prior_emp)
+breakf_prior_unemp &lt;- data.frame(breakf_prior_unemp=breakf_prior_unemp)
+
+breakf_est &lt;- rep(NA, obs)
+
+for (i in 1:obs){
+  if(breakf[i,3]==1|breakf[i,3]==2){
+    breakf_est[i] &lt;- sample(breakf_prior_emp[breakf_prior_emp$breakf_prior_emp &gt;= breakf[i,1] &amp; 
+                                               breakf_prior_emp$breakf_prior_emp &lt;= breakf[i,2], ], 1)
+  } else if(breakf[i,3]==3){
+    breakf_est[i] &lt;- sample(breakf_prior_unemp[breakf_prior_unemp$breakf_prior_unemp &gt;= breakf[i,1] &amp; 
+                                                 breakf_prior_unemp$breakf_prior_unemp &lt;= breakf[i,2], ], 1)
+  } else {
+    breakf_est[i] &lt;- NA
+  }
+}
+</code></pre>
+
+<h3>Combine Time Estimates</h3>
+
+<p>This section binds all of the time use estimates into a single dataframe and sums in order to calculate a total annual hours committed to children (<code>t_ca</code>)</p>
+
+<pre><code class="r">#clean up RAM
+gc()
+</code></pre>
+
+<pre><code>##           used (Mb) gc trigger (Mb) max used (Mb)
+## Ncells  512069 27.4     741108 39.6   667722 35.7
+## Vcells 2237820 17.1    4138456 31.6  4138424 31.6
+</code></pre>
+
+<pre><code class="r">
+t_c &lt;- data.frame(read=read_est
+                  ,sing=sing_est
+                  ,trans=trans_est
+                  ,dinner=dinner_est
+                  ,breakf=breakf_est)
+t_c &lt;- rowSums(t_c)
+t_ca &lt;- t_c*365.25/60
+</code></pre>
+
+<h2>Estimate an Annual Childcare Expenditure</h2>
+
+<p>Here I use estimates from the consumer expenditure survey to calculate an estimated childcare expenditure per year based on the maternal responses in the SECH. Here, the mothers responded with an actual number of hours that children spend in childcare during a given week (<code>childcare</code>). I use a different distribution (i.e. <code>cc_own</code>, <code>cc_ctr</code>, or <code>cc_oth</code>) depending on the care setting (<code>care_stg</code>) indicated by the mother. </p>
+
+<pre><code class="r"># bind relevant variables into a dataframe
+childcare &lt;- data.frame(childcare = childcare)
+childcare$care_stg &lt;- care_stg
+
+# create an empty vector 
+x_c &lt;- rep(NA, obs)
+
+#childcare*(cc_cost/4/40)*52 = 0.29575*cc_cost*childcare
+
+# loop through every survey value
+for (i in 1:obs){
+  if(!is.na(childcare[i,2]) &amp; childcare[i,2]==1){
+    x_c[i] &lt;- childcare[i,1]*(cc_own/4/40)*52
+  } else if(!is.na(childcare[i,2]) &amp; childcare[i,2]==2){
+    x_c[i] &lt;- childcare[i,1]*(cc_oth/4/40)*52  
+  } else if(!is.na(childcare[i,2]) &amp; childcare[i,2]==3){
+    x_c[i] &lt;- childcare[i,1]*(cc_ctr/4/40)*52
+  } else {
+    x_c[i] &lt;- childcare[i,1]*(mean(c(cc_ctr, cc_oth, cc_own))/4/40)*52
+  }
+}
+</code></pre>
+
+<h2>Define Key Economic and Dependent Variables for analysis</h2>
+
+<pre><code class="r"># next calculate an hourly wage for the parents using the mc work hour sims from atus                                  
+
+hrs_est &lt;- rep(NA, obs)
+for (i in 1:obs){
+  hrs_est[i] &lt;- ifelse(emp[i]==1, sample(x=mc_hrs_ft, size=1, replace=TRUE),
+                       ifelse(emp[i]==2, sample(x=mc_hrs_pt, size=1, replace=TRUE), 
+                              ifelse(emp[i]==3|emp[i]==4, 0, NA)))
+}
+
+#wage from income (w_i) (hourly)
+w_i &lt;- (inc_est/m_adltcnt)/(365.25*hrs_est)
+
+#calculate the child time multiplier (w_i for working mothers, market rate for childcare otherwise)
+cc_mlt &lt;- ifelse(w_i == Inf, 104/31, w_i)
+
+#calculate alpha (constraining values to below 1...this only effects 18 values)
+#alpha &lt;- log(t_ca*cc_mlt + x_c)/log((cc_mlt*365.25*24))
+#alpha &lt;- ifelse(alpha &gt; 1, 1, alpha)
+alpha &lt;- (t_ca*cc_mlt + x_c)/((cc_mlt*365.25*24))
+alpha &lt;- ifelse(alpha &gt; 1, 1, alpha)
+
+#wage from endowment (w_e) (annual)
+w_ea &lt;- ifelse(w_i==Inf, inc_est, 0) 
+
+#recode wealth from income (annual)
+w_ia &lt;- w_i*40*52
+
+#total wealth from income and endowments
+w_ta &lt;- inc_est 
+
+#total time available (minus work hours)
+t_ta &lt;- (24*365.25)-hrs_est
+
+#total time value available
+t_tva &lt;- t_ta*w_i
+
+#total time value spent on children using the Reid (1934) standard 
+#outlined in A Framework for Nonmarket Accounting
+t_tvc &lt;- t_ca*cc_mlt
+
+#implicit time value spent on parent
+t_tvp &lt;- t_tva-t_tvc
+
+#time value for the whole year
+#for working parents multiply by w_i
+#if w_i not available, multiply by mean(cc_own, cc_oth, cc_ctr)
+t_v &lt;- w_i * 365*24
+
+# load reports of negative punishment (toy takeaway)
+negpn1 &lt;- ifelse(as.vector(dat$A4Q07X03) &gt; 4, NA, as.vector(dat$A4Q07X03))
+
+# load reports of negative punishment (time out)
+negpn2 &lt;- ifelse(as.vector(dat$A4Q07X04) &gt; 4, NA, as.vector(dat$A4Q07X04))
+
+# load reports of positive punishment (talking about behavior)
+pospn3 &lt;- ifelse(as.vector(dat$A4Q07X05) &gt; 4, NA, as.vector(dat$A4Q07X05))
+
+#recode yelling
+pospn1_bin &lt;- ifelse(pospn1 &lt; 4, 1, 0)
+
+#recode spanking
+pospn2_bin &lt;- ifelse(pospn2 &lt; 4, 1, 0)
+
+#recode toy takeaway
+negpn1_bin &lt;- ifelse(negpn1 &lt; 4, 1, 0)
+
+#recode time-out
+negpn2_bin &lt;- ifelse(negpn2 &lt; 4, 1, 0)
+
+#recode talking about behavior
+pospn3_bin &lt;- ifelse(pospn3 &lt; 4, 1, 0)
+
+#recode gate safety gates
+safgt_bin &lt;- ifelse(safgt == 3 | safgt == 7, NA
+                    ,ifelse(safgt == 1, 1, 0)
+                    )
+
+#recode gate safety locks
+saflk_bin &lt;- ifelse(saflk == 3 | saflk == 7, NA
+                    ,ifelse(saflk == 1, 1, 0)
+)
+
+#recode padding precautions
+safpd_bin &lt;- ifelse(safpd == 3 | safpd == 7, NA
+                    ,ifelse(safpd == 1, 1, 0)
+)
+
+#recode gate safety plug blocks
+safbp_bin &lt;- ifelse(safbp == 3 | safbp == 7, NA
+                    ,ifelse(safbp == 1, 1, 0)
+)
+
+
+# recode thermostat safety
+safth_bin &lt;- ifelse(safth == 3 | safth == 7, NA
+                    ,ifelse(safth == 1, 1, 0)
+)
+</code></pre>
+
+<h2>Pull Key Variables Together</h2>
+
+<pre><code class="r">
+r_dat &lt;- data.frame(id=seq(1:2068)
+                    ,c_age
+                    ,cnt_ch
+                    ,m_white 
+                    ,m_age
+                    ,m_mar 
+                    ,m_college
+                    ,m_hi_frus
+                    ,c_health 
+                    ,c_hi_health                    
+                    ,dev_cnc
+                   ,w_ta
+                   ,t_ta
+                   ,t_tvc
+                   ,x_c
+                   ,inc_est
+                   ,t_ca
+                   ,cc_mlt
+                   ,x_c
+                   ,pospn1_bin
+                   ,pospn1
+                   ,pospn2_bin
+                   ,pospn2
+                   ,negpn1_bin
+                   ,negpn1
+                   ,negpn2_bin
+                   ,negpn2
+                   ,pospn3_bin
+                   ,pospn3
+                   ,safgt_bin
+                   ,safgt
+                   ,saflk_bin
+                   ,saflk
+                   ,safpd_bin
+                   ,safpd
+                   ,safbp_bin
+                   ,safbp
+                   ,safth_bin
+                   ,safth
+                   ,alpha)
+</code></pre>
+
+<h2>Calculate Probability of All Negative Discipline</h2>
+
+<pre><code class="r">pospn1_bin0 &lt;- pospn1_bin
+pospn2_bin0 &lt;- pospn2_bin
+pospn3_bin0 &lt;- pospn3_bin
+negpn1_bin0 &lt;- negpn1_bin
+negpn2_bin0 &lt;- negpn2_bin
+
+safgt_bin0 &lt;- safgt_bin
+safpd_bin0 &lt;- safpd_bin
+saflk_bin0 &lt;- saflk_bin
+safbp_bin0 &lt;- safbp_bin
+safth_bin0 &lt;- safth_bin
+
+pospn1_bin0[is.na(pospn1_bin0)] &lt;- 0
+pospn2_bin0[is.na(pospn2_bin0)] &lt;- 0
+pospn3_bin0[is.na(pospn3_bin0)] &lt;- 0
+negpn1_bin0[is.na(negpn1_bin0)] &lt;- 0
+negpn2_bin0[is.na(negpn2_bin0)] &lt;- 0
+safgt_bin0[is.na(safgt_bin0)] &lt;- 0
+safpd_bin0[is.na(safpd_bin0)] &lt;- 0
+saflk_bin0[is.na(saflk_bin0)] &lt;- 0
+safbp_bin0[is.na(safbp_bin0)] &lt;- 0
+safth_bin0[is.na(safth_bin0)] &lt;- 0
+
+pos_count &lt;- rowSums(data.frame(pospn1_bin0, pospn2_bin0, pospn3_bin0))
+neg_count &lt;- rowSums(data.frame(negpn1_bin0, negpn2_bin0))
+saf_count &lt;- rowSums(data.frame(safgt_bin0, safpd_bin0, saflk_bin0, safbp_bin0, safth_bin0))
+
+dis_strat &lt;- data.frame(id=seq(1:obs)
+                        ,dis_strat=rep(NA, obs)
+                        ,pos_count
+                        ,neg_count
+                        ,saf_count)
+for (i in 1:obs){
+  if(pos_count[i]&gt;0 &amp; neg_count[i]==0){
+    dis_strat[i,2] &lt;- 0
+  }else if(neg_count[i]&gt;0 &amp; pos_count[i]==0){
+    dis_strat[i,2] &lt;- 1
+  }else{
+    dis_strat[i,2] &lt;- &quot;mixture&quot;
+  }  
+}
+
+r_dat &lt;- sqldf(&quot;select 
+               r.*
+               ,dis_strat
+               ,pos_count
+               ,neg_count
+               ,saf_count
+               from r_dat r
+               join dis_strat ds
+               on r.id=ds.id&quot;)
+</code></pre>
+
+<pre><code>## Loading required package: tcltk
+</code></pre>
+
+<pre><code class="r">
+#rm(list=setdiff(ls(), &quot;r_dat&quot;))
+save.image(&quot;~/Dropbox/qualpaper/sech_out.RData&quot;)
+</code></pre>
+
+</body>
+
+</html>
+

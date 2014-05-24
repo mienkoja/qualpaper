@@ -1,0 +1,14 @@
+base
+DBI
+ggplot2
+gsubfn
+knitr
+MASS
+plyr
+proto
+reshape2
+Rlab
+RSQLite
+RSQLite.extfuns
+sqldf
+stringr

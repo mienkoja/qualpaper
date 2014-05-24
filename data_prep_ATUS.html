@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Get Time Use Estimates from ATUS and Calculate Income Distribution</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>Get Time Use Estimates from ATUS and Calculate Income Distribution</h1>
+
+<p>This document outlines the definition of several distributions used to smooth ordinal estimates of various continuous variables in the Early Childhood Survey. As with the CES code, this is the script used here is a hack of the scripts written by <a href="https://github.com/ajdamico/usgsd/tree/master/American%20Time%20Use%20Survey">ajdamico</a> and available for use the following <a href="https://github.com/ajdamico/usgsd/tree/master/American%20Time%20Use%20Survey">link</a>. The files were downloaded using scripts in that repo and the directories identified in the following scripts assume that the user has a directory structure that matches those resulting from the <a href="https://github.com/ajdamico/usgsd/tree/master/American%20Time%20Use%20Survey">ajdamico</a> download scripts.   </p>
+
+<h2>Preliminary Steps</h2>
+
+<p>The following code clears our memory, sets our working directory (as created by the <a href="https://github.com/ajdamico/usgsd/tree/master/Consumer%20Expenditure%20Survey">ajdamico</a> scripts), sets a random seed to facilitate replication, and loads some libraries that are required for these initial steps. </p>
+
+<pre><code class="r"># clear memory
+rm(list = ls(all = TRUE))
+
+# setwd(&#39;C:/Users/mienkoja/Dropbox/qp_analysis/ATUS/2003&#39;)
+setwd(&quot;~/Dropbox/qualpaper/ATUS/2003&quot;)
+
+require(ggplot2)
+</code></pre>
+
+<pre><code>## Loading required package: ggplot2
+</code></pre>
+
+<pre><code class="r">require(sqldf)  # load the sqldf package (enables sql queries on data frames)
+</code></pre>
+
+<pre><code>## Loading required package: sqldf
+## Loading required package: gsubfn
+## Loading required package: proto
+## Loading required namespace: tcltk
+## Loading required package: RSQLite
+## Loading required package: DBI
+## Loading required package: RSQLite.extfuns
+</code></pre>
+
+<pre><code class="r">require(MASS)  #for fitdistr
+</code></pre>
+
+<pre><code>## Loading required package: MASS
+</code></pre>
+
+<pre><code class="r">require(Rlab)  #for rbern
+</code></pre>
+
+<pre><code>## Loading required package: Rlab
+## Rlab 2.15.1 attached.
+## 
+## 
+## Attaching package: &#39;Rlab&#39;
+## 
+## The following object is masked from &#39;package:MASS&#39;:
+## 
+##     michelson
+## 
+## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     dexp, dgamma, dweibull, pexp, pgamma, pweibull, qexp, qgamma,
+##     qweibull, rexp, rgamma, rweibull
+## 
+## The following object is masked from &#39;package:datasets&#39;:
+## 
+##     precip
+</code></pre>
+
+<pre><code class="r">
+set.seed(123456)
+</code></pre>
+
+<h2>Read in All Data</h2>
+
+<p>This chunk of code reads in all of the required data from the summary (<code>atussum.rda</code>) and roster (<code>atusrost.rda</code>) files. The data are filtered to just look at households with a child 3 or below and only looking at females for congruence with the NSECH sample. We select all respondents first to inspect distribution and then select seperate extracts for employed, unemployed, and non-in-labor forces (i.e. other) subjects.</p>
+
+<pre><code class="r"># load the roster file
+load(&quot;atusrost.rda&quot;)
+
+# load the activity summary file
+load(&quot;atussum.rda&quot;)
+
+atussum &lt;- sqldf(&quot;select *
+                 from atussum a
+                 join (select distinct 
+                 tucaseid 
+                 from atusrost 
+                 where teage &lt;= 3) b
+                 on a.tucaseid = b.tucaseid
+                 where tesex = 2&quot;)
+save.image(&quot;~/Dropbox/qualpaper/smooth.RData&quot;)
+</code></pre>
+
+<p>Note that as with the CES data, we have the <code>save.image()</code> at the end of the previous chunk. I am not currently evaluating this chunk when I compile my markdown to HTML. The code runs fine outside of knitr, but knitr has a yet undiagnosed problem in trying to load the compressed data files. Once this problem is fixed, the following chunk will be unecessary.  </p>
+
+<pre><code class="r">load(&quot;~/Dropbox/qualpaper/smooth.RData&quot;)
+</code></pre>
+
+<pre><code class="r"># count of observations
+obs &lt;- length(atussum$tucaseid)
+
+# vector of reading activities
+atus_read &lt;- atussum$t030301
+
+# vector of talking activities (closest activity to singing - includes
+# singing according to ATUS)
+atus_sing &lt;- atussum$t030106
+
+# vector of transportation activities
+atus_trans &lt;- atussum$t170301 + atussum$t030112 + atussum$t030110
+
+# vector of meal prep and eating activities
+atus_meal &lt;- atussum$t020102
+</code></pre>
+
+<h2>Examine the Distributions</h2>
+
+<p>All of the distributions are zero-inflated so we focus just on the non-zero portions to determine our likely distribution.</p>
+
+<pre><code class="r"># create a data frame for plotting in ggplot
+min &lt;- c(atus_read, atus_sing, atus_trans, atus_meal)
+act_type &lt;- c(rep(&quot;read&quot;, obs), rep(&quot;sing&quot;, obs), rep(&quot;trans&quot;, obs), rep(&quot;meal&quot;, 
+    obs))
+dat_act &lt;- data.frame(min = min, act_type = act_type)
+
+# all distributions are zero-inflated.  look at just the non-zero portions
+# to determine our likely distribution
+dat_act &lt;- subset(dat_act, dat_act$min &gt; 0)
+
+# plot all four distributions exponential is probably not perfect, but is
+# not unreasonable
+ggplot(dat_act, aes(x = min, y = ..density..)) + geom_histogram() + facet_wrap(~act_type)
+</code></pre>
+
+<pre><code>## stat_bin: binwidth defaulted to range/30. Use &#39;binwidth = x&#39; to adjust this.
+## stat_bin: binwidth defaulted to range/30. Use &#39;binwidth = x&#39; to adjust this.
+## stat_bin: binwidth defaulted to range/30. Use &#39;binwidth = x&#39; to adjust this.
+## stat_bin: binwidth defaulted to range/30. Use &#39;binwidth = x&#39; to adjust this.
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk inspect_dist"/> </p>
+
+<p>A plot of the four distributions reveals a strong positive skew. The exponential is probably not a perfect fit for these data, but it is not unreasonable.</p>
+
+<h2>Write a Zero-Inflated Exponential Fitting and Sampling Function</h2>
+
+<p>Next we write a function to fit ATUS data to an exponential by MLE and then create a zero-inflated exponential &ldquo;prior&rdquo; for each activity. This function receives a vector of zero and non-zero time values for a given activity. Specifically, <code>x</code> is the vector and <code>n</code> is the number of values you want returned. This function could be improved at some point by allowing the user to specify their own p and n (i.e. don&#39;t use an x vector).</p>
+
+<pre><code class="r">ziexp_prior &lt;- function(x, n) {
+    # create a vector of people who perform the given activity (i.e. a non-zero
+    # (nz) vector)
+    x_nz &lt;- x[x &gt; 0]
+
+    # calculate rate parameter with fitdistr
+    param &lt;- fitdistr(x_nz, &quot;exponential&quot;)
+
+    # specify a zi sampling function calculate emperical p for the bern portion
+    p &lt;- (length(x) - length(x_nz))/length(x)
+
+    # simulate all values using the param estimate from above
+    prior &lt;- rep(NA, n)
+    for (i in 1:n) {
+        prior[i] &lt;- ifelse(rbern(n = 1, p = p) == 1, 0, rexp(n = 1, param$estimate[1]))
+    }
+    # return results
+    return(prior)
+}
+</code></pre>
+
+<h2>Breakout Employment Categories</h2>
+
+<p>As indicated above, we now break out the sample for each employment category. This breakout is made due to the possibility of differences in the parenting time distributions of women at various levels of employment. </p>
+
+<pre><code class="r">#select employed
+atussum_emp &lt;- sqldf(&quot;select * 
+                     from atussum
+                     where telfs in (1,2)&quot;)
+</code></pre>
+
+<pre><code>## Loading required package: tcltk
+</code></pre>
+
+<pre><code class="r">
+#vector of reading activities
+atus_read_emp &lt;- atussum_emp$t030301
+
+#vector of talking activities (closest activity to singing - includes singing according to ATUS)
+atus_sing_emp &lt;- atussum_emp$t030106
+
+#vector of transportation activities
+atus_trans_emp &lt;- atussum_emp$t170301 + atussum_emp$t030112 + atussum_emp$t030110
+
+#vector of meal prep and eating activities
+atus_meal_emp &lt;- atussum_emp$t020102
+
+#select unemployed
+atussum_unemp &lt;- sqldf(&quot;select * 
+                       from atussum
+                       where telfs in (3,4)&quot;)
+
+#vector of reading activities
+atus_read_unemp &lt;- atussum_unemp$t030301
+
+#vector of talking activities (closest activity to singing - includes singing according to ATUS)
+atus_sing_unemp &lt;- atussum_unemp$t030106
+
+#vector of transportation activities
+atus_trans_unemp &lt;- atussum_unemp$t170301 + atussum_unemp$t030112 + atussum_unemp$t030110
+
+#vector of meal prep and eating activities
+atus_meal_unemp &lt;- atussum_unemp$t020102
+
+#select &quot;other&quot; employment status
+atussum_other &lt;- sqldf(&quot;select * 
+                       from atussum
+                       where telfs in (5)&quot;)
+
+#vector of reading activities
+atus_read_other &lt;- atussum_other$t030301
+
+#vector of talking activities (closest activity to singing - includes singing according to ATUS)
+atus_sing_other &lt;- atussum_other$t030106
+
+#vector of transportation activities
+atus_trans_other &lt;- atussum_other$t170301 + atussum_other$t030112 + atussum_other$t030110
+
+#vector of meal prep and eating activities
+atus_meal_other &lt;- atussum_other$t020102
+</code></pre>
+
+<h2>Create Sampling Vectors</h2>
+
+<p>We now create sampling vectors for each employment category using the <code>ziexp_prior()</code> function identified above. </p>
+
+<pre><code class="r">read_prior_emp &lt;- ziexp_prior(atus_read_emp, 1e+05)
+sing_prior_emp &lt;- ziexp_prior(atus_sing_emp, 1e+05)
+trans_prior_emp &lt;- ziexp_prior(atus_trans_emp, 1e+05)
+meal_prior_emp &lt;- ziexp_prior(atus_meal_emp, 1e+05)
+
+read_prior_unemp &lt;- ziexp_prior(atus_read_unemp, 1e+05)
+sing_prior_unemp &lt;- ziexp_prior(atus_sing_unemp, 1e+05)
+trans_prior_unemp &lt;- ziexp_prior(atus_trans_unemp, 1e+05)
+meal_prior_unemp &lt;- ziexp_prior(atus_meal_unemp, 1e+05)
+
+read_prior_other &lt;- ziexp_prior(atus_read_other, 1e+05)
+sing_prior_other &lt;- ziexp_prior(atus_sing_other, 1e+05)
+trans_prior_other &lt;- ziexp_prior(atus_trans_other, 1e+05)
+meal_prior_other &lt;- ziexp_prior(atus_meal_other, 1e+05)
+</code></pre>
+
+<h2>Create Sampling Vectors for Income</h2>
+
+<p>There are no established, peer-reviewed sources of activity distributions (at least not for the activities above). As such, we defined our own exponential distributions as noted above. This is not the case for income. For income, there is a rich set of literature which seeks to identify good distributions to describe personal income in the US. Bandourian, McDonald, and Turley (2002) compare several distributions for a variety of different countries. Weibull is not the best fitting for US data but is identified by the authors as one of the best fitting over all of the examined distributions and is chosen here for its simplicity and relative familiarity to the target audience of this paper. I use the parameter estimates from Bandourian, et al. for the draw from the Weibull. Bandouria, et al. were using 1994 data for their distribution. As such, I inflation adjust the measures (using the recommended BLS multiplier).</p>
+
+<pre><code class="r">inc_prior &lt;- rweibull(1e+05, 1.3, 50287) * 1.16
+</code></pre>
+
+<h2>Run Monte Carlo Simulations to Draw Work Hours</h2>
+
+<p>In the following code I run Monte Carlo simulations from which I can sample to get an estimate of work hours for individuals in our survey. This is somewhat less sophisticated than the approach I am taking for time spent, in child-caring activities. However, there is much less variability in these numbers (e.g. most full-time employees work aroung 40 hours) and it is still a preferred approach to simplying multiplying the employment categories by a scalar. Doing something similar to what we have done for the child-caring activities may be preferred to this and should be explored at some point. </p>
+
+<pre><code class="r">
+mc &lt;- function(low, high, ci = 0.95, n = 10000) {
+    mu = mean(c(low, high))
+    z = qnorm(1 - (1 - ci)/2)
+    s = (high - mu)/z
+    rnorm(n, mu, s)
+}
+</code></pre>
+
+<p>The first step is to load the relevant ATUS files. After loading the activity (<code>atusact.rda</code>) and respondt (<code>atusresp.rda</code>) files, we join these files together and subset the data to <code>atusact</code>. Our where clause gives us only women (<code>resex = 5</code>) who provided some indication of working (<code>tutier1code = 5</code>).</p>
+
+<pre><code class="r"># load the roster file
+load(&quot;atusrost.rda&quot;)
+
+# load the activity summary file
+load(&quot;atusact.rda&quot;)
+
+load(&quot;atuswgts_all2003.rda&quot;)
+
+load(&quot;atusresp.rda&quot;)
+
+atusact &lt;- sqldf(&quot;select 
+                    a.tucaseid
+                    ,sum(a.tuactdur24) tt_wrk
+                    ,b.tufinlwgt
+                    ,sum(a.tuactdur24)*b.tufinlwgt tt_wrk_by_wgt
+                    ,d.trdpftpt 
+                 from atusact a
+                 join atusresp b
+                    on a.tucaseid = b.tucaseid    
+                 join (select distinct 
+                        tucaseid 
+                      from atusrost 
+                      where teage &lt;= 3) c
+                    on a.tucaseid = c.tucaseid
+                 join atussum d
+                    on a.tucaseid = d.tucaseid
+                 where tesex = 2
+                    and a.tutier1code = 5
+                 group by 
+                    a.tucaseid
+                    ,b.tufinlwgt
+                    ,d.trdpftpt&quot;)
+
+save.image(&quot;~/Dropbox/qualpaper/inc_est.RData&quot;)
+</code></pre>
+
+<p>As with other <code>*.rda</code> files, we have the <code>save.image()</code> at the end of the previous chunk. I am not currently evaluating this chunk when I compile my markdown to HTML. The code runs fine outside of knitr, but knitr has a yet undiagnosed problem in trying to load the compressed data files. Once this problem is fixed, the following chunk will be unecessary.  </p>
+
+<pre><code class="r">load(&quot;~/Dropbox/qualpaper/inc_est.RData&quot;)
+</code></pre>
+
+<p>Here, I subset <code>atusact</code> to seperate full and part time vectors.   </p>
+
+<pre><code class="r">atusact_ft &lt;- subset(atusact, atusact$trdpftpt == 1)
+atusact_pt &lt;- subset(atusact, atusact$trdpftpt == 2)
+</code></pre>
+
+<p>Next, we sum the time activity values and divide by 60 (to convert to hours). This is our average daily hours worked for full (<code>h_f</code>) and part time (<code>p_t</code>) women. I then join this to the weight data and then apply the standard error formula given by the BLS <a href="https://docs.google.com/viewer?url=http%3A%2F%2Fwww.bls.gov%2Ftus%2Fatususersguide.pdf">here</a>. We then calculate upper and lower values for use in the monte carol simulation. </p>
+
+<pre><code class="r">h_f &lt;- (colSums(atusact_ft)[4]/colSums(atusact_ft)[3])/60
+h_p &lt;- (colSums(atusact_pt)[4]/colSums(atusact_pt)[3])/60
+
+finlwgt &lt;- atuswgts_all2003[, c(1, 161:321)]
+
+finwgt_ft &lt;- sqldf(&quot;select \n                      tt_wrk\n                      ,fw.* \n                     from finlwgt fw \n                      join atusact_ft af \n                        on fw.tucaseid = af.tucaseid&quot;)
+</code></pre>
+
+<pre><code>## Loading required package: tcltk
+</code></pre>
+
+<pre><code class="r">
+finwgt_pt &lt;- sqldf(&quot;select \n                      tt_wrk\n                      ,fw.* \n                     from finlwgt fw \n                      join atusact_pt ap \n                        on fw.tucaseid = ap.tucaseid&quot;)
+
+
+h_p_se &lt;- (4/160) * sum(((colSums(finwgt_pt[, 1] * finwgt_pt[, 4:163])/colSums(finwgt_pt[, 
+    4:163])/60) - h_p)^2)
+h_f_se &lt;- (4/160) * sum(((colSums(finwgt_ft[, 1] * finwgt_ft[, 4:163])/colSums(finwgt_ft[, 
+    4:163])/60) - h_f)^2)
+
+upper_h_p &lt;- h_p + h_p_se * qnorm(0.975)
+lower_h_p &lt;- h_p - h_p_se * qnorm(0.975)
+
+upper_h_f &lt;- h_f + h_f_se * qnorm(0.975)
+lower_h_f &lt;- h_f - h_f_se * qnorm(0.975)
+</code></pre>
+
+<p>The last step of this process is to run the Monte Carlo simulations and assign the results to a vector for each employment type. </p>
+
+<pre><code class="r">mc_hrs_ft &lt;- mc(lower_h_f, upper_h_f)
+mc_hrs_pt &lt;- mc(lower_h_p, upper_h_p)
+</code></pre>
+
+<h2>Save Data for Later Analysis </h2>
+
+<pre><code class="r">priors &lt;- c(&quot;mc_hrs_ft&quot;, &quot;mc_hrs_pt&quot;, &quot;read_prior_other&quot;, &quot;sing_prior_other&quot;, 
+    &quot;trans_prior_other&quot;, &quot;meal_prior_other&quot;, &quot;meal_prior_unemp&quot;, &quot;trans_prior_unemp&quot;, 
+    &quot;sing_prior_unemp&quot;, &quot;read_prior_unemp&quot;, &quot;meal_prior_emp&quot;, &quot;trans_prior_emp&quot;, 
+    &quot;sing_prior_emp&quot;, &quot;read_prior_emp&quot;, &quot;inc_prior&quot;)
+
+rm(list = setdiff(ls(), priors))
+save.image(&quot;~/Dropbox/qualpaper/atus_out.RData&quot;)
+</code></pre>
+
+</body>
+
+</html>
+
