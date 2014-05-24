@@ -71,7 +71,7 @@
 
 \begin{frontmatter}
 
-  \title{Constrained Parenting Decisions:\\ Toward a General Model of Child Maltreatment\tnoteref{mytitlenote}}
+  \title{Constrained Parenting Decisions:\\ Test Toward a General Model of Child Maltreatment\tnoteref{mytitlenote}}
 
 %\title{Elsevier \LaTeX\ template\tnoteref{mytitlenote}}
 \tnotetext[mytitlenote]{Prepared for likely submission to the Child and Youth Services Review. Other possibilities (in order of preference) include Child Malreatment, and Social Services Review.}
