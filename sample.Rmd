@@ -1,0 +1,11 @@
+---
+output: html_document
+csl: apa.csl
+bibliography:  qualpaper_v4.bib
+---
+
+# Introduction
+
+The purpose of this paper is to formally specify a general theory of child maltreatment. The conclusion of this paper is that child maltreatment is inextricably linked to resource constraints. As such, we tend to see a relationship between a parent's tendency to maltreat her child and the parent's relative position in the wealth distribution of a given society. Specifically, a parent on the lower end of a wealth distribution will tend to exhibit an increased probability of maltreating her child relative to parents at the higher end of a wealth distribution. The central thesis of this paper is that maltreatment is the normal consequence of parenting decisions made under household resource constraints. While child maltreatment may be undesirable, in most cases it is not pathological. Recognition of this basic distinction has important implications for child welfare policy and practice. 
+ Studies examining administrative data sets of low-income populations (e.g. TANF recipients) have also shown that exogenous resource-decreasing shocks such as welfare-reform [e.g. @Courtney2005] or welfare sanctions [e.g. @Slack2007] will tend to increase a family's probability of child welfare system involvement. Other studies have exploited experimental income support programs to address income endogeneity problems inherent in other studies and still find an inverse relationship between family income and the probability of child maltreatment [@Fein2003].
+

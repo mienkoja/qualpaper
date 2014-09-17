@@ -1,0 +1,52 @@
+% TikZ chains with labeled edges
+% Author: Stefan Kottwitz , http://texblog.net
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usetikzlibrary{matrix,positioning,scopes}
+% %
+% \makeatletter
+% \tikzset{join/.code=\tikzset{after node path={%
+% \ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+% edge[every join]#1(\tikzchaincurrent)\fi}}}
+% \makeatother
+% %
+% \tikzset{>=stealth',every on chain/.append style={join},
+%          every join/.style={->}}
+% \tikzstyle{labeled}=[execute at begin node=$\scriptstyle,
+%    execute at end node=$]
+%
+\begin{document}
+\begin{tikzpicture}
+  \matrix (m) [matrix of nodes, row sep=3em, column sep=3em]
+    { {} & Pr(TxMM)  & Pr(PB=MP)  & Pr(CWBw) \\ [-20pt]
+    \fontspec{Frutiger LT Std 55 Roman}PS\textsubscript{1} & 
+      \fontspec{Frutiger LT Std 55 Roman}Low  & 
+      \fontspec{Frutiger LT Std 55 Roman}Low  & 
+      \fontspec{Frutiger LT Std 55 Roman}High \\
+      PS2 & HIGH & LOW & HIGH  \\
+      PS3 & LOW  & HIGH & LOW  \\};
+    
+    %{ [start chain] 
+     % \chainin (m-2-1);
+      %\chainin (m-2-2);
+      %\chainin (m-2-3);
+      %\chainin (m-2-4);
+    %}
+%     { [start chain] 
+%       \chainin (m-3-1);
+%       \chainin (m-3-2);
+%       \chainin (m-3-3);
+%       \chainin (m-3-4);
+%     }
+%     { [start chain] 
+%       \chainin (m-4-1);
+%       \chainin (m-4-2);
+%       \chainin (m-4-3);
+%       \chainin (m-4-4);
+%     }
+    \path[thick,->] (m-2-1) edge (m-2-2);
+    \path[thick,->] (m-2-2) edge (m-2-3);
+    \path[thick,->] (m-2-3) edge (m-2-4);
+\end{tikzpicture}
+\end{document}

@@ -10,7 +10,6 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{microtype}
-
 \definecolor{nice_blue}{HTML}{377EB8}
 
 %\usepackage[margin=0.5in]{geometry}

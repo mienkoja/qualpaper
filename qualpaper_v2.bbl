@@ -1,0 +1,503 @@
+\begin{thebibliography}{63}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Book
+\bibitem[{Bandourian et~al.(2002)Bandourian, McDonald \&
+  Turley}]{Bandourian2002}
+\bibinfo{author}{Bandourian, R.}, \bibinfo{author}{McDonald, J.~B.}, \&
+  \bibinfo{author}{Turley, R.~S.} (\bibinfo{year}{2002}).
+\newblock {\it \bibinfo{title}{A comparison of parametric models of income
+  distribution across countries and over time}\/}.
+\newblock \bibinfo{publisher}{Maxwell School of Citizenship and Public Affairs,
+  Syracuse University}.
+%Type = Article
+\bibitem[{Barro et~al.(1986)Barro, Becker \& Tomes}]{BarroEtAl1986}
+\bibinfo{author}{Barro, R.~J.}, \bibinfo{author}{Becker, G.~S.}, \&
+  \bibinfo{author}{Tomes, N.} (\bibinfo{year}{1986}).
+\newblock \bibinfo{title}{Human capital and the rise and fall of families}.
+\newblock {\it \bibinfo{journal}{Journal of Labor Economics}\/},  {\it
+  \bibinfo{volume}{4}\/}.
+%Type = Book
+\bibitem[{Becker(1981)}]{Becker1981}
+\bibinfo{author}{Becker, G.~S.} (\bibinfo{year}{1981}).
+\newblock {\it \bibinfo{title}{A Treatise on the Family}\/}.
+\newblock \bibinfo{publisher}{Harvard university press}.
+%Type = Article
+\bibitem[{Berger et~al.(2008)Berger, Brooks-Gunn, Paxson \&
+  Waldfogel}]{Berger2008}
+\bibinfo{author}{Berger, L.}, \bibinfo{author}{Brooks-Gunn, J.},
+  \bibinfo{author}{Paxson, C.}, \& \bibinfo{author}{Waldfogel, J.}
+  (\bibinfo{year}{2008}).
+\newblock \bibinfo{title}{First-year maternal employment and child outcomes:
+  Differences across racial and ethnic groups}.
+\newblock {\it \bibinfo{journal}{Children and Youth Services Review}\/},  {\it
+  \bibinfo{volume}{30}\/}, \bibinfo{pages}{365--387}.
+%Type = Article
+\bibitem[{Berger(2007)}]{Berger2007}
+\bibinfo{author}{Berger, L.~M.} (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{Socioeconomic factors and substandard parenting}.
+\newblock {\it \bibinfo{journal}{Social Service Review}\/},  {\it
+  \bibinfo{volume}{81}\/}, \bibinfo{pages}{485--522}.
+%Type = Article
+\bibitem[{Berger et~al.(2009)Berger, Paxson \& Waldfogel}]{Berger2009}
+\bibinfo{author}{Berger, L.~M.}, \bibinfo{author}{Paxson, C.}, \&
+  \bibinfo{author}{Waldfogel, J.} (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Income and child development}.
+\newblock {\it \bibinfo{journal}{Children and Youth Services Review}\/},  {\it
+  \bibinfo{volume}{31}\/}, \bibinfo{pages}{978--989}.
+%Type = Article
+\bibitem[{Berger \& Waldfogel(2004)}]{BergerAndWoldfogel2004}
+\bibinfo{author}{Berger, L.~M.}, \& \bibinfo{author}{Waldfogel, J.}
+  (\bibinfo{year}{2004}).
+\newblock \bibinfo{title}{Out-of-home placement of children and economic
+  factors: An empirical analysis}.
+\newblock {\it \bibinfo{journal}{Review of Economics of the Household}\/},
+  {\it \bibinfo{volume}{2}\/}, \bibinfo{pages}{387--411}.
+%Type = Article
+\bibitem[{Blundell et~al.(2007)Blundell, Chiappori, Magnac \&
+  Meghir}]{Blundell2007}
+\bibinfo{author}{Blundell, R.}, \bibinfo{author}{Chiappori, P.-A.},
+  \bibinfo{author}{Magnac, T.}, \& \bibinfo{author}{Meghir, C.}
+  (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{Collective labour supply: Heterogeneity and
+  non-participation}.
+\newblock {\it \bibinfo{journal}{The Review of Economic Studies}\/},  {\it
+  \bibinfo{volume}{74}\/}, \bibinfo{pages}{417--445}.
+%Type = Book
+\bibitem[{Bogetoft \& Otto(2010)}]{Bogetoft2010}
+\bibinfo{author}{Bogetoft, P.}, \& \bibinfo{author}{Otto, L.}
+  (\bibinfo{year}{2010}).
+\newblock {\it \bibinfo{title}{Benchmarking with DEA, SFA, and R}\/} volume
+  \bibinfo{volume}{157}.
+\newblock \bibinfo{publisher}{Springer}.
+%Type = Manual
+\bibitem[{Bogetoft \& Otto(2013)}]{Bogetoft2013}
+\bibinfo{author}{Bogetoft, P.}, \& \bibinfo{author}{Otto, L.}
+  (\bibinfo{year}{2013}).
+\newblock {\it \bibinfo{title}{Benchmarking with DEA and SFA}\/}.
+\newblock \bibinfo{note}{R package version 0.23}.
+%Type = Article
+\bibitem[{Brandon(1999)}]{Brandon1999}
+\bibinfo{author}{Brandon, P.~D.} (\bibinfo{year}{1999}).
+\newblock \bibinfo{title}{The state, the child, and imperfect parenting}.
+\newblock {\it \bibinfo{journal}{Rationality and Society}\/},  {\it
+  \bibinfo{volume}{11}\/}, \bibinfo{pages}{399--418}.
+%Type = Article
+\bibitem[{Brandon(2001)}]{Brandon2001}
+\bibinfo{author}{Brandon, P.~D.} (\bibinfo{year}{2001}).
+\newblock \bibinfo{title}{State intervention in imperfect families: The child,
+  the state, and imperfect parenting reconsidered from a theory of caomparative
+  advantage.}
+\newblock {\it \bibinfo{journal}{Rationality and Society}\/},  {\it
+  \bibinfo{volume}{13}\/}, \bibinfo{pages}{285--303}.
+%Type = Book
+\bibitem[{Cameron \& Freymond(2006)}]{Cameron2006}
+\bibinfo{author}{Cameron, G.}, \& \bibinfo{author}{Freymond, N.}
+  (\bibinfo{year}{2006}).
+\newblock {\it \bibinfo{title}{Towards positive systems of child and family
+  welfare: International comparisons of child protection, family service, and
+  community caring systems}\/}.
+\newblock \bibinfo{publisher}{University of Toronto Press}.
+%Type = Article
+\bibitem[{Cancian et~al.(2013)Cancian, Yang \& Slack}]{Cancian2013}
+\bibinfo{author}{Cancian, M.}, \bibinfo{author}{Yang, M.-Y.}, \&
+  \bibinfo{author}{Slack, K.~S.} (\bibinfo{year}{2013}).
+\newblock \bibinfo{title}{The effect of additional child support income on the
+  risk of child maltreatment}.
+\newblock {\it \bibinfo{journal}{Social Service Review}\/},  {\it
+  \bibinfo{volume}{87}\/}, \bibinfo{pages}{417--437}.
+%Type = Book
+\bibitem[{Chagnon(1983)}]{Chagnon1983}
+\bibinfo{author}{Chagnon, N.~A.} (\bibinfo{year}{1983}).
+\newblock {\it \bibinfo{title}{Yanomam{\"o}: The Fierce People. New York: Holt,
+  Rinehart and Winston. 1991 Yanomam{\"o}: The Last Days of Eden}\/}.
+\newblock \bibinfo{publisher}{San Diego: Harcourt Brace}.
+%Type = Article
+\bibitem[{Chiappori(1988)}]{Chiappori1988}
+\bibinfo{author}{Chiappori, P.-A.} (\bibinfo{year}{1988}).
+\newblock \bibinfo{title}{Rational household labor supply}.
+\newblock {\it \bibinfo{journal}{Econometrica: Journal of the Econometric
+  Society}\/},  (pp. \bibinfo{pages}{63--90}).
+%Type = Article
+\bibitem[{Courtney et~al.(2005)Courtney, Dworsky, Piliavin \&
+  Zinn}]{Courtney2005}
+\bibinfo{author}{Courtney, M.~E.}, \bibinfo{author}{Dworsky, A.},
+  \bibinfo{author}{Piliavin, I.}, \& \bibinfo{author}{Zinn, A.}
+  (\bibinfo{year}{2005}).
+\newblock \bibinfo{title}{Involvement of tanf applicant families with child
+  welfare services}.
+\newblock {\it \bibinfo{journal}{Social Service Review}\/},  {\it
+  \bibinfo{volume}{79}\/}, \bibinfo{pages}{119--157}.
+%Type = Book
+\bibitem[{Daly \& Wilson(1988)}]{Daly1988}
+\bibinfo{author}{Daly, M.}, \& \bibinfo{author}{Wilson, M.}
+  (\bibinfo{year}{1988}).
+\newblock {\it \bibinfo{title}{Homicide}\/}.
+\newblock \bibinfo{publisher}{Transaction Publishers}.
+%Type = Book
+\bibitem[{Dawkins(1976)}]{Dawkins1976}
+\bibinfo{author}{Dawkins, R.} (\bibinfo{year}{1976}).
+\newblock {\it \bibinfo{title}{The selfish gene}\/}.
+\newblock \bibinfo{publisher}{Oxford university press}.
+%Type = Incollection
+\bibitem[{Donni \& Chiappori(2011)}]{Chiappori2011}
+\bibinfo{author}{Donni, O.}, \& \bibinfo{author}{Chiappori, P.-A.}
+  (\bibinfo{year}{2011}).
+\newblock \bibinfo{title}{Nonunitary models of household behavior: A survey of
+  the literature}.
+\newblock In {\it \bibinfo{booktitle}{Household economic behaviors}\/} (pp.
+  \bibinfo{pages}{1--40}).
+\newblock \bibinfo{publisher}{Springer}.
+%Type = Article
+\bibitem[{Easterlin(1974)}]{Easterlin1974}
+\bibinfo{author}{Easterlin, R.~A.} (\bibinfo{year}{1974}).
+\newblock \bibinfo{title}{Does economic growth improve the human lot? some
+  empirical evidence}.
+\newblock {\it \bibinfo{journal}{Nations and households in economic growth}\/},
+   {\it \bibinfo{volume}{89}\/}.
+%Type = Article
+\bibitem[{Farrell(1957)}]{Farrell1957}
+\bibinfo{author}{Farrell, M.~J.} (\bibinfo{year}{1957}).
+\newblock \bibinfo{title}{The measurement of productive efficiency}.
+\newblock {\it \bibinfo{journal}{Journal of the Royal Statistical Society.
+  Series A (General)}\/},  (pp. \bibinfo{pages}{253--290}).
+%Type = Article
+\bibitem[{Fein \& Lee(2003)}]{Fein2003}
+\bibinfo{author}{Fein, D.~J.}, \& \bibinfo{author}{Lee, W.~S.}
+  (\bibinfo{year}{2003}).
+\newblock \bibinfo{title}{The impacts of welfare reform on child maltreatment
+  in delaware}.
+\newblock {\it \bibinfo{journal}{Children and Youth Services Review}\/},  {\it
+  \bibinfo{volume}{25}\/}, \bibinfo{pages}{83--111}.
+%Type = Article
+\bibitem[{Gershoff(2002)}]{Gershoff2002}
+\bibinfo{author}{Gershoff, E.~T.} (\bibinfo{year}{2002}).
+\newblock \bibinfo{title}{Corporal punishment by parents and associated child
+  behaviors and experiences: a meta-analytic and theoretical review.}
+\newblock {\it \bibinfo{journal}{Psychological bulletin}\/},  {\it
+  \bibinfo{volume}{128}\/}, \bibinfo{pages}{539}.
+%Type = Book
+\bibitem[{Gil(1970)}]{Gil1970}
+\bibinfo{author}{Gil, D.~G.} (\bibinfo{year}{1970}).
+\newblock {\it \bibinfo{title}{Violence against children: Physical child abuse
+  in the United States}\/}.
+\newblock \bibinfo{publisher}{Harvard University Press Cambridge, MA}.
+%Type = Article
+\bibitem[{Gorman(1976)}]{Gorman1976}
+\bibinfo{author}{Gorman, W.~M.} (\bibinfo{year}{1976}).
+\newblock \bibinfo{title}{Tricks with utility functions}.
+\newblock {\it \bibinfo{journal}{Essays in economic analysis}\/},  (pp.
+  \bibinfo{pages}{211--243}).
+%Type = Article
+\bibitem[{Graham(2008)}]{Graham2008}
+\bibinfo{author}{Graham, C.} (\bibinfo{year}{2008}).
+\newblock \bibinfo{title}{Happiness and health: Lessons—and questions—for
+  public policy}.
+\newblock {\it \bibinfo{journal}{Health affairs}\/},  {\it
+  \bibinfo{volume}{27}\/}, \bibinfo{pages}{72--87}.
+%Type = Article
+\bibitem[{Greene(2014)}]{Greene2014}
+\bibinfo{author}{Greene, J.~D.} (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Beyond point-and-shoot morality: Why cognitive
+  (neuro) science matters for ethics}.
+\newblock {\it \bibinfo{journal}{Forthcoming in Ethics}\/}, .
+%Type = Article
+\bibitem[{Hamilton(1964)}]{Hamilton1964}
+\bibinfo{author}{Hamilton, W.~D.} (\bibinfo{year}{1964}).
+\newblock \bibinfo{title}{The genetical evolution of social behaviour. i}.
+\newblock {\it \bibinfo{journal}{Journal of theoretical biology}\/},  {\it
+  \bibinfo{volume}{7}\/}, \bibinfo{pages}{1--16}.
+%Type = Article
+\bibitem[{Ho et~al.(2014)Ho, Konrath, Brown \& Swain}]{Ho2014}
+\bibinfo{author}{Ho, S.~S.}, \bibinfo{author}{Konrath, S.},
+  \bibinfo{author}{Brown, S.}, \& \bibinfo{author}{Swain, J.~E.}
+  (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Empathy and stress related neural responses in
+  maternal decision making}.
+\newblock {\it \bibinfo{journal}{Decision Neuroscience}\/},  {\it
+  \bibinfo{volume}{8}\/}, \bibinfo{pages}{152}.
+%Type = Article
+\bibitem[{Hoeting et~al.(1999)Hoeting, Madigan, Raftery \&
+  Volinsky}]{Hoeting1999}
+\bibinfo{author}{Hoeting, J.~A.}, \bibinfo{author}{Madigan, D.},
+  \bibinfo{author}{Raftery, A.~E.}, \& \bibinfo{author}{Volinsky, C.~T.}
+  (\bibinfo{year}{1999}).
+\newblock \bibinfo{title}{Bayesian model averaging: a tutorial}.
+\newblock {\it \bibinfo{journal}{Statistical science}\/},  (pp.
+  \bibinfo{pages}{382--401}).
+%Type = Article
+\bibitem[{Kashdan et~al.(2008)Kashdan, Biswas-Diener \& King}]{Kashdan2008}
+\bibinfo{author}{Kashdan, T.~B.}, \bibinfo{author}{Biswas-Diener, R.}, \&
+  \bibinfo{author}{King, L.~A.} (\bibinfo{year}{2008}).
+\newblock \bibinfo{title}{Reconsidering happiness: The costs of distinguishing
+  between hedonics and eudaimonia}.
+\newblock {\it \bibinfo{journal}{The Journal of Positive Psychology}\/},  {\it
+  \bibinfo{volume}{3}\/}, \bibinfo{pages}{219--233}.
+%Type = Article
+\bibitem[{Kempe et~al.(1962)Kempe, Silverman, Steele \&
+  Droegmuellar}]{Kempe1962}
+\bibinfo{author}{Kempe, C.}, \bibinfo{author}{Silverman, F.},
+  \bibinfo{author}{Steele, B.}, \& \bibinfo{author}{Droegmuellar, W.}
+  (\bibinfo{year}{1962}).
+\newblock \bibinfo{title}{The battered child syndrome}.
+\newblock {\it \bibinfo{journal}{The Journal of American Medical
+  Association}\/},  {\it \bibinfo{volume}{181}\/}, \bibinfo{pages}{4--11}.
+%Type = Book
+\bibitem[{Leeb(2008)}]{Leeb2008}
+\bibinfo{author}{Leeb, R.~T.} (\bibinfo{year}{2008}).
+\newblock {\it \bibinfo{title}{Child maltreatment surveillance: Uniform
+  definitions for public health and recommended data elements}\/}.
+\newblock \bibinfo{publisher}{Centers for Disease Control and Prevention,
+  National Center for Injury Prevention and Control}.
+%Type = Article
+\bibitem[{Mani et~al.(2013)Mani, Mullainathan, Shafir \& Zhao}]{Mani2013}
+\bibinfo{author}{Mani, A.}, \bibinfo{author}{Mullainathan, S.},
+  \bibinfo{author}{Shafir, E.}, \& \bibinfo{author}{Zhao, J.}
+  (\bibinfo{year}{2013}).
+\newblock \bibinfo{title}{Poverty impedes cognitive function}.
+\newblock {\it \bibinfo{journal}{science}\/},  {\it \bibinfo{volume}{341}\/},
+  \bibinfo{pages}{976--980}.
+%Type = Book
+\bibitem[{Milner(1998)}]{Milner1998}
+\bibinfo{author}{Milner, L.~S.} (\bibinfo{year}{1998}).
+\newblock {\it \bibinfo{title}{Hardness of heart/hardness of life: the stain of
+  human infanticide}\/}.
+\newblock \bibinfo{publisher}{University Press of America}.
+%Type = Book
+\bibitem[{Nelson(1986)}]{Nelson1986}
+\bibinfo{author}{Nelson, B.~J.} (\bibinfo{year}{1986}).
+\newblock {\it \bibinfo{title}{Making an issue of child abuse: Political agenda
+  setting for social problems}\/}.
+\newblock \bibinfo{publisher}{University of Chicago Press}.
+%Type = Article
+\bibitem[{Paxson \& Waldfogel(2002)}]{Paxson2002}
+\bibinfo{author}{Paxson, C.}, \& \bibinfo{author}{Waldfogel, J.}
+  (\bibinfo{year}{2002}).
+\newblock \bibinfo{title}{Work, welfare, and child maltreatment}.
+\newblock {\it \bibinfo{journal}{Journal of Labor Economics}\/},  {\it
+  \bibinfo{volume}{20}\/}, \bibinfo{pages}{435--474}.
+%Type = Article
+\bibitem[{Paxton et~al.(2012)Paxton, Ungar \& Greene}]{Paxton2012}
+\bibinfo{author}{Paxton, J.~M.}, \bibinfo{author}{Ungar, L.}, \&
+  \bibinfo{author}{Greene, J.~D.} (\bibinfo{year}{2012}).
+\newblock \bibinfo{title}{Reflection and reasoning in moral judgment}.
+\newblock {\it \bibinfo{journal}{Cognitive Science}\/},  {\it
+  \bibinfo{volume}{36}\/}, \bibinfo{pages}{163--177}.
+%Type = Book
+\bibitem[{Pelton(1981)}]{Pelton1981}
+\bibinfo{author}{Pelton, L.~H.} (\bibinfo{year}{1981}).
+\newblock {\it \bibinfo{title}{The social context of child abuse and
+  neglect}\/}.
+\newblock \bibinfo{publisher}{Human Sciences Press New York}.
+%Type = Article
+\bibitem[{Pelton(1994)}]{Pelton1994}
+\bibinfo{author}{Pelton, L.~H.} (\bibinfo{year}{1994}).
+\newblock \bibinfo{title}{The role of material factors in child abuse and
+  neglect}.
+\newblock {\it \bibinfo{journal}{Protecting children from abuse and neglect:
+  Foundations for a new national strategy}\/},  (pp.
+  \bibinfo{pages}{131--181}).
+%Type = Article
+\bibitem[{Plomin et~al.(1994)Plomin, Owen \& McGuffin}]{Plomin1994}
+\bibinfo{author}{Plomin, R.}, \bibinfo{author}{Owen, M.~J.}, \&
+  \bibinfo{author}{McGuffin, P.} (\bibinfo{year}{1994}).
+\newblock \bibinfo{title}{The genetic basis of complex human behaviors}.
+\newblock {\it \bibinfo{journal}{Science}\/},  {\it \bibinfo{volume}{264}\/},
+  \bibinfo{pages}{1733--1739}.
+%Type = Article
+\bibitem[{Raftery et~al.(2009)Raftery, Hoeting, Volinsky, Painter \&
+  Yeung}]{Raftery2009}
+\bibinfo{author}{Raftery, A.}, \bibinfo{author}{Hoeting, J.},
+  \bibinfo{author}{Volinsky, C.}, \bibinfo{author}{Painter, I.}, \&
+  \bibinfo{author}{Yeung, K.~Y.} (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Bma: Bayesian model averaging. r package version
+  3.12}.
+\newblock {\it \bibinfo{journal}{URL: http://CRAN. R-project. org/package=
+  BMA}\/}, .
+%Type = Article
+\bibitem[{Regalado et~al.(2004)Regalado, Sareen, Inkelas, Wissow \&
+  Halfon}]{Regalado2004}
+\bibinfo{author}{Regalado, M.}, \bibinfo{author}{Sareen, H.},
+  \bibinfo{author}{Inkelas, M.}, \bibinfo{author}{Wissow, L.~S.}, \&
+  \bibinfo{author}{Halfon, N.} (\bibinfo{year}{2004}).
+\newblock \bibinfo{title}{Parents' discipline of young children: Results from
+  the national survey of early childhood health}.
+\newblock {\it \bibinfo{journal}{Pediatrics}\/},  {\it
+  \bibinfo{volume}{113}\/}, \bibinfo{pages}{1952--1958}.
+%Type = Book
+\bibitem[{Ridley(2003)}]{Ridley2003}
+\bibinfo{author}{Ridley, M.} (\bibinfo{year}{2003}).
+\newblock {\it \bibinfo{title}{Nature via nurture: Genes, experience, and what
+  makes us human.}\/}.
+\newblock \bibinfo{publisher}{HarperCollins Publishers}.
+%Type = Article
+\bibitem[{Roy(1947)}]{Roy1947}
+\bibinfo{author}{Roy, R.} (\bibinfo{year}{1947}).
+\newblock \bibinfo{title}{La distribution du revenu entre les divers biens}.
+\newblock {\it \bibinfo{journal}{Econometrica, Journal of the Econometric
+  Society}\/},  (pp. \bibinfo{pages}{205--225}).
+%Type = Article
+\bibitem[{Runyan et~al.(2005)Runyan, Cox, Dubowitz, Newton, Upadhyaya, Kotch,
+  Leeb, Everson \& Knight}]{Runyan2005}
+\bibinfo{author}{Runyan, D.~K.}, \bibinfo{author}{Cox, C.~E.},
+  \bibinfo{author}{Dubowitz, H.}, \bibinfo{author}{Newton, R.~R.},
+  \bibinfo{author}{Upadhyaya, M.}, \bibinfo{author}{Kotch, J.~B.},
+  \bibinfo{author}{Leeb, R.~T.}, \bibinfo{author}{Everson, M.~D.}, \&
+  \bibinfo{author}{Knight, E.~D.} (\bibinfo{year}{2005}).
+\newblock \bibinfo{title}{Describing maltreatment: do child protective service
+  reports and research definitions agree?}
+\newblock {\it \bibinfo{journal}{Child abuse \& neglect}\/},  {\it
+  \bibinfo{volume}{29}\/}, \bibinfo{pages}{461--477}.
+%Type = Book
+\bibitem[{Russell \& Trainor(1984)}]{Russell1984}
+\bibinfo{author}{Russell, A.~B.}, \& \bibinfo{author}{Trainor, C.~M.}
+  (\bibinfo{year}{1984}).
+\newblock {\it \bibinfo{title}{Trends in child abuse and neglect: A national
+  perspective}\/}.
+\newblock \bibinfo{publisher}{American Humane Association, Children's
+  Division}.
+%Type = Article
+\bibitem[{Ryff(1989)}]{Ryff1989}
+\bibinfo{author}{Ryff, C.~D.} (\bibinfo{year}{1989}).
+\newblock \bibinfo{title}{Happiness is everything, or is it? explorations on
+  the meaning of psychological well-being.}
+\newblock {\it \bibinfo{journal}{Journal of personality and social
+  psychology}\/},  {\it \bibinfo{volume}{57}\/}, \bibinfo{pages}{1069}.
+%Type = Article
+\bibitem[{Sedlak \& Broadhurst(1996)}]{Sedlak1996}
+\bibinfo{author}{Sedlak, A.~J.}, \& \bibinfo{author}{Broadhurst, D.~D.}
+  (\bibinfo{year}{1996}).
+\newblock \bibinfo{title}{The national incidence study of child abuse and
+  neglect}.
+\newblock {\it \bibinfo{journal}{Washington DC. US Department of Health and
+  Human Services}\/}, .
+%Type = Article
+\bibitem[{Sedlak et~al.(2010)Sedlak, Mettenburg, Basena, Peta, McPherson,
+  Greene et~al.}]{Sedlak2010}
+\bibinfo{author}{Sedlak, A.~J.}, \bibinfo{author}{Mettenburg, J.},
+  \bibinfo{author}{Basena, M.}, \bibinfo{author}{Peta, I.},
+  \bibinfo{author}{McPherson, K.}, \bibinfo{author}{Greene, A.} et~al.
+  (\bibinfo{year}{2010}).
+\newblock \bibinfo{title}{Fourth national incidence study of child abuse and
+  neglect (nis-4)}.
+\newblock {\it \bibinfo{journal}{Washington, DC: US Department of Health and
+  Human Services. Retrieved on July}\/},  {\it \bibinfo{volume}{9}\/},
+  \bibinfo{pages}{2010}.
+%Type = Article
+\bibitem[{Slack et~al.(2007)Slack, Lee \& Berger}]{Slack2007}
+\bibinfo{author}{Slack, K.~S.}, \bibinfo{author}{Lee, B.~J.}, \&
+  \bibinfo{author}{Berger, L.~M.} (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{Do welfare sanctions increase child protection system
+  involvement? a cautious answer}.
+\newblock {\it \bibinfo{journal}{Social Service Review}\/},  {\it
+  \bibinfo{volume}{81}\/}, \bibinfo{pages}{207--228}.
+%Type = Article
+\bibitem[{Sodian et~al.(2004)Sodian, Schoeppner \& Metz}]{Sodian2004}
+\bibinfo{author}{Sodian, B.}, \bibinfo{author}{Schoeppner, B.}, \&
+  \bibinfo{author}{Metz, U.} (\bibinfo{year}{2004}).
+\newblock \bibinfo{title}{Do infants apply the principle of rational action to
+  human agents?}
+\newblock {\it \bibinfo{journal}{Infant Behavior and Development}\/},  {\it
+  \bibinfo{volume}{27}\/}, \bibinfo{pages}{31--41}.
+%Type = Article
+\bibitem[{Stith et~al.(2009)Stith, Liu, Davies, Boykin, Alder, Harris, Som,
+  McPherson \& Dees}]{Stith2009}
+\bibinfo{author}{Stith, S.~M.}, \bibinfo{author}{Liu, T.},
+  \bibinfo{author}{Davies, L.~C.}, \bibinfo{author}{Boykin, E.~L.},
+  \bibinfo{author}{Alder, M.~C.}, \bibinfo{author}{Harris, J.~M.},
+  \bibinfo{author}{Som, A.}, \bibinfo{author}{McPherson, M.}, \&
+  \bibinfo{author}{Dees, J.} (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Risk factors in child maltreatment: A meta-analytic
+  review of the literature}.
+\newblock {\it \bibinfo{journal}{Aggression and violent behavior}\/},  {\it
+  \bibinfo{volume}{14}\/}, \bibinfo{pages}{13--29}.
+%Type = Article
+\bibitem[{Stuebe et~al.(2010)Stuebe, Kleinman, Gillman, Rifas-Shiman, Gunderson
+  \& Rich-Edwards}]{Stuebe2010}
+\bibinfo{author}{Stuebe, A.~M.}, \bibinfo{author}{Kleinman, K.},
+  \bibinfo{author}{Gillman, M.~W.}, \bibinfo{author}{Rifas-Shiman, S.~L.},
+  \bibinfo{author}{Gunderson, E.~P.}, \& \bibinfo{author}{Rich-Edwards, J.}
+  (\bibinfo{year}{2010}).
+\newblock \bibinfo{title}{Duration of lactation and maternal metabolism at 3
+  years postpartum}.
+\newblock {\it \bibinfo{journal}{Journal of Women's Health}\/},  {\it
+  \bibinfo{volume}{19}\/}, \bibinfo{pages}{941--950}.
+%Type = Article
+\bibitem[{Suter \& Hertwig(2011)}]{Suter2011}
+\bibinfo{author}{Suter, R.~S.}, \& \bibinfo{author}{Hertwig, R.}
+  (\bibinfo{year}{2011}).
+\newblock \bibinfo{title}{Time and moral judgment}.
+\newblock {\it \bibinfo{journal}{Cognition}\/},  {\it \bibinfo{volume}{119}\/},
+  \bibinfo{pages}{454--458}.
+%Type = Article
+\bibitem[{Taylor et~al.(2010)Taylor, Manganello, Lee \& Rice}]{Taylor2010}
+\bibinfo{author}{Taylor, C.~A.}, \bibinfo{author}{Manganello, J.~A.},
+  \bibinfo{author}{Lee, S.~J.}, \& \bibinfo{author}{Rice, J.~C.}
+  (\bibinfo{year}{2010}).
+\newblock \bibinfo{title}{Mothers' spanking of 3-year-old children and
+  subsequent risk of children's aggressive behavior}.
+\newblock {\it \bibinfo{journal}{Pediatrics}\/},  {\it
+  \bibinfo{volume}{125}\/}, \bibinfo{pages}{e1057--e1065}.
+%Type = Book
+\bibitem[{Testa \& Poertner(2010)}]{TestaAndPoertner2010}
+\bibinfo{author}{Testa, M.}, \& \bibinfo{author}{Poertner, J.}
+  (\bibinfo{year}{2010}).
+\newblock {\it \bibinfo{title}{Fostering accountability: Using evidence to
+  guide and improve child welfare policy}\/}.
+\newblock \bibinfo{publisher}{Oxford Univ Pr}.
+%Type = Book
+\bibitem[{Train(1986)}]{Train1986}
+\bibinfo{author}{Train, K.} (\bibinfo{year}{1986}).
+\newblock {\it \bibinfo{title}{Qualitative choice analysis: Theory,
+  econometrics, and an application to automobile demand}\/}
+  volume~\bibinfo{volume}{10}.
+\newblock \bibinfo{publisher}{MIT press}.
+%Type = Article
+\bibitem[{Trivers(1974)}]{Trivers1974}
+\bibinfo{author}{Trivers, R.~L.} (\bibinfo{year}{1974}).
+\newblock \bibinfo{title}{Parent-offspring conflict}.
+\newblock {\it \bibinfo{journal}{American zoologist}\/},  {\it
+  \bibinfo{volume}{14}\/}, \bibinfo{pages}{249--264}.
+%Type = Book
+\bibitem[{Trocm{\'e} et~al.(2010)Trocm{\'e}, Fallon, MacLaurin, Daciuk,
+  Felstiner, Black, Tonmyr, Blackstock, Barter, Turcotte
+  et~al.}]{TrocmeEtAl2010}
+\bibinfo{author}{Trocm{\'e}, N.}, \bibinfo{author}{Fallon, B.},
+  \bibinfo{author}{MacLaurin, B.}, \bibinfo{author}{Daciuk, J.},
+  \bibinfo{author}{Felstiner, C.}, \bibinfo{author}{Black, T.},
+  \bibinfo{author}{Tonmyr, L.}, \bibinfo{author}{Blackstock, C.},
+  \bibinfo{author}{Barter, K.}, \bibinfo{author}{Turcotte, D.} et~al.
+  (\bibinfo{year}{2010}).
+\newblock {\it \bibinfo{title}{Canadian incidence study of reported child abuse
+  and neglect, 2008}\/}.
+\newblock \bibinfo{publisher}{Public Health Agency of Canada Ottawa}.
+%Type = Misc
+\bibitem[{Trocm{\'e} et~al.(2007)Trocm{\'e}, Lajoie, Fallon \&
+  Felstiner}]{TrocmeEtAl2007}
+\bibinfo{author}{Trocm{\'e}, N.}, \bibinfo{author}{Lajoie, J.},
+  \bibinfo{author}{Fallon, B.}, \& \bibinfo{author}{Felstiner, C.}
+  (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{Injuries and death of children at the hands of their
+  parents}.
+\newblock
+  \bibinfo{howpublished}{\url{http://cwrp.ca/sites/default/files/publications/en/Injuries57E.pdf}}.
+\newblock \bibinfo{note}{Accessed: 2014-02-01}.
+%Type = Book
+\bibitem[{{US Department of Health and Human Services}(2013)}]{HHS2013}
+\bibinfo{author}{{US Department of Health and Human Services}}
+  (\bibinfo{year}{2013}).
+\newblock {\it \bibinfo{title}{Child Welfare Outcomes 2008-2011-Report to
+  Congress.}\/}.
+\newblock \bibinfo{publisher}{Author}.
+
+\end{thebibliography}

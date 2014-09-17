@@ -1,0 +1,432 @@
+Analysis of Prepared Data
+========================================================
+
+Analysis of data prepared in `data_prep*` files.
+
+```{r prelim_steps_analysis}
+#clear memory
+rm(list=ls(all=TRUE)) 
+
+setwd("C:/Users/mienkoja/Dropbox/qualpaper")
+#setwd("~/Dropbox/qualpaper/")
+
+require(Benchmarking)
+require(sqldf)
+require(BMA)
+require(Amelia) # generate multiple imputations
+require(mitools) # for MIextract()
+require(mix) # for mi.inference()
+require(ggplot2)
+require(extrafont)
+require(pocr)
+require(gridExtra)
+
+
+set.seed(123456)
+
+#load("~/Dropbox/qualpaper/sech_out.RData")
+load("C:/Users/mienkoja/Dropbox/qualpaper/sech_out.RData")
+```
+
+Calculate Technical Efficiency
+-------------------------
+
+```{r calc_tech_eff, tidy=FALSE}
+# see page 215 from Bogetoft and Otto 2011
+sfa_dat <- as.data.frame(na.omit(with(r_dat, cbind(id
+                                                   ,w_ta=w_ta*alpha
+                                                   ,t_ta=t_ta*alpha
+                                                   ,t_tvc
+                                                   ,x_c)
+                                      )
+                                 )
+                         )
+
+sfa_dat <- subset(sfa_dat, (is.infinite(sfa_dat$w_ta)==FALSE | is.infinite(sfa_dat$t_ta==FALSE)
+                             )
+                  )
+sfa_dat <- subset(sfa_dat, !(sfa_dat$w_ta==0 & sfa_dat$t_ta==0))
+
+x <- with(sfa_dat, cbind(w_ta, t_ta)) 
+y1 <- matrix(sfa_dat$t_tvc)
+y2 <- matrix(sfa_dat$x_c)
+
+t_tvc_sfa <- sfa(log1p(x), log1p(y1))
+
+summary(t_tvc_sfa)
+
+#percentage of inefficiency variation to total variation
+lambda <- lambda.sfa(t_tvc_sfa)
+100*lambda^2/(1+lambda^2)
+
+#variance for inefficiency
+sigma2u.sfa(t_tvc_sfa)
+
+#variance for random errors
+sigma2v.sfa(t_tvc_sfa)
+
+#residuals
+e <- residuals(t_tvc_sfa)
+
+#sigma 2
+s2 <- sigma2.sfa(t_tvc_sfa)
+
+mustar <- -e*lambda^2/(1+lambda^2)
+sstar <- lambda/(1+lambda^2)*sqrt(s2)
+tej <- exp(-mustar-sstar*(dnorm(mustar/sstar)/pnorm(mustar/sstar)))
+tejt <- data.frame(id=sfa_dat$id, tejt=tej[1:1822])
+#tejt <- data.frame(id=sfa_dat$id, tejt=tej[1:927])
+
+r_dat <- sqldf("select 
+                  r.*
+                  ,tejt
+                from r_dat r
+                left join tejt tt
+                  on r.id=tt.id")
+
+#try benchmarking for x_c
+x_c_sfa <- sfa(log1p(x), log1p(y2))
+
+summary(x_c_sfa)
+
+#percentage of inefficiency variation to total variation
+lambda <- lambda.sfa(x_c_sfa)
+100*lambda^2/(1+lambda^2)
+
+#variance for inefficiency
+sigma2u.sfa(x_c_sfa)
+
+#variance for random errors
+sigma2v.sfa(x_c_sfa)
+
+#residuals
+e <- residuals(x_c_sfa)
+
+#sigma 2
+s2 <- sigma2.sfa(x_c_sfa)
+
+mustar <- -e*lambda^2/(1+lambda^2)
+sstar <- lambda/(1+lambda^2)*sqrt(s2)
+tej <- exp(-mustar-sstar*(dnorm(mustar/sstar)/pnorm(mustar/sstar)))
+#tejx <- data.frame(id=sfa_dat$id, tejx=tej[1:927])
+tejx <- data.frame(id=sfa_dat$id, tejx=tej[1:1822])
+
+
+r_dat <- sqldf("select 
+               r.*
+               ,tejx
+               from r_dat r
+               left join tejx tx
+               on r.id=tx.id")
+
+X <- with(sfa_dat, cbind(w_ta = w_ta/t_ta, t_tvc, x_c))
+Y <- matrix(sfa_dat$t_ta, ncol=1)
+dist <- sfa(log1p(X), -log(Y))
+tedist <- te.sfa(dist)
+sigma2u <- sigma2u.sfa(dist)
+sigma2v <- sigma2v.sfa(dist)
+
+te <- data.frame(id=sfa_dat$id, te=tedist)
+
+# commented code is to possibly model te as a hyper parameter
+#nsim <- 10
+#nobs <- 1823
+
+#te <- data.frame(id=rep(sfa_dat$id, nsim), te=rep(tedist, nsim))
+#err <- rep(NA, nsim*nobs)
+#err <- rnorm(1, mean=0, sd=sigma2v)-rnorm(1, mean=0, sd=sigma2u), nsim*nobs)
+# for (i in 1:(nsim*nobs)){
+#     err[i] <- rnorm(1, mean=0, sd=sigma2v)-rnorm(1, mean=0, sd=sigma2u)  
+# }
+# te$err <- err
+# te$te_sim <- te$te + te$err
+# 
+# idx <- data.frame(j=rep(seq(1:nobs), nsim), i = rep(seq(1:nsim), nobs), tot = seq(1:(nsim*nobs)))
+# 
+# m <- lm(tot~j+i, dat=idx)
+
+r_dat <- sqldf("select 
+               r.*
+               ,te
+               from r_dat r
+               left join te te
+               on r.id=te.id")
+```
+
+Attempt an SEM 
+-------------------------
+```{r sem_attempt, tidy=FALSE}
+
+require(lavaan)
+#require(car)
+### start with a CFA using all variables
+
+r_dat[,c("pospn1"
+         ,"pospn2"
+         ,"pospn3"
+         ,"negpn1"
+         ,"negpn2")] <- lapply(r_dat[,c("pospn1"
+                                       ,"pospn2"
+                                       ,"pospn3"
+                                       ,"negpn1"
+                                       ,"negpn2")], ordered)
+
+model1_cfa <- ' 
+    f1 =~ pospn1 + pospn2 + pospn3
+    f2 =~ negpn1 + negpn2
+'
+
+model2 <- ' 
+    f1 =~ pospn1 + pospn2
+    f2 =~ negpn1 + negpn2
+'
+
+r_dat$pospn1_r <- factor(r_dat$pospn1
+                       ,levels=rev(levels(r_dat$pospn1)))
+
+r_dat$pospn2_r <- factor(r_dat$pospn2
+                       ,levels=rev(levels(r_dat$pospn2)))
+
+model3 <- ' 
+    f1 =~ pospn1 + pospn2 + negpn1 + negpn2
+'
+
+
+fit1 <- cfa(model1_cfa, data = r_dat)
+summary(fit1, fit.measures = TRUE)
+
+fit2 <- cfa(model2, data = r_dat)
+summary(fit2, fit.measures = TRUE)
+
+fit3 <- cfa(model3, data = r_dat)
+summary(fit3, fit.measures = TRUE)
+
+
+### No SEMs will actually converge...
+
+#...see path analysis below
+
+
+```
+
+
+Run a BMA to Select Variables 
+-------------------------
+
+This section of the code does a little prep work and then conducts a BMA to identify the model with the highest posterior probability. 
+
+```{r run_bma_on_vars, tidy=FALSE}
+r_dat_sub <- subset(r_dat
+                    ,r_dat$c_age > 18
+                    ,select = c(neg_count
+                                ,pos_count
+                                ,alpha 
+                                ,cc_mlt
+                                ,te 
+                                ,c_age
+                                ,w_ta
+                                ,cnt_ch
+                                ,m_white
+                                ,m_age
+                                ,m_mar
+                                ,m_college 
+                                ,m_hi_frus 
+                                ,c_health
+                                ,c_hi_health                    
+                                ,dev_cnc)
+)
+
+#transform some variables
+r_dat_sub$te <- as.numeric(r_dat_sub$te)
+r_dat_sub$log_w_ta <- log(r_dat_sub$w_ta)     
+r_dat_sub$log_m_age <- log(r_dat_sub$m_age)
+r_dat_sub$log_c_age <- log(r_dat_sub$c_age)
+#final calculation for p_all_neg
+r_dat_sub$p_all_neg <- (r_dat_sub$neg_count/2)/((r_dat_sub$neg_count/2)+(r_dat_sub$pos_count/3))
+r_dat_sub$p_all_neg_d <- ((r_dat_sub$neg_count/2)+(r_dat_sub$pos_count/3))
+
+#calculate some interactions
+r_dat_sub$alpha_by_log_w_ta <- r_dat_sub$alpha*log(r_dat_sub$w_ta)     
+r_dat_sub$te_by_log_w_ta <- r_dat_sub$te*log(r_dat_sub$w_ta)
+r_dat_sub$alpha_by_te <- r_dat_sub$te*r_dat_sub$alpha
+r_dat_sub$alpha_by_log_w_ta_by_te <- r_dat_sub$te*log(r_dat_sub$w_ta)*r_dat_sub$alpha
+
+x=subset(r_dat_sub, select=c(alpha
+                             ,cc_mlt
+                             ,te 
+                             ,c_age
+                             ,w_ta
+                             ,cnt_ch
+                             ,m_white
+                             ,m_age
+                             ,m_mar
+                             ,m_college 
+                             ,m_hi_frus 
+                             ,c_health
+                             ,c_hi_health                    
+                             ,dev_cnc
+                             ,log_w_ta  
+                             ,log_m_age))
+
+glm.out.p_all_neg <- bic.glm(y=r_dat_sub$p_all_neg
+                             ,x=x
+                             ,data = r_dat_sub
+                             ,glm.family = quasibinomial()
+                             ,wt=r_dat_sub$p_all_neg_d
+) 
+
+summary(glm.out.p_all_neg)
+imageplot.bma(glm.out.p_all_neg)
+```
+
+
+```{r path_analysis_attempt, tidy=FALSE}
+model1 <- ' 
+    alpha ~ c_age +
+           cnt_ch +
+           m_white +
+           m_mar +
+           m_college + 
+           m_hi_frus + 
+           c_health +
+           c_hi_health +                    
+           dev_cnc +
+           log_w_ta +  
+           log_m_age
+    p_all_neg ~ log_w_ta + alpha
+'
+fit1 <- sem(model1, data = r_dat_sub, mimic="Mplus")
+summary(fit1, fit.measures = TRUE)
+
+r_dat$cc_mlt
+
+
+m0 <- glm(p_all_neg ~ 1
+                 ,family=binomial
+                 ,weights=r_dat_sub$p_all_neg_d
+                 ,data=r_dat_sub)
+
+m1 <- glm(p_all_neg ~ alpha +
+                 log_w_ta
+                 ,family=binomial
+                 ,weights=r_dat_sub$p_all_neg_d
+                 ,data=r_dat_sub)
+
+1-(logLik(m1)/logLik(m0))
+
+m2 <- glm(alpha ~ c_age +
+           cnt_ch +
+           m_white +
+           m_age +
+           m_mar +
+           m_college + 
+           m_hi_frus + 
+           c_health +
+           c_hi_health +                    
+           dev_cnc +
+           log_w_ta +  
+           log_m_age
+          ,family=binomial
+          ,weights=r_dat_sub$cc_mlt
+          ,data=r_dat_sub)
+
+m2_0 <- glm(alpha ~ 1
+          ,family=binomial
+          ,weights=r_dat_sub$cc_mlt
+          ,data=r_dat_sub)
+
+1-(logLik(m2)/logLik(m2_0))
+
+```
+
+
+Run MI to Make up for Missing Data
+-------------------------
+I will ultimately run an MI to account for some of the missing values in my data (about 10 percent of alpha values). I should ultimately work out a way to integrate the multiple imputation into the BMA above. This should be fairly straight-forward but will probably take an hour or two to implement. At the time of this writing, my implementation of `Amelia`. Having run the model previously, however, I can confirm that the results do not change from those of the binomial GLM below.  
+
+```{r run_mi}
+# r_dat_sub.amelia <- amelia(r_dat_sub
+#                            ,m=10
+#                            ,noms=c("m_white" 
+#                                    ,"m_mar"
+#                                    ,"m_college" 
+#                                    ,"m_hi_frus" 
+#                                    ,"c_hi_health"                    
+#                                    ,"dev_cnc")
+#                            ,emburn=c(500,500))
+
+```
+
+Run Most Probable Model from BMA
+-------------------------
+I include the technical efficiency variable, `te`, as well due to a desire to test the original hypothesis of the paper. As suggested by the BMA, however, `te` is not a significant predictor in the model. 
+
+```{r run_glm}
+m1 <- glm(p_all_neg ~ alpha +
+                 log_w_ta
+                 ,family=quasibinomial
+                 ,weights=r_dat_sub$p_all_neg_d
+                 ,data=r_dat_sub)
+summary(m1)
+
+sim_dat <- subset(r_dat_sub, select=c(alpha, log_w_ta))
+
+sim_dat_w1 <- with(sim_dat
+                 ,data.frame(alpha = mean(sim_dat$alpha, na.rm=TRUE)
+                             ,log_w_ta = rep(seq(from = 4, to = 13, length.out = 1000))
+                             )
+                 )
+
+sim_dat_w2 <- cbind(sim_dat_w1
+                    ,predict(m1, type="response", newdata=sim_dat_w1, se = TRUE))
+
+sim_dat_w3 <- within(sim_dat_w2, {
+    LL <- fit - (1.96 * se.fit)
+    UL <- fit + (1.96 * se.fit)
+})
+
+sim_dat_a1 <- with(sim_dat
+                 ,data.frame(log_w_ta = mean(sim_dat$log_w_ta, na.rm=TRUE)
+                             ,alpha = rep(seq(from = 0, to = 1, length.out = 1000))
+                             )
+                 )
+
+sim_dat_a2 <- cbind(sim_dat_a1
+                    ,predict(m1, type="response", newdata=sim_dat_a1, se = TRUE))
+
+sim_dat_a3 <- within(sim_dat_a2, {
+    LL <- fit - (1.96 * se.fit)
+    UL <- fit + (1.96 * se.fit)
+})
+
+breaks=c(.40, .45, .50, .55, .60)
+
+
+
+w_p <- ggplot(sim_dat_w3, aes(x = log_w_ta, y = fit)) + 
+        geom_ribbon(aes(ymin = LL, ymax = UL),alpha = 0.2, fill="#294d64") + 
+        geom_line(size = 1, colour="#294d64") +
+        xlab("Log of Income") +
+        ylab(expression(paste("P(Type II Discipline | ", alpha, ")"))) +
+        scale_y_continuous(labels = percent
+                           #,breaks=breaks
+                           ,limits=c(0, 1)) +
+        theme_bw() +
+        theme(text=element_text(size=16, family="Frutiger LT Std 45 Light"))
+
+a_p <- ggplot(sim_dat_a3, aes(x = alpha, y = fit)) + 
+        geom_ribbon(aes(ymin = LL, ymax = UL),alpha = 0.2, fill="#294d64") + 
+        geom_line(size = 1, colour="#294d64") +
+        xlab(expression(alpha)) +
+        ylab("P(Type II Discipline | Income)") +
+        scale_y_continuous(labels = percent
+                           #,breaks=breaks
+                           ,limits=c(0, 1)) +
+        theme_bw() +
+        theme(text=element_text(size=16, family="Frutiger LT Std 45 Light"))
+
+png(file="C:/Users/mienkoja/Dropbox/qualpaper/model_plot.png", width=15, height = 12, units="in", res = 640)
+grid.arrange(w_p, a_p, ncol=2)
+dev.off()
+grid.arrange(w_p, a_p, ncol=2)
+```

@@ -1,0 +1,13 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\node at (0,0) {Test};
+
+\end{tikzpicture}
+
+\end{document}

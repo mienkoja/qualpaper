@@ -1,0 +1,34 @@
+---
+title: "Test"
+output: html_document
+---
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+require(knitr)
+source("tmd.R")
+require(Hmisc)
+opts_chunk$set(echo = FALSE
+               ,warning=FALSE
+               ,results='asis'
+               ,message=FALSE
+               ,error=FALSE
+               ,dpi = 400)
+
+k <- .65
+```
+
+
+```{r, fig.width=10.5*k, fig.height=8.5*k, eval=FALSE}
+tmd(code = "general_conceptual_model_flow.Rnw", k2p = FALSE)
+```
+
+```{r, fig.width=3, fig.height=3}
+tmd(code = "general_conceptual_model_graphs.Rnw", k2p = FALSE)
+```
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{fontspec}
+\usetikzlibrary{positioning,decorations.text,pgfplots.groupplots,intersections,shapes.multipart}
+\pgfplotsset{compat=1.7}
+
+\definecolor{nice_blue}{HTML}{377EB8}
+\definecolor{nice_green}{HTML}{80C87D}
+\definecolor{nice_purple}{HTML}{984EA3}
+\definecolor{nice_red}{HTML}{E41A1C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+\definecolor{nice_light_orange}{HTML}{FDBF6F}
+\definecolor{nice_yellow}{HTML}{FFFF99}
+\definecolor{nice_pink}{HTML}{FB9A99}
+
+\pgfplotsset{
+    simple graphs/.style={
+        domain=0:12
+        ,xmin=0
+        ,xmax=12
+        ,ymin=0
+        ,ymax=12
+        ,axis lines*=left
+        ,xtick=\empty
+        ,ytick=\empty
+        ,every axis y label/.style={
+            at={(axis description cs:-0.05,0.25)}
+            ,rotate=90
+            ,anchor=west},
+        }
+        ,every axis x label/.style={
+            at={(axis description cs:0.5,-0.1)}
+            ,anchor=south}
+        }
+
+\tikzset{
+small_dot/.style={
+  fill,
+  circle,
+  inner sep=1.5pt
+  }
+}
+
+
+\def\myshift#1{\raisebox{2ex}}
+
+
+
+\begin{document}
+
+
+%\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}[scale=0.95]
+\centering
+
+
+% \node at (.75,4.5) {\fontspec{Frutiger LT Std 55 Roman}w\textsubscript{1}};
+% \node at (1.25,5) {\fontspec{Frutiger LT Std 55 Roman}w\textsubscript{2}};
+% \node at (1.75,5.45) {\fontspec{Frutiger LT Std 55 Roman}w\textsubscript{3}};
+% \node[color=nice_purple] at (5.35,3.5) {\fontspec{Frutiger LT Std 55 Roman}Well-being};
+
+\begin{axis}[
+    simple graphs,
+    ymax=6,
+    xmax=6,
+    ytick=\empty,
+    xtick=\empty,
+    enlarge x limits=false,
+    axis lines*=left,
+    axis line style = {gray!80, line width=2.83464567pt,shorten <=-0.5\pgflinewidth},
+    xlabel=\fontspec{Frutiger LT Std 55 Roman}Parental Wellbeing, 
+    ylabel=\fontspec{Frutiger LT Std 55 Roman}Child Wellbeing
+]
+
+\addplot [nice_blue, line width=2.83464567pt, smooth] table {ppf1.dat};
+\addplot [nice_blue, line width=2.83464567pt, smooth] table {ppf2.dat};
+
+\addplot[nice_purple, line width=2.83464567pt] plot coordinates {
+        (0,1)
+        (6,1)};
+
+\end{axis}
+
+\node (wbar) at (10,1) [draw=none,fill=none] {\fontspec{Frutiger LT Std 55 Roman}Societal Wellbeing Threshold};
+\node (wbar_arrow_end) at (6,1) [draw=none,fill=none] {};
+\node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}A}] (A) at (2,1.5) {}; 
+\node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}B}] (B) at (2,.5) {}; 
+\node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}C}] (C) at (4.425,.5) {}; 
+\node[small_dot, label={right:\fontspec{Frutiger LT Std 55 Roman}B'}] (B_prime) at (4.225,1.5) {}; 
+\node[small_dot, label={right:\fontspec{Frutiger LT Std 55 Roman}C'}] (C_prime) at (6.55,1.5) {}; 
+\node[draw=none] (Frontier2) at (2,5.75) {\fontspec{Frutiger LT Std 55 Roman}Frontier 2}; 
+\node[draw=none] (Frontier1) at (1.25,4.4) {\fontspec{Frutiger LT Std 55 Roman}Frontier 1}; 
+\node[draw=none] (Frontier2_pt) at (4,4.25) {}; 
+\node[draw=none] (Frontier1_pt) at (3.25,2.75) {}; 
+
+\draw[->,bend left, line width=2.83464567*0.5pt]  (Frontier2) to node [auto] {} (Frontier2_pt);
+\draw[->,bend left, line width=2.83464567*0.5pt]  (Frontier1) to node [auto] {} (Frontier1_pt);
+
+\draw[->,bend left, line width=2.83464567*0.5pt]  (wbar) to node [auto] {} (wbar_arrow_end);
+\draw[->, line width=2.83464567*0.5pt]  (C) to node [auto] {} (C_prime);
+\draw[->, line width=2.83464567*0.5pt]  (B) to node [auto] {} (B_prime);
+
+
+\end{tikzpicture}
+
+
+
+
+\end{document}
