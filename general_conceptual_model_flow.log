@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2013.8.9)  9 SEP 2014 15:31
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2013.8.9)  22 OCT 2014 18:39
 entering extended mode
 **general_conceptual_model_flow.tex
 (C:\Users\mienkoja\Dropbox\repos\qualpaper\general_conceptual_model_flow.tex
@@ -1199,8 +1199,32 @@ File: N0036253_mod.png Graphic file (type QTm)
 . 
 . This font family consists of the following shapes:
 .................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
 File: N0036254_mod.png Graphic file (type QTm)
  <use  "N0036254_mod.png" >
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1356,8 +1380,32 @@ File: N0036253_mod.png Graphic file (type QTm)
 . 
 . This font family consists of the following shapes:
 .................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
 File: N0036254_mod.png Graphic file (type QTm)
  <use  "N0036254_mod.png" >
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1513,6 +1561,14 @@ File: N0036253_mod.png Graphic file (type QTm)
 . 
 . This font family consists of the following shapes:
 .................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
 File: N0036254_mod.png Graphic file (type QTm)
  <use  "N0036254_mod.png" >
 .................................................
@@ -1627,10 +1683,26 @@ File: N0036254_mod.png Graphic file (type QTm)
 . 
 . This font family consists of the following shapes:
 .................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FrutigerLTStd55Roman(0)' created for font 'Frutiger LT Std 55
+. Roman' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 487.
+(Font)              <7> on input line 502.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 487.
+(Font)              <5> on input line 502.
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1653,10 +1725,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (C:\Users\mienkoja\Dropbox\repos\qualpaper\general_conceptual_model_flow.aux) )
  
 Here is how much of TeX's memory you used:
- 30914 strings out of 429025
- 701097 string characters out of 3167801
- 832753 words of memory out of 3000000
- 33712 multiletter control sequences out of 15000+200000
+ 30957 strings out of 429025
+ 702344 string characters out of 3167801
+ 838239 words of memory out of 3000000
+ 33755 multiletter control sequences out of 15000+200000
  3752 words of font info for 28 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
  56i,13n,92p,746b,895s stack positions out of 5000i,500n,10000p,200000b,50000s

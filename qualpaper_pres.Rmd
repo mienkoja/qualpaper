@@ -1,0 +1,139 @@
+---
+title: "Constrained Parenting Decisions"
+author: "Joe Mienko"
+date: "Wednesday, October 23, 2014"
+output:
+  beamer_presentation:
+    colortheme: seagull
+    fonttheme: professionalfonts
+    keep_tex: yes
+    theme: CambridgeUS
+---
+
+## Introduction
+
+> - The purpose of this manuscript is to formally specify and test a general theory of child maltreatment. 
+
+> - Well-known association between poverty and child maltreatment. 
+
+> - Lack of a basic framework explaining why we would expect a link between poverty and child maltreatment. 
+
+> - This study and the empirical analysis presented here attempt to provide such a basis.
+
+## Background - Human Evolution
+
+### Why do Humans Engage in Parenting Activities?
+
+> - Basic evolutionary theory demonstrates that behaviors exist \emph{because} they helped genes to evolve to their present state.
+
+> - Parental altruism is one such behavior - defined as those behaviors requiring the investment of time or other resources in a child in a way that benefits the child but comes at a cost to the parent. 
+
+> - By engaging in such altruistic acts to her own children, a parent is increasing the survival probability of her own children and thus increasing the survival probability of her own genes. 
+
+## Background - Human Evolution 
+
+### Do Parents Engage in Altruism Forever?
+
+> - No!
+
+> - Countless examples of infanticide in tribal cultures. 
+
+> - Until recently, infanticide was regularly practiced in Western cultures. 
+
+## Parental Decision-Making
+
+### Why do Parents Make Different Decisions in Different Circumstances?
+
+> - Humans have agency (or at they at least act like they do)
+
+> - Evidence from neuroscience suggests that humans make decisions with both automaticity
+
+> - ...and as the result of more thoughtful deliberation.
+
+## Parental Decision-Making
+
+### Joshua Greene's Dual Process Theory of Morality
+
+> - Greene (2014) outlines a model of this dual-process human brain in which humans are said to possess an automatic mode (primarily driven by structures such as the ventromedial prefrontal cortex) and a manual mode
+(primarily driven by structures such as the dorsolateral prefrontal cortex). 
+
+> - In simple terms, moral decisions that require cost-benefit analysis and thinking require humans to engage in manual mode, deliberative thinking. 
+
+> - Moral decisions that do not require cost-benefit analysis are viewed to be made automatically - without the need for higher level thought processes.
+
+## State Decision-Making
+
+### Why do State's Intervene in Family Lives?
+
+> - Since the 19th century, Western society and most of the world has evolved into a series of social welfare states which also seek to prevent the existence of "carnival[s] of slaughter". 
+
+> - When parent's violate this understanding, we tend to see children who are less well-developed and less capable of full participation in society as adults. In other words, society is made to pay for individual parental decisions.
+
+> - For the purposes of this manuscript, instances in which this contract is broken down are viewed to be instances of child maltreatment. When children are maltreated, the state is viewed to have a fiduciary
+obligation to both the child and to the rest of society. 
+
+## Overall Conceptual Model
+
+\includegraphics[scale=0.3]{general_conceptual_model_flow.pdf}
+
+## Decisions Under Low Resource Levels
+
+\centering{
+\includegraphics[scale=0.375]{general_conceptual_model_graphs.pdf}}
+
+## Measuring Decision Making in Parents 
+
+### Altruism
+
+Those parental behaviors or decisions requiring the investment of time or other resources in a child in a way that increases the wellbeing of the child but at a cost to parental wellbeing.
+
+### Maltreative Behaviors 
+
+Those behaviors that will ultimately bring a child's cumulative well-being below the societally defined threshold. 
+
+## Connecting Altruism to Maltreative Parental Behaviors
+
+\centering{
+\includegraphics[scale=.9]{wellbeing_production_possibilities.pdf}}
+
+## Major Predictions of the Model
+
+> - As resource levels increase, maltreative parenting behavior will decrease (well-established). 
+
+> - In the current analysis, an independent effect of altruism while controlling for the effects of resources is expected.
+
+## Analytic Approach
+
+> - Using data from the National Survey of Early Childhood Health (NSECH), the Consumer Expenditure Survey (CES), and the American Time Use Survey (ATUS), estimates of altruism, parental efficiency, income, and other control variables were calculated. 
+
+> - A dependent measure of the probability that all reported discipline strategies would be Type-II strategies was also calculated. 
+
+> - All variables were subjected to Bayesian Model Averaging (BMA) across quasibinomial GLMs to determine the most probable set of covariates. The BMA results estimate that the model with the highest posterior probability is a model which only includes the household and parental investments (household altruism) and the natural logarithm of their annual income. 
+
+
+## Model Results
+
+\centering{
+\includegraphics[scale=.65]{./qualpaper_v5_files/figure-latex/ModelResultGph2.pdf}}
+
+
+## Discussion
+
+> - The results of the analysis presented above confirm the hypothesis that more altruistic households will tend to engage in parenting strategies associated with wellbeing to a greater extent than less altruistic households.  
+
+> - To the extent that the other assumptions of the theoretical model hold, the results of this analysis suggest that relatively simple models of human behavior might be able to explain how families become involved with the child welfare system.
+
+## Next Steps 
+
+> - Examination of state-level estimates of altruism. 
+
+> - Directly test opther aspects of the model through the monetization of various parenting staretgies. 
+
+> - Brain-imaging studies explicitly testing assumptions used from dual-process theory of morality. 
+
+> - MIMIC approach to measuring altruism and maltreative behaviors. 
+
+
+##
+
+Thank You!

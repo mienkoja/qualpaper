@@ -226,7 +226,7 @@ cols <- brewer.pal(8,"Set1")
 
 \linenumbers
 
-\section{Introduction}
+\section{Introduction and Theoretical Background}
 
 The purpose of this paper is to formally specify a general theory of child maltreatment. The conclusion of this paper is that child maltreatment is inextricably linked to resource constraints. As such, we tend to see a relationship between a parent’s tendency to maltreat her child and the parent’s relative position in the wealth distribution of a given society. Specifically, a parent on the lower end of a wealth distribution will tend to exhibit an increased probability of maltreating her child relative to parents at the higher end of a wealth distribution. The central thesis of this paper is that maltreatment is the normal consequence of parenting decisions made under household resource constraints. While child maltreatment may be undesirable, in most cases it is not pathological. Recognition of this basic distinction has important implications for child welfare policy and practice. 
 
@@ -250,7 +250,22 @@ Understanding human behavior, of course, requires a recognition of human agency 
 
 \citet{Greene2014} outlines a model of this dual-process human brain in which humans are said to possess an automatic mode (primarily driven by structures such as the ventromedial prefrontal cortex) and a manual mode (primarily driven by structures such as the dorsolateral prefrontal cortex). The experimental evidence for this model is well-covered by Greene and will not repeated here. However, Greene demonstrates how a series of experimental studies show that the dual-process theory of the brain implies a dual-process theory of \emph{morality}. The basis of Greene's theory is what he refers to as the Central Tension Principle in which ``characteristically deontological judgments are preferentially supported by automatic emotional responses, while characteristically consequentialist judgments are preferentially supported by conscious reasoning and allied processes of cognitive control[(i.e. manual mode)]''. In simple terms, moral decisions that require cost-benefit analysis and ``thinking'' (i.e. the types of decisions that would tend to lead to optimal parental investment decisions in spite of resource constraints) require humans to engage in manual mode, deliberative thinking. Other moral decisions are made automatically.
 
-In terms of parenting, this paper assumes that our automatic mode tends to serve humans well most of the time. Human's have evolved to, under normal circumstances, care for their children as described above. This means that most of the time, default parental impulses will tend to avoid a Middlesex-style ``carnival of slaughter''. Placing a parent under resource constraints would require that the parent switch to manual-mode thinking and continue to make optimal investments in their child in spite of the sorts of genetic impulses they might feel. However, recent experimental evidence gives us reason to believe that switching to manual-mode thinking becomes difficult under resource constraints. Specifically, cognitive load (i.e. time pressure or a form of resource constraint) has been been observed to decrease manual mode thinking in experimental subjects \citep{Suter2011, Paxton2012}. Other recent research by \citet{Mani2013} suggests that the types of cognitive load that are induced in experimental settings are also induced by reductions in income. Taken as a whole, these recent findings lead to the conclusion that relatively poor parents who are faced with choices of how to invest in their children will tend to rely on automatic mode decision-making processes relative to wealthier parents. As shown in (Insert Figure) below, under \emph{extreme} resource constraints it is reasonable to conclude that this tendency will give way to maltreative behaviors. 
+In terms of parenting, this paper assumes that our automatic mode tends to serve humans well most of the time. Human's have evolved to, under normal circumstances, care for their children as described above. This means that most of the time, default parental impulses will tend to avoid a Middlesex-style ``carnival of slaughter''. Placing a parent under resource constraints would require that the parent switch to manual-mode thinking and continue to make optimal investments in their child in spite of the sorts of genetic impulses they might feel. However, recent experimental evidence gives us reason to believe that switching to manual-mode thinking becomes difficult under resource constraints. Specifically, cognitive load (i.e. time pressure or a form of resource constraint) has been been observed to decrease manual mode thinking in experimental subjects \citep{Suter2011, Paxton2012}. Other recent research by \citet{Mani2013} suggests that the types of cognitive load that are induced in experimental settings are also induced by reductions in income. Taken as a whole, these recent findings lead to the conclusion that relatively poor parents who are faced with choices of how to invest in their children will tend to rely on automatic mode decision-making processes relative to wealthier parents. Under \emph{extreme} resource constraints we conclude for the purposes of this paper that this tendency will give way to maltreative behaviors. 
+
+\section{Microeconomic Model}
+
+This manuscript considers two types of individuals ($i$): $p$ and $c$
+indicating a parent and child respectively. This is a simplifying
+assumption made for the purposes of this paper. The model proposed here,
+however, readily extends to multiple children and multiple parents as
+well as to children of varying ages and genders. The parent's total
+well-being is given as $w_p(x_p)$ where $x_p$ is a composite good
+consumed by the parent. The child's well-being is given as $w_c(x_c)$
+where $x_c$ is a composite good consumed by the child. For the purposes
+of this paper, it is assumed that $x_p$ and $x_c$ are private goods. In
+other words, $x_p$ is only consumed by $p$ and $x_c$ is only consumed by
+$c$. The overall framework utilized here is, however, general enough to
+accommodate both private and public goods through the application of a \citet{Gorman1976} type linear technology function.
 
 
 

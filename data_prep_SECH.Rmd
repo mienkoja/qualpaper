@@ -6,15 +6,17 @@ This document preps data (making use of information calculated in `data_prep_CES
 #clear memory
 rm(list=ls(all=TRUE)) 
 
+setwd("C:/Users/mienkoja/Dropbox/repos/qualpaper/ATUS/2003")
 #setwd("C:/Users/mienkoja/Dropbox/qp_analysis/ATUS/2003")
-setwd("~/Dropbox/qualpaper/")
+#setwd("~/Dropbox/qualpaper/")
 
 require(sqldf)  	# load the sqldf package (enables sql queries on data frames)
 
 set.seed(123456)
 
-load("~/Dropbox/qualpaper/cc_out.RData")
-load("~/Dropbox/qualpaper/atus_out.RData")
+load("C:/Users/mienkoja/Dropbox/repos/qualpaper/cc_out.RData")
+load("C:/Users/mienkoja/Dropbox/repos/qualpaper/atus_out.RData")
+setwd("C:/Users/mienkoja/Dropbox/repos/qualpaper/")
 dat <- read.csv("datasech.csv")
 ```
 
@@ -753,12 +755,20 @@ safth_bin0[is.na(safth_bin0)] <- 0
 
 pos_count <- rowSums(data.frame(pospn1_bin0, pospn2_bin0, pospn3_bin0))
 neg_count <- rowSums(data.frame(negpn1_bin0, negpn2_bin0))
+pos_count_alt1 <- rowSums(data.frame(pospn1_bin0, pospn2_bin0))
+neg_count_alt1 <- rowSums(data.frame(negpn1_bin0, negpn2_bin0, pospn3_bin0))
+pos_count_alt2 <- rowSums(data.frame(pospn1_bin0, pospn2_bin0))
+neg_count_alt2 <- rowSums(data.frame(negpn1_bin0, negpn2_bin0))
 saf_count <- rowSums(data.frame(safgt_bin0, safpd_bin0, saflk_bin0, safbp_bin0, safth_bin0))
 
 dis_strat <- data.frame(id=seq(1:obs)
                         ,dis_strat=rep(NA, obs)
                         ,pos_count
                         ,neg_count
+                        ,pos_count_alt1
+                        ,neg_count_alt1
+                        ,pos_count_alt2
+                        ,neg_count_alt2
                         ,saf_count)
 for (i in 1:obs){
   if(pos_count[i]>0 & neg_count[i]==0){
@@ -772,14 +782,17 @@ for (i in 1:obs){
 
 r_dat <- sqldf("select 
                r.*
-               ,dis_strat
                ,pos_count
                ,neg_count
+               ,pos_count_alt1
+               ,neg_count_alt1
+               ,pos_count_alt2
+               ,neg_count_alt2
                ,saf_count
                from r_dat r
                join dis_strat ds
                on r.id=ds.id")
 
 #rm(list=setdiff(ls(), "r_dat"))
-save.image("~/Dropbox/qualpaper/sech_out.RData")
+save.image("C:/Users/mienkoja/Dropbox/repos/qualpaper/sech_out.RData")
 ```

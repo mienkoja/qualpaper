@@ -93,7 +93,10 @@
       ] (auto_mode) at (13,3)
     {\includegraphics[width=.25\textwidth]{N0036253_mod.png}};
 \node[draw=none] 
-   (auto_mode_cover) at (13,1.5) {\fontspec{Frutiger LT Std 55 Roman}Automatic};
+   (auto_mode_cover1) at (13,4.5) {\fontspec{Frutiger LT Std 55 Roman}Automatic};
+\node[draw=none] 
+   (auto_mode_cover2) at (13,1.5) {\fontspec{Frutiger LT Std 55 Roman}(i.e. Survival)};
+
 
 \node[draw
       ,circle
@@ -105,7 +108,9 @@
       ] (manual_mode) at (7,3)
     {\includegraphics[width=.25\textwidth]{N0036254_mod.png}};
 \node[draw=none] 
-   (auto_mode_cover) at (7,1.5) {\fontspec{Frutiger LT Std 55 Roman}Manual};
+   (man_mode_cover1) at (7,4.5) {\fontspec{Frutiger LT Std 55 Roman}Manual};
+\node[draw=none] 
+   (man_mode_cover2) at (7,1.5) {\fontspec{Frutiger LT Std 55 Roman}(i.e. Learning)};   
 
 
 % \node[circle split
@@ -212,7 +217,7 @@
   \fontspec{Frutiger LT Std 55 Roman}Threshold};   
 
 \draw[->,line width=2.83464567pt,draw=gray!80]  
-  (parenting_sit) to node [auto] {} (auto_mode);
+  (parenting_sit) to node [auto] {\fontspec{Frutiger LT Std 55 Roman}Low Stress} (auto_mode);
   
 \draw[->,line width=2.83464567pt,draw=gray!80]  
   (auto_mode) to node [auto] {} (parenting_beh);  
@@ -253,7 +258,9 @@
       ] (auto_mode_sub) at (13*2,3)
     {\includegraphics[width=.25\textwidth]{N0036253_mod.png}};
 \node[draw=none] 
-   (auto_mode_cover_sub) at (13*2,1.5) {\fontspec{Frutiger LT Std 55 Roman}Automatic};
+   (auto_mode_cover_sub1) at (13*2,4.5) {\fontspec{Frutiger LT Std 55 Roman}Automatic};
+\node[draw=none] 
+   (auto_mode_cover_sub2) at (13*2,1.5) {\fontspec{Frutiger LT Std 55 Roman}(i.e. Survival)};
 
 \node[draw
       ,circle
@@ -264,7 +271,9 @@
       ] (manual_mode_sub) at (7+13,3)
     {\includegraphics[width=.25\textwidth]{N0036254_mod.png}};
 \node[draw=none] 
-   (manual_mode_cover_sub) at (7+13,1.5) {\fontspec{Frutiger LT Std 55 Roman}Manual};
+   (manual_mode_cover_sub1) at (7+13,4.5) {\fontspec{Frutiger LT Std 55 Roman}Manual};
+\node[draw=none] 
+   (manual_mode_cover_sub2) at (7+13,1.5) {\fontspec{Frutiger LT Std 55 Roman}(i.e. Learning)};
 
 
 \node[circle split
@@ -335,7 +344,7 @@
   \fontspec{Frutiger LT Std 55 Roman}Threshold};   
 
 \draw[->,line width=2.83464567pt,draw=gray!80]  
-  (parenting_sit_sub) to node [auto] {} (auto_mode_sub);
+  (parenting_sit_sub) to node [auto] {\fontspec{Frutiger LT Std 55 Roman}Moderate Stress} (auto_mode_sub);
   
 \draw[->,line width=2.83464567pt,draw=gray!80, dashed]  
   (auto_mode_sub) to node [auto] {} (parenting_beh_sub);  
@@ -377,7 +386,10 @@
       ] (auto_mode_con) at (13*3,3)
     {\includegraphics[width=.25\textwidth]{N0036253_mod.png}};
 \node[draw=none] 
-   (auto_mode_cover_con) at (13*3,1.5) {\fontspec{Frutiger LT Std 55 Roman}Automatic};
+   (auto_mode_cover_con1) at (13*3,4.5) {\fontspec{Frutiger LT Std 55 Roman}Automatic};
+\node[draw=none] 
+   (auto_mode_cover_con2) at (13*3,1.5) {\fontspec{Frutiger LT Std 55 Roman}(i.e. Survival)};
+
 
 \node[draw
       ,dashed
@@ -389,7 +401,10 @@
       ] (manual_mode_con) at (7+13*2,3)
     {\includegraphics[width=.25\textwidth]{N0036254_mod.png}};
 \node[draw=none] 
-   (manual_mode_cover_con) at (7+13*2,1.5) {\fontspec{Frutiger LT Std 55 Roman}Manual};
+   (manual_mode_cover_con1) at (7+13*2,4.5) {\fontspec{Frutiger LT Std 55 Roman}Manual};
+\node[draw=none] 
+   (manual_mode_cover_con2) at (7+13*2,1.5) {\fontspec{Frutiger LT Std 55 Roman}(i.e. Learning)};
+   
 
 
 \node[circle split
@@ -460,7 +475,7 @@
   \fontspec{Frutiger LT Std 55 Roman}Threshold};   
 
 \draw[->,line width=2.83464567pt,draw=gray!80]  
-  (parenting_sit_con) to node [auto] {} (auto_mode_con);
+  (parenting_sit_con) to node [auto] {\fontspec{Frutiger LT Std 55 Roman}High Stress} (auto_mode_con);
   
 \draw[->,line width=2.83464567pt,draw=gray!80]  
   (auto_mode_con) to node [auto] {} (parenting_beh_con);  

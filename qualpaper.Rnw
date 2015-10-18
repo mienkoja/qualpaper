@@ -1,7 +1,5 @@
 \documentclass[1p, review]{elsarticle}
 \usepackage{xcolor}      % use if color is used in text
-
-
 \usepackage{endnotes}
 \usepackage{graphicx}   % need for figures
 \usepackage{verbatim}   % useful for program listings

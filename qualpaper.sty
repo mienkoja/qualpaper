@@ -1,1 +1,35 @@
 \usepackage{pdfpages}
+\usepackage{xcolor}      % use if color is used in text
+\usepackage{endnotes}
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage[section]{placeins}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{microtype}
+
+%\usepackage[margin=0.5in]{geometry}
+\let\footnote=\endnote
+
+\usetikzlibrary{positioning,arrows,automata,fit,backgrounds,decorations.text,chains}
+
+\newcommand{\appropto}{\mathrel{\vcenter{
+  \offinterlineskip\halign{\hfil$##$\cr
+    \propto\cr\noalign{\kern2pt}\sim\cr\noalign{\kern-2pt}}}}}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+
+\makeatletter
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty
+ \let\@evenhead\@empty
+ \def\@oddfoot{}%
+ \let\@evenfoot\@oddfoot}
+\makeatother
+
+
+
+
+

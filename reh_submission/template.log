@@ -1,0 +1,250 @@
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2013.8.9)  22 DEC 2014 13:47
+entering extended mode
+**template.tex
+(C:\Users\mienkoja\Dropbox\repos\qualpaper\reh_submission\template.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+
+LaTeX Warning: File `example.eps' already exists on the system.
+               Not generating it from this source.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fix-cm.sty"
+Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+))
+(C:\Users\mienkoja\Dropbox\repos\qualpaper\reh_submission\svjour3.cls
+Document Class: svjour3 2007/05/08 v3.2 
+LaTeX document class for Springer journals
+Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
+(Springer-SVJour3)           not found in option list of \documentclass
+(Springer-SVJour3)           - autoactivating "global" style.
+(C:\Users\mienkoja\Dropbox\repos\qualpaper\reh_submission\svglov3.clo
+File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
+
+SVJour Class option: svglov3.clo for standardised journals
+)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
+\logodepth=\dimen102
+\headerboxheight=\dimen103
+\betweenumberspace=\dimen104
+\aftertext=\dimen105
+\headlineindent=\dimen106
+\c@inst=\count80
+\c@auth=\count81
+\instindent=\dimen107
+\authrun=\box26
+\authorrunning=\toks14
+\titrun=\box27
+\titlerunning=\toks15
+\combirun=\box28
+\c@lastpage=\count82
+\rubricwidth=\dimen108
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\spthmsep=\dimen109
+\c@theorem=\count88
+\c@case=\count89
+\c@conjecture=\count90
+\c@corollary=\count91
+\c@definition=\count92
+\c@example=\count93
+\c@exercise=\count94
+\c@lemma=\count95
+\c@note=\count96
+\c@problem=\count97
+\c@property=\count98
+\c@proposition=\count99
+\c@question=\count100
+\c@solution=\count101
+\c@remark=\count102
+\c@figure=\count103
+\c@table=\count104
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\figcapgap=\dimen110
+\tabcapgap=\dimen111
+\figgap=\dimen112
+\bibindent=\dimen113
+\@tempcntc=\count105
+) (C:\Users\mienkoja\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: xetex.def on input line 91.
+
+(C:\Users\mienkoja\AppData\Roaming\MiKTeX\2.9\tex\xelatex\xetex-def\xetex.def
+File: xetex.def 2013/04/29 v0.96 LaTeX color/graphics driver for XeTeX (RRM/JK)
+
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+) (C:\Users\mienkoja\Dropbox\repos\qualpaper\reh_submission\template.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+SVJour3 warning: Missing \journalname
+Requested font "cmbx10" at 10.0pt
+Requested font "cmr8" at 8.0pt
+Requested font "cmr12" at 13.0pt
+Requested font "cmbx12" at 13.0pt
+Requested font "cmr10" at 10.95pt
+Requested font "cmbx10" at 10.95pt
+Requested font "cmbx7" at 7.0pt
+Requested font "cmbx5" at 5.0pt
+Requested font "cmmib10" at 10.0pt
+Requested font "cmmib7" at 7.0pt
+Requested font "cmmib5" at 5.0pt
+Requested font "cmbsy10" at 10.0pt
+Requested font "cmbsy7" at 7.0pt
+Requested font "cmbsy5" at 5.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 95.
+Requested font "cmr6" at 6.0pt
+Requested font "cmmi8" at 8.0pt
+Requested font "cmmi6" at 6.0pt
+Requested font "cmsy8" at 8.0pt
+Requested font "cmsy6" at 6.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 95.
+
+Package natbib Warning: Citation `Nelson1986' on page 1 undefined on input line
+ 107.
+
+
+Package natbib Warning: Citation `Gil1970' on page 1 undefined on input line 10
+9.
+
+
+Package natbib Warning: Citation `Pelton1981' on page 1 undefined on input line
+ 109.
+
+
+Package natbib Warning: Citation `Pelton1994' on page 1 undefined on input line
+ 109.
+
+
+Package natbib Warning: Citation `Russell1984' on page 1 undefined on input lin
+e 109.
+
+
+Package natbib Warning: Citation `Sedlak1996' on page 1 undefined on input line
+ 109.
+
+
+Package natbib Warning: Citation `Stith2009' on page 1 undefined on input line 
+109.
+
+
+Package natbib Warning: Citation `BergerAndWoldfogel2004' on page 1 undefined o
+n input line 109.
+
+
+Package natbib Warning: Citation `Courtney2005' on page 1 undefined on input li
+ne 109.
+
+
+Package natbib Warning: Citation `Slack2007' on page 1 undefined on input line 
+109.
+
+
+Package natbib Warning: Citation `Cancian2013' on page 1 undefined on input lin
+e 109.
+
+
+Package natbib Warning: Citation `Fein2003' on page 1 undefined on input line 1
+09.
+
+
+Package natbib Warning: Citation `Cameron2006' on page 1 undefined on input lin
+e 109.
+
+[1]
+
+Package natbib Warning: Citation `RefB' on page 2 undefined on input line 114.
+
+
+Package natbib Warning: Citation `RefJ' on page 2 undefined on input line 114.
+
+Requested font "cmti10" at 10.0pt
+File: example.eps Graphic file (type eps)
+<example.eps>
+Requested font "cmbx8" at 8.0pt
+File: example.eps Graphic file (type eps)
+ <example.eps>
+(C:\Users\mienkoja\Dropbox\repos\qualpaper\reh_submission\template.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[2] [3] (C:\Users\mienkoja\Dropbox\repos\qualpaper\reh_submission\template.aux)
+ ) 
+Here is how much of TeX's memory you used:
+ 1620 strings out of 429025
+ 22178 string characters out of 3167801
+ 71813 words of memory out of 3000000
+ 4917 multiletter control sequences out of 15000+200000
+ 10088 words of font info for 35 fonts, out of 3000000 for 9000
+ 912 hyphenation exceptions out of 8191
+ 25i,7n,22p,1304b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on template.pdf (3 pages).

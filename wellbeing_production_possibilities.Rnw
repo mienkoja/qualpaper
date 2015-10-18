@@ -86,11 +86,11 @@ small_dot/.style={
 \node (wbar_arrow_end) at (6,1) [draw=none,fill=none] {};
 \node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}A}] (A) at (2,1.5) {}; 
 \node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}B}] (B) at (2,.5) {}; 
-\node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}C}] (C) at (4.425,.5) {}; 
-\node[small_dot, label={right:\fontspec{Frutiger LT Std 55 Roman}B'}] (B_prime) at (4.225,1.5) {}; 
-\node[small_dot, label={right:\fontspec{Frutiger LT Std 55 Roman}C'}] (C_prime) at (6.55,1.5) {}; 
-\node[draw=none] (Frontier2) at (2,5.75) {\fontspec{Frutiger LT Std 55 Roman}Frontier 2}; 
-\node[draw=none] (Frontier1) at (1.25,4.4) {\fontspec{Frutiger LT Std 55 Roman}Frontier 1}; 
+\node[small_dot, label={left:\fontspec{Frutiger LT Std 55 Roman}D}] (D) at (4.425,.5) {}; 
+\node[small_dot, label={right:\fontspec{Frutiger LT Std 55 Roman}C}] (C) at (4.225,1.5) {}; 
+\node[small_dot, label={right:\fontspec{Frutiger LT Std 55 Roman}E}] (E) at (6.085,1.5) {}; 
+\node[draw=none] (Frontier2) at (2,5.75) {\fontspec{Frutiger LT Std 55 Roman}Possibility 2}; 
+\node[draw=none] (Frontier1) at (1.25,4.4) {\fontspec{Frutiger LT Std 55 Roman}Possibility 1}; 
 \node[draw=none] (Frontier2_pt) at (4,4.25) {}; 
 \node[draw=none] (Frontier1_pt) at (3.25,2.75) {}; 
 
@@ -98,8 +98,8 @@ small_dot/.style={
 \draw[->,bend left, line width=2.83464567*0.5pt]  (Frontier1) to node [auto] {} (Frontier1_pt);
 
 \draw[->,bend left, line width=2.83464567*0.5pt]  (wbar) to node [auto] {} (wbar_arrow_end);
-\draw[->, line width=2.83464567*0.5pt]  (C) to node [auto] {} (C_prime);
-\draw[->, line width=2.83464567*0.5pt]  (B) to node [auto] {} (B_prime);
+\draw[->, line width=2.83464567*0.5pt]  (D) to node [auto] {} (E);
+\draw[->, line width=2.83464567*0.5pt]  (B) to node [auto] {} (C);
 
 
 \end{tikzpicture}

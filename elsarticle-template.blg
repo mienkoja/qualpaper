@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: elsarticle-template.aux
+The style file: elsarticle-num.bst
+I couldn't open database file mybibfile.bib
+---line 31 of file elsarticle-template.aux
+ : \bibdata{mybibfile
+ :                   }
+I'm skipping whatever remains of this command
+I found no database files---while reading file elsarticle-template.aux
+Warning--I didn't find a database entry for "Feynman1963118"
+Warning--I didn't find a database entry for "Dirac1953888"
+(There were 2 error messages)
